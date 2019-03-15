@@ -12,7 +12,9 @@ class LoginController extends Controller
 {
     public function login()
     {
-        return Socialite::driver('github')->redirect();
+        return Socialite::driver('github')
+                        ->setScopes(['read:user'])
+                        ->redirect();
     }
 
     public function callback(Request $request)
