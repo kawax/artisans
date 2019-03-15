@@ -23,7 +23,7 @@ class UserController extends Controller
     {
         $user = User::whereName($name)->firstOrFail();
 
-        $img = Image::canvas(640, 480, config('artisans.primary'));
+        $img = Image::canvas(800, 400, config('artisans.primary'));
 
         $img->text($user->name, 20, 10, function ($font) {
             $font->file(config('artisans.font'));
@@ -32,7 +32,7 @@ class UserController extends Controller
             $font->valign('top');
         });
 
-        $img->text(Str::wordwrap($user->title, 10), 20, 100, function ($font) {
+        $img->text(Str::wordwrap($user->title, 12), 20, 100, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(60);
             $font->color('#fff');

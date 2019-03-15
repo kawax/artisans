@@ -18,9 +18,9 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $img = Image::canvas(640, 480, config('artisans.primary'));
+        $img = Image::canvas(800, 400, config('artisans.primary'));
 
-        $img->text(config('app.name'), 40, 200, function ($font) {
+        $img->text(config('app.name'), 100, 170, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(64);
             $font->color('#fff');
