@@ -25,14 +25,14 @@ class UserController extends Controller
 
         $img = Image::canvas(640, 480, config('artisans.primary'));
 
-        $img->text($user->name, 20, 10, function ($font) {
+        $img->text($user->name, 20, 60, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(50);
             $font->color('#fff');
             $font->valign('top');
         });
 
-        $img->text(Str::wordwrap($user->title, 10), 20, 100, function ($font) {
+        $img->text(Str::wordwrap($user->title, 10), 20, 150, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(60);
             $font->color('#fff');
