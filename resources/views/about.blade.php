@@ -8,10 +8,19 @@
             <li>余計な情報は預からないのでメールアドレスさえも保存してません。</li>
         </ul>
     </div>
-    <p>
+    <p class="mb-1">
         <a class="button is-dark" href="{{ route('login') }}">
             <i class="fab fa-github"></i>
             Login with GitHub
         </a>
+    </p>
+    <p>
+        @tweet
+
+        @slot('url')
+            {{ route('home') }}
+        @endslot
+
+        @endtweet
     </p>
 </div>
