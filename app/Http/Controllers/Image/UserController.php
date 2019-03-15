@@ -25,7 +25,7 @@ class UserController extends Controller
 
         $img = Image::canvas(800, 400, config('artisans.primary'));
 
-        $img->text($user->name, 30, 10, function ($font) {
+        $img->text($user->name, 30, 20, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(50);
             $font->color('#fff');
