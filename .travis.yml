@@ -6,6 +6,8 @@ php:
 
 before_script:
   - travis_retry composer install --no-interaction --prefer-source --no-progress --no-suggest
+  - cp .env.example .env
+  - php artisan key:generate
 
 branches:
   only:
