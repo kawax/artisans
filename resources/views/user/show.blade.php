@@ -11,6 +11,10 @@
         {{ $user->name }}
     @endslot
 
+    @slot('title')
+        {{ $user->name }} / {{ config('app.name') }}
+    @endslot
+
     @slot('description')
         {{ $user->title }}
     @endslot
