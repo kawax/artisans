@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
     {
         factory(User::class, 100)->create()
                                  ->each(function (User $user) {
-                                     $user->tags()->sync(factory(Tag::class,3)->create()->pluck('id'));
+                                     $user->tags()->sync(factory(Tag::class, 3)->create()->pluck('id'));
                                  });
     }
 }
