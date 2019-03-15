@@ -35,3 +35,6 @@ Vue.component('profile-component', require('./components/ProfileComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+
+require('./bulma')
