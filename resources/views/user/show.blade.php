@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('title')
-    {{ $user->name }} / {{ config('app.name', 'Laravel') }}
-@endsection
+@section('title', $user->name . ' / ' . config('app.name', 'Laravel'))
 
 @section('card')
     @card

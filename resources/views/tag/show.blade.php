@@ -1,13 +1,9 @@
 @extends('layouts.app')
 
-@section('title')
-    {{ $tag->tag }} / {{ config('app.name', 'Laravel') }}
-@endsection
+@section('title', $tag->tag . ' / ' . config('app.name', 'Laravel'))
 
 @section('content')
     <div class="container">
-
-        @include('about')
 
         <div class="columns">
 
