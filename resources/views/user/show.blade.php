@@ -20,7 +20,7 @@
     @endslot
 
     @slot('image')
-        {{ route('image.user', $user->name) }}
+        {{ route('image.user', $user->name) }}?id={{ $user->updated_at->timestamp }}
     @endslot
 
     @endcard
