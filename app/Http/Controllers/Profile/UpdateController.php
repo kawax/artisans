@@ -27,11 +27,9 @@ class UpdateController extends Controller
 
         $tag_id = [];
 
-        foreach ($request->tags as $name) {
-            $tag_id[] = Tag::updateOrCreate([
-                'tag' => $name,
-            ], [
-                'tag' => $name,
+        foreach ($request->tags as $tag) {
+            $tag_id[] = Tag::firstOrCreate([
+                'tag' => $tag,
             ])->id;
         }
 
