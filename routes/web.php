@@ -15,12 +15,12 @@ Route::get('login', 'LoginController@login')->name('login');
 Route::get('callback', 'LoginController@callback')->name('callback');
 Route::any('logout', 'LoginController@logout')->name('logout');
 
-Route::get('@{name}', 'UserController')->name('user');
+Route::get('@{user}', 'UserController')->name('user');
 
-Route::get('tag/{name}', 'TagController')->name('tag');
+Route::get('tag/{tag}', 'TagController')->name('tag');
 
 Route::prefix('image')->namespace('Image')->group(function () {
-    Route::get('/user/{name}', 'UserController')->name('image.user');
+    Route::get('/user/{user}', 'UserController')->name('image.user');
     Route::get('/home', 'HomeController')->name('image.home');
 });
 

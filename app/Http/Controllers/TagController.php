@@ -11,14 +11,14 @@ class TagController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  string                   $name
+     * @param  Request $request
+     * @param  Tag     $tag
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, $name)
+    public function __invoke(Request $request, Tag $tag)
     {
-        $tag = Tag::whereTag($name)->with('users')->firstOrFail();
+        $tag->load('users');
 
         $users = $tag->users()->artisans();
 

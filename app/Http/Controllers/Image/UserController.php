@@ -14,15 +14,13 @@ class UserController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  string                   $name
+     * @param  Request $request
+     * @param  User    $user
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, $name)
+    public function __invoke(Request $request, User $user)
     {
-        $user = User::whereName($name)->firstOrFail();
-
         $img = Image::canvas(800, 400, config('artisans.primary'));
 
         $img->text($user->name, 30, 20, function ($font) {

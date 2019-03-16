@@ -16,6 +16,16 @@ class Tag extends Model
     ];
 
     /**
+     * モデルのルートキーの取得
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'tag';
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users()

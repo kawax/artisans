@@ -59,6 +59,16 @@ class User extends Authenticatable
     }
 
     /**
+     * モデルのルートキーの取得
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tags()
