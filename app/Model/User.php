@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use Illuminate\Database\Eloquent\Builder;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -45,12 +47,26 @@ class User extends Authenticatable
     ];
 
     /**
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param int                                   $page
+     * @param  Builder $query
+     * @param  string  $search
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
-    public function scopeArtisans($query, int $page = 20)
+    public function scopeSearch($query, ?string $search)
+    {
+        return $query->when($search, function (Builder $query, $search) {
+            return $query->where('title', 'LIKE', '%' . $search . '%')
+                         ->orWhere('message', 'LIKE', '%' . $search . '%');
+        });
+    }
+
+    /**
+     * @param  Builder $query
+     * @param  int     $page
+     *
+     * @return \Illuminate\Pagination\LengthAwarePaginator
+     */
+    public function scopeArtisans($query, ?int $page = 20)
     {
         return $query->latest('updated_at')
                      ->whereHidden(false)

@@ -35,5 +35,6 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
 });
 
 Route::view('privacy', 'pages.privacy')->name('privacy');
+Route::view('api', 'pages.api')->name('pages.api');
 
 Route::get('/', 'HomeController')->name('home');
