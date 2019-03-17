@@ -18,8 +18,6 @@ class TagController extends Controller
      */
     public function __invoke(Request $request, Tag $tag)
     {
-        $tag->load('users');
-
         $users = $tag->users()->artisans();
 
         return view('tag.show')->with(compact('users', 'tag'));
