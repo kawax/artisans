@@ -56,7 +56,8 @@ class User extends Authenticatable
     {
         return $query->when($search, function (Builder $query, $search) {
             return $query->where('title', 'LIKE', '%' . $search . '%')
-                         ->orWhere('message', 'LIKE', '%' . $search . '%');
+                         ->orWhere('message', 'LIKE', '%' . $search . '%')
+                         ->orWhere('name', 'LIKE', '%' . $search . '%');
         });
     }
 

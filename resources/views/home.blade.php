@@ -27,7 +27,9 @@
 
             <div class="column is-half">
 
-               @include('home.users')
+                <user-search-component></user-search-component>
+
+                @include('home.users')
 
             </div>
 

@@ -71,7 +71,7 @@
                                         <dt class="has-text-weight-semibold">page</dt>
                                         <dd>ページ</dd>
                                         <dt class="has-text-weight-semibold">q</dt>
-                                        <dd>キーワード検索。タイトルとメッセージのみ。</dd>
+                                        <dd>キーワード検索。検索対象は名前とタイトルとメッセージ。</dd>
                                         <dt class="has-text-weight-semibold">limit</dt>
                                         <dd>取得件数。指定可能範囲1~100。デフォルト20。</dd>
                                     </dl>
