@@ -53,6 +53,27 @@ class ExampleTest extends TestCase
                  ->assertSee('profile-component');
     }
 
+    public function testProfileMe()
+    {
+        $user = factory(User::class)->create([
+            'name' => 'test',
+        ]);
+
+        $response = $this->actingAs($user)->get('/profile/me');
+
+        $response->assertStatus(200)
+                 ->assertJson([
+                     'name' => 'test',
+                 ])
+                 ->assertJsonStructure([
+                     'id',
+                     'name',
+                     'title',
+                     'message',
+                     'tags',
+                 ]);
+    }
+
     public function testProfileUpdate()
     {
         $user = factory(User::class)->create();

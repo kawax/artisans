@@ -27,7 +27,7 @@ Route::prefix('image')->namespace('Image')->group(function () {
 
 Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function () {
     Route::view('/', 'profile.edit')->name('profile.edit');
-    Route::get('/user', 'UserController')->name('profile.user');
+    Route::get('/me', 'MeController')->name('profile.me');
     Route::put('/', 'UpdateController')->name('profile.update');
 
     Route::view('destroy', 'profile.destroy')->name('profile.destroy');

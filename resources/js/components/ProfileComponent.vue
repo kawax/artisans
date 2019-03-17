@@ -50,7 +50,7 @@
             }
         },
         mounted () {
-            axios.get('/profile/user').then(res => {
+            axios.get('/profile/me').then(res => {
                 this.name = res.data.name
                 this.title = res.data.title
                 this.message = res.data.message

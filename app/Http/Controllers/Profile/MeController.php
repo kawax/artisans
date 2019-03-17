@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 use App\Http\Resources\Profile\UserResource;
 
-class UserController extends Controller
+class MeController extends Controller
 {
     /**
      * Handle the incoming request.
