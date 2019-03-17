@@ -5,6 +5,8 @@
 @section('content')
     <div class="container">
 
+        @include('about')
+
         <div class="columns">
 
             <div class="column is-half">

@@ -16,11 +16,6 @@
     </p>
     <p>
         @tweet
-
-        @slot('url')
-            {{ route('home') }}
-        @endslot
-
         @endtweet
     </p>
 </div>
