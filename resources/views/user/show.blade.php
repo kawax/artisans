@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $user->name . ' / ' . config('app.name', 'Laravel'))
+@section('title', $user->name . ' / ' . config('app.name'))
 
 @section('card')
     @card

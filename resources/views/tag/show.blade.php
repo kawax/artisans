@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $tag->tag . ' / ' . config('app.name', 'Laravel'))
+@section('title', $tag->tag . ' / ' . config('app.name'))
 
 @section('content')
     <div class="container">
