@@ -53,6 +53,43 @@ class ExampleTest extends TestCase
                  ->assertSee('profile-component');
     }
 
+    public function testProfileUpdate()
+    {
+        $user = factory(User::class)->create();
+
+        $response = $this->actingAs($user)->put('/profile', [
+            'title'   => 'test',
+            'message' => 'test',
+            'tags'    => ['test'],
+        ]);
+
+        $this->assertDatabaseHas('users', [
+            'title'   => 'test',
+            'message' => 'test',
+        ]);
+
+        $this->assertDatabaseHas('tags', [
+            'tag' => 'test',
+        ]);
+
+        $response->assertStatus(200);
+    }
+
+    public function testProfileDestroy()
+    {
+        $user = factory(User::class)->create([
+            'name' => 'test',
+        ]);
+
+        $response = $this->actingAs($user)->delete('/profile/destroy');
+
+        $this->assertDatabaseMissing('users', [
+            'name' => 'test',
+        ]);
+
+        $response->assertRedirect();
+    }
+
     public function testTag()
     {
         $user = factory(User::class)->create()->each(function (User $user) {
