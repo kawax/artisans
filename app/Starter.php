@@ -15,6 +15,10 @@ class Starter
      */
     public static function can($count): bool
     {
+        if (auth()->check() and auth()->user()->id === config('artisans.admin_id')) {
+            return true;
+        }
+
         $user_count = cache()->remember('user_count', now()->addHours(1), function () {
             return User::count();
         });
