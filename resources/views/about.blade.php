@@ -6,9 +6,9 @@
             <li>ユーザー登録はGitHubでのログインのみ。</li>
             <li>サービス内でのメッセージのやり取りはありません。Laravel職人なら外部の連絡先を用意できるでしょう。</li>
             <li>余計な情報は預からないのでメールアドレスさえも保存してません。</li>
-            <li>募集側は業務委託のみ投稿可能です。雇用・求人情報は禁止なので注意してください。（法的な理由で）</li>
-            <li>業務よりも気軽な募集であれば自由にどうぞ。オープンソースプロジェクトを手伝って欲しいとか職人チームを作りたいとか。</li>
             @if(Starter::can(config('artisans.starter.step1')))
+                <li>募集側は業務委託のみ投稿可能です。雇用・求人情報は禁止なので注意してください。（法的な理由で）</li>
+                <li>業務よりも気軽な募集であれば自由にどうぞ。オープンソースプロジェクトを手伝って欲しいとか職人チームを作りたいとか。</li>
                 <li>通知先
                     <a href="https://discord.gg/5VSJv5j" class="tag is-dark">Discord</a>
                     <b-tooltip label="無期限の招待リンクが作れないので保留"
@@ -20,12 +20,14 @@
             @endif
         </ul>
     </div>
-    <p class="mb-1">
-        <a class="button is-dark" href="{{ route('login') }}">
-            <i class="fab fa-github"></i>
-            Login with GitHub
-        </a>
-    </p>
+    @guest
+        <p class="mb-1">
+            <a class="button is-dark" href="{{ route('login') }}">
+                <i class="fab fa-github"></i>
+                Login with GitHub
+            </a>
+        </p>
+    @endguest
     <p>
         @tweet
         @endtweet
