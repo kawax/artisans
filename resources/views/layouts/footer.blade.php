@@ -6,10 +6,10 @@
             <a href="https://github.com/kawax/artisans" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
         <p>
-            Copyright (C) 2019 kawax
+            Copyright (C) 2019 kawax [LICENSE AGPL]
         </p>
         <p>
-            LICENSE: AGPL
+            Laravel {{ app()->version() }}
         </p>
     </div>
 </footer>
