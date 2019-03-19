@@ -131,7 +131,7 @@ return [
                 'connection' => 'redis',
                 'queue'      => ['artisans'],
                 'balance'    => 'auto',
-                'processes'  => 10,
+                'processes'  => 3,
                 'tries'      => 3,
             ],
         ],
