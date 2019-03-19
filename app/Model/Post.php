@@ -61,7 +61,7 @@ class Post extends Model implements Feedable
     {
         return FeedItem::create()
                        ->id('post/' . $this->id)
-                       ->title($this->title ?? '')
+                       ->title($this->title ?? 'no title')
                        ->summary(Markdown::parse(e($this->message)))
                        ->updated($this->updated_at)
                        ->link(route('post.show', $this))

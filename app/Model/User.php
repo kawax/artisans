@@ -87,7 +87,7 @@ class User extends Authenticatable implements Feedable
     {
         return FeedItem::create()
                        ->id('user/' . $this->id)
-                       ->title($this->title ?? '')
+                       ->title($this->title ?? $this->name ?? 'no title')
                        ->summary(Markdown::parse(e($this->message)))
                        ->updated($this->updated_at)
                        ->link(route('user', $this))

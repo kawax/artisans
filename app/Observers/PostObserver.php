@@ -38,7 +38,7 @@ class PostObserver
 
         Notification::route('discord', config('services.discord.channel.post'))
                     ->route('slack', config('services.slack.post'))
-                    ->notify(new PostNotification($post, 'updated'));
+                    ->notify((new PostNotification($post, 'updated'))->delay(now()->addMinutes(10)));
     }
 
     /**
