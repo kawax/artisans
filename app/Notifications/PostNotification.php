@@ -57,16 +57,19 @@ class PostNotification extends Notification implements ShouldQueue
     public function toDiscord($notifiable)
     {
         return DiscordMessage::create("[{$this->event}]" . PHP_EOL . route('post.show', $this->post), [
-            'author'      => [
+            'author'    => [
                 'name'     => $this->post->user->name,
                 'url'      => route('user', $this->post->user),
                 'icon_url' => $this->post->user->avatar,
             ],
-            'title'       => $this->post->title,
-            'description' => $this->post->message,
-            'url'         => route('post.show', $this->post),
-            'timestamp'   => $this->post->created_at,
-            'color'       => 15156272,
+            'title'     => $this->post->title,
+            //'description' => $this->post->message,
+            'url'       => route('post.show', $this->post),
+            'image'     => [
+                'url' => route('image.post', $this->post),
+            ],
+            'timestamp' => $this->post->created_at,
+            'color'     => 15156272,
         ]);
     }
 
@@ -76,8 +79,7 @@ class PostNotification extends Notification implements ShouldQueue
                                  ->content("[{$this->event}]" . PHP_EOL . route('post.show', $this->post))
                                  ->attachment(function ($attachment) {
                                      $attachment->title($this->post->title, route('post.show', $this->post))
-                                                ->color(config('artisans.primary'))
-                                                ->content($this->post->message);
+                                                ->color(config('artisans.primary'));
                                  });
     }
 }
