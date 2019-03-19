@@ -26,6 +26,9 @@ Vue.use(Buefy)
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('profile-component', require('./components/ProfileComponent.vue').default)
 Vue.component('user-search-component', require('./components/UserSearchComponent.vue').default)
+Vue.component('post-create-component', require('./components/PostCreateComponent.vue').default)
+Vue.component('post-edit-component', require('./components/PostEditComponent.vue').default)
+Vue.component('post-search-component', require('./components/PostSearchComponent.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

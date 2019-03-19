@@ -177,6 +177,7 @@ return [
 
         App\Providers\BladeServiceProvider::class,
         App\Providers\MacroServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class,
 
     ],
 
@@ -229,6 +230,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //TODO:後で削除
+        'Starter' => App\Starter::class,
     ],
 
 ];

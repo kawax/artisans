@@ -30,7 +30,7 @@
                 placeholder="Add a tag">
             </b-taginput>
         </b-field>
-        <p class="help mb-1">スキルを書くなり「リモート限定」等条件を指定するなり使い方は自由。</p>
+        <p class="help mb-1">スキルを書くなり条件を書くなり使い方は自由。</p>
 
 
         <button class="button is-fullwidth is-primary" @click="post">保存</button>

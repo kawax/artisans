@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Http\Resources\Api\UserResource;
-use App\Model\User;
+use App\Http\Resources\Api\PostResource;
+use App\Model\Post;
 
-class UserController extends Controller
+class PostController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -21,10 +21,11 @@ class UserController extends Controller
     {
         $page = max(1, min(100, $request->input('limit', 20)));
 
-        $users = User::search($request->input('q'))
-                     ->artisans($page)
+        $posts = Post::search($request->input('q'))
+                     ->jobs()
+                     ->paginate($page)
                      ->appends('q', $request->input('q'));
 
-        return UserResource::collection($users);
+        return PostResource::collection($posts);
     }
 }

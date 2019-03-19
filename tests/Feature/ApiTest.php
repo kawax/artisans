@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Model\User;
-use App\Model\Tag;
+use App\Model\Post;
 
 class ApiTest extends TestCase
 {
@@ -61,6 +61,39 @@ class ApiTest extends TestCase
                          'current_page' => 2,
                          'per_page'     => 10,
                      ],
+                 ]);
+    }
+
+    public function testPost()
+    {
+        $user = factory(User::class)->create();
+        $user->posts()->saveMany(factory(Post::class, 100)->make());
+
+        $response = $this->withoutMiddleware()
+                         ->get('/api/post');
+
+        $response->assertStatus(200)
+                 ->assertJson([
+                     'meta' => [
+                         'total' => 100,
+                     ],
+                 ])
+                 ->assertJsonStructure([
+                     'data' => [
+                         [
+                             'id',
+                             'title',
+                             'message',
+                             'created_at',
+                             'updated_at',
+                             'user' => [
+                                 'name',
+                                 'avatar',
+                             ],
+                         ],
+                     ],
+                     'links',
+                     'meta',
                  ]);
     }
 }
