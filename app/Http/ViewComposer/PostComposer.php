@@ -15,7 +15,9 @@ class PostComposer
 
     public function compose(View $view)
     {
-        $posts = Post::jobs()->get();
+        $posts = cache()->remember('posts.all', now()->addDay(), function () {
+            return Post::jobs()->get();
+        });
 
         $view->with(compact('posts'));
     }

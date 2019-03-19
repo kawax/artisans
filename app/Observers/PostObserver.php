@@ -18,6 +18,8 @@ class PostObserver
      */
     public function created(Post $post)
     {
+        cache()->forget('posts.all');
+
         Notification::route('discord', config('services.discord.channel.post'))
                     ->route('slack', config('services.slack.post'))
                     ->notify(new PostNotification($post, 'created'));
@@ -32,6 +34,8 @@ class PostObserver
      */
     public function updated(Post $post)
     {
+        cache()->forget('posts.all');
+
         Notification::route('discord', config('services.discord.channel.post'))
                     ->route('slack', config('services.slack.post'))
                     ->notify(new PostNotification($post, 'updated'));
@@ -46,6 +50,8 @@ class PostObserver
      */
     public function deleted(Post $post)
     {
+        cache()->forget('posts.all');
+
         info('deleted', $post->toArray());
     }
 
