@@ -2,9 +2,11 @@
 
 namespace App\Observers;
 
-use App\Model\User;
+use Illuminate\Support\Facades\Notification;
 
-//TODO:通知
+use App\Model\User;
+use App\Notifications\UserNotification;
+
 class UserObserver
 {
     /**
@@ -17,6 +19,10 @@ class UserObserver
     public function created(User $user)
     {
         info('created', $user->toArray());
+
+        Notification::route('discord', config('services.discord.channel.user'))
+                    ->route('slack', config('services.slack.user'))
+                    ->notify(new UserNotification($user, 'created'));
     }
 
     /**
@@ -29,6 +35,10 @@ class UserObserver
     public function updated(User $user)
     {
         info('updated', $user->toArray());
+
+        //        Notification::route('discord', config('services.discord.channel.user'))
+        //                    ->route('slack', config('services.slack.user'))
+        //                    ->notify(new UserNotification($user, 'updated'));
     }
 
     /**

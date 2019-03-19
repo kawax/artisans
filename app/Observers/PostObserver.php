@@ -5,9 +5,8 @@ namespace App\Observers;
 use Illuminate\Support\Facades\Notification;
 
 use App\Model\Post;
-use App\Notifications\Post\PostCreatedNotification;
+use App\Notifications\PostNotification;
 
-//TODO:通知
 class PostObserver
 {
     /**
@@ -19,7 +18,9 @@ class PostObserver
      */
     public function created(Post $post)
     {
-        info('created', $post->toArray());
+        Notification::route('discord', config('services.discord.channel.post'))
+                    ->route('slack', config('services.slack.post'))
+                    ->notify(new PostNotification($post, 'created'));
     }
 
     /**
@@ -31,7 +32,9 @@ class PostObserver
      */
     public function updated(Post $post)
     {
-        info('updated', $post->toArray());
+        Notification::route('discord', config('services.discord.channel.post'))
+                    ->route('slack', config('services.slack.post'))
+                    ->notify(new PostNotification($post, 'updated'));
     }
 
     /**

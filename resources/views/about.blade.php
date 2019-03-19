@@ -8,6 +8,10 @@
             <li>余計な情報は預からないのでメールアドレスさえも保存してません。</li>
             @if(Starter::can(config('artisans.starter.step1')))
                 <li>募集側は業務委託のみ投稿可能です。雇用・求人情報は禁止なので注意してください。（法的な理由で）</li>
+                <li>通知先
+                    <a href="https://discord.gg/5VSJv5j" class="tag is-dark">Discord</a>
+                    <del>Slack</del>
+                </li>
             @endif
         </ul>
     </div>
