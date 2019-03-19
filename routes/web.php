@@ -45,6 +45,7 @@ Route::middleware(['starter:' . config('artisans.starter.step1')])->group(functi
 });
 
 
+Route::view('terms', 'pages.terms')->name('pages.terms')->middleware(['starter:' . config('artisans.starter.step1')]);
 Route::view('privacy', 'pages.privacy')->name('privacy');
 Route::view('api', 'pages.api')->name('pages.api');
 
