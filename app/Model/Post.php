@@ -25,31 +25,6 @@ class Post extends Model implements Feedable
     ];
 
     /**
-     * @return array|FeedItem
-     */
-    public function toFeedItem()
-    {
-        return FeedItem::create()
-                       ->id('post/' . $this->id)
-                       ->title($this->title ?? '')
-                       ->summary(Markdown::parse(e($this->message)))
-                       ->updated($this->updated_at)
-                       ->link(route('post.show', $this))
-                       ->author($this->user->name);
-    }
-
-    /**
-     * @return mixed
-     */
-    public static function getFeedItems()
-    {
-        return self::latest()
-                   ->with('user')
-                   ->take(100)
-                   ->get();
-    }
-
-    /**
      * @param  Builder $query
      * @param  string  $search
      *
@@ -77,6 +52,31 @@ class Post extends Model implements Feedable
         return $query->latest()
                      ->where('updated_at', '>=', $expired)
                      ->with('user');
+    }
+
+    /**
+     * @return array|FeedItem
+     */
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+                       ->id('post/' . $this->id)
+                       ->title($this->title ?? '')
+                       ->summary(Markdown::parse(e($this->message)))
+                       ->updated($this->updated_at)
+                       ->link(route('post.show', $this))
+                       ->author($this->user->name);
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getFeedItems()
+    {
+        return self::latest()
+                   ->with('user')
+                   ->take(50)
+                   ->get();
     }
 
     /**

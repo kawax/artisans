@@ -52,31 +52,6 @@ class User extends Authenticatable implements Feedable
     ];
 
     /**
-     * @return array|FeedItem
-     */
-    public function toFeedItem()
-    {
-        return FeedItem::create()
-                       ->id('user/' . $this->id)
-                       ->title($this->title ?? '')
-                       ->summary(Markdown::parse(e($this->message)))
-                       ->updated($this->updated_at)
-                       ->link(route('user', $this))
-                       ->author($this->name);
-    }
-
-    /**
-     * @return mixed
-     */
-    public static function getFeedItems()
-    {
-        return self::latest()
-                   ->whereHidden(false)
-                   ->take(100)
-                   ->get();
-    }
-
-    /**
      * @param  Builder $query
      * @param  string  $search
      *
@@ -103,6 +78,31 @@ class User extends Authenticatable implements Feedable
                      ->whereHidden(false)
                      ->with('tags')
                      ->paginate($page);
+    }
+
+    /**
+     * @return array|FeedItem
+     */
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+                       ->id('user/' . $this->id)
+                       ->title($this->title ?? '')
+                       ->summary(Markdown::parse(e($this->message)))
+                       ->updated($this->updated_at)
+                       ->link(route('user', $this))
+                       ->author($this->name);
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getFeedItems()
+    {
+        return self::latest()
+                   ->whereHidden(false)
+                   ->take(50)
+                   ->get();
     }
 
     /**
