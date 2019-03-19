@@ -8,7 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Builder;
 
-class User extends Authenticatable
+use Illuminate\Mail\Markdown;
+
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+
+class User extends Authenticatable implements Feedable
 {
     use Notifiable;
 
@@ -45,6 +50,31 @@ class User extends Authenticatable
     protected $casts = [
         'hidden' => 'boolean',
     ];
+
+    /**
+     * @return array|FeedItem
+     */
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+                       ->id('user/' . $this->id)
+                       ->title($this->title ?? '')
+                       ->summary(Markdown::parse(e($this->message)))
+                       ->updated($this->updated_at)
+                       ->link(route('user', $this))
+                       ->author($this->name);
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getFeedItems()
+    {
+        return self::latest()
+                   ->whereHidden(false)
+                   ->take(100)
+                   ->get();
+    }
 
     /**
      * @param  Builder $query

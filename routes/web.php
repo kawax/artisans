@@ -50,3 +50,5 @@ Route::view('privacy', 'pages.privacy')->name('privacy');
 Route::view('api', 'pages.api')->name('pages.api');
 
 Route::get('/', 'HomeController')->name('home');
+
+Route::feeds();

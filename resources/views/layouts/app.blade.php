@@ -17,6 +17,10 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
+    @if(Starter::can(config('artisans.starter.step1')))
+        @include('feed::links')
+    @endif
+
     @yield('card')
 
 </head>

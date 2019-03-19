@@ -5,9 +5,14 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
+use Illuminate\Mail\Markdown;
+
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+
 use App\Starter;
 
-class Post extends Model
+class Post extends Model implements Feedable
 {
     /**
      * The attributes that are mass assignable.
@@ -18,6 +23,31 @@ class Post extends Model
         'title',
         'message',
     ];
+
+    /**
+     * @return array|FeedItem
+     */
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+                       ->id('post/' . $this->id)
+                       ->title($this->title ?? '')
+                       ->summary(Markdown::parse(e($this->message)))
+                       ->updated($this->updated_at)
+                       ->link(route('post.show', $this))
+                       ->author($this->user->name);
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getFeedItems()
+    {
+        return self::latest()
+                   ->with('user')
+                   ->take(100)
+                   ->get();
+    }
 
     /**
      * @param  Builder $query

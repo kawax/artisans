@@ -27,6 +27,7 @@
         "laravel/tinker": "^1.0",
         "predis/predis": "^1.1",
         "revolution/discord-manager": "^1.0",
+        "spatie/laravel-feed": "^2.2",
         "tomschlick/laravel-http2-server-push": "dev-patch"
     },
     "require-dev": {
