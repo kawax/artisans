@@ -15,7 +15,7 @@ class Starter
      */
     public static function can($count): bool
     {
-        if (auth()->check() and auth()->user()->id === config('artisans.admin_id')) {
+        if (auth()->check() and auth()->user()->id == config('artisans.admin_id')) {
             return true;
         }
 
