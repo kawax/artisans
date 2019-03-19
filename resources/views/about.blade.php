@@ -10,7 +10,11 @@
                 <li>募集側は業務委託のみ投稿可能です。雇用・求人情報は禁止なので注意してください。（法的な理由で）</li>
                 <li>通知先
                     <a href="https://discord.gg/5VSJv5j" class="tag is-dark">Discord</a>
-                    <del>Slack</del>
+                    <b-tooltip label="無期限の招待リンクが作れないので保留"
+                               type="is-dark"
+                               position="is-right">
+                        <del>Slack</del>
+                    </b-tooltip>
                 </li>
             @endif
         </ul>
