@@ -23,6 +23,7 @@
         <b-field label="タグ">
             <b-taginput
                 v-model="tags"
+                maxlength="20"
                 maxtags="10"
                 ellipsis
                 icon-pack="fas"
