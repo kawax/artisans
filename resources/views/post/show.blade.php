@@ -10,7 +10,7 @@
     @endslot
 
     @slot('title')
-        {{ $post->title }} / {{ config('app.name') }}
+        {{ config('app.name') }}
     @endslot
 
     @slot('description')
