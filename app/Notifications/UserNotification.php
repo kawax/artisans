@@ -14,7 +14,7 @@ use Illuminate\Notifications\Messages\SlackMessage;
 
 use App\Model\User;
 
-class UserNotification extends Notification
+class UserNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 

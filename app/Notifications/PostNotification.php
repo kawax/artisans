@@ -14,7 +14,7 @@ use Illuminate\Notifications\Messages\SlackMessage;
 
 use App\Model\Post;
 
-class PostNotification extends Notification
+class PostNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
