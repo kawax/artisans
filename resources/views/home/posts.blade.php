@@ -7,7 +7,7 @@
             @foreach($posts as $post)
                 <article class="media">
                     <figure class="media-left image is-32x32">
-                        <img src="{{ $post->user->avatar }}" class="is-rounded" title="{{ $post->user->name }}">
+                        <img src="{{ $post->user->avatar }}" class="is-rounded" alt="{{ $post->user->name }}" title="{{ $post->user->name }}" lazyload="on">
                     </figure>
                     <div class="media-content">
                         <div class="content">

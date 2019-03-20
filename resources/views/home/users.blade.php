@@ -10,7 +10,7 @@
                 <tr>
                     <td>
                         <figure class="image is-32x32">
-                            <img src="{{ $user->avatar }}" class="is-rounded">
+                            <img src="{{ $user->avatar }}" class="is-rounded" alt="{{ $user->name }}" title="{{ $user->name }}" lazyload="on">
                         </figure>
                     </td>
                     <td>
