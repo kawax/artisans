@@ -13,7 +13,7 @@
 
                 <user-search-component></user-search-component>
 
-                @include('home.users')
+                @include('user.users')
 
             </div>
         </div>

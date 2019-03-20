@@ -11,13 +11,13 @@
 
             <div class="column is-half">
 
-                @include('home.users')
+                @include('user.users')
 
             </div>
 
             <div class="column is-half">
 
-                @include('home.posts')
+                @include('post.posts')
 
             </div>
         </div>

@@ -92,21 +92,34 @@
                     </div>
                 </div>
 
-                @can('update', $post)
-                    <p>
-                        <a href="{{ route('post.edit', $post) }}" class="button is-primary is-outlined mb-1">変更</a>
-                    </p>
-                @endcan
+                <div class="field has-addons">
+                    @can('update', $post)
+
+                        <p class="control">
+                            <a href="{{ route('post.edit', $post) }}" class="button is-primary is-outlined mb-1">
+                                <span class="icon"><i class="fas fa-edit"></i></span>
+                                <span>変更</span>
+                            </a>
+                        </p>
+                    @endcan
+                    @can('delete', $post)
+
+                        <p class="control">
+                            <a href="{{ route('post.confirm', $post) }}" class="button is-primary is-outlined">削除確認</a>
+                        </p>
+                    @endcan
+                    @cannot('delete', $post)
+                        <p class="control">
+                            <post-report-component post-id="{{ $post->id }}"></post-report-component>
+                        </p>
+                    @endcannot
+                </div>
+
 
                 @if(Starter::can(config('artisans.starter.step2')))
                     <post-search-component></post-search-component>
                 @endif
 
-                @can('delete', $post)
-                    <p>
-                        <a href="{{ route('post.confirm', $post) }}" class="button is-primary is-outlined">削除確認</a>
-                    </p>
-                @endcan
 
             </div>
         </div>

@@ -31,7 +31,7 @@
 
                 <user-search-component></user-search-component>
 
-                @include('home.users')
+                @include('user.users')
 
             </div>
 
@@ -48,7 +48,7 @@
                     @endif
                 @endauth
 
-                @include('home.posts')
+                @include('post.posts')
 
             </div>
         </div>

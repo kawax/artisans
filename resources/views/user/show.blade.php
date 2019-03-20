@@ -116,7 +116,10 @@
 
                 @auth
                     @if(auth()->user()->id === $user->id)
-                        <a href="{{ route('profile.edit') }}" class="button is-primary is-outlined mb-1">変更</a>
+                        <a href="{{ route('profile.edit') }}" class="button is-primary is-outlined mb-1">
+                            <span class="icon"><i class="fas fa-edit"></i></span>
+                            <span>変更</span>
+                        </a>
                     @endif
                 @endauth
 

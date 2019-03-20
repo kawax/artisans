@@ -18,7 +18,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            'home.posts',
+            'post.posts',
             PostComposer::class
         );
 

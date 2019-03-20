@@ -42,6 +42,8 @@ Route::middleware(['starter:' . config('artisans.starter.step1')])->group(functi
     Route::get('post/confirm/{post}', 'Post\ConfirmController')->name('post.confirm');
 
     Route::resource('post', 'PostController');
+
+    Route::post('post/report/{post}', 'Post\ReportController')->name('post.report')->middleware('auth');
 });
 
 

@@ -22,7 +22,7 @@
                     @endif
                 @endauth
 
-                @include('home.posts')
+                @include('post.posts')
 
             </div>
         </div>

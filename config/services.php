@@ -59,8 +59,9 @@ return [
         ],
         'token'     => env('DISCORD_BOT_TOKEN'),
         'channel'   => [
-            'user' => env('DISCORD_CHANNEL_USER'),
-            'post' => env('DISCORD_CHANNEL_POST'),
+            'user'        => env('DISCORD_CHANNEL_USER'),
+            'post'        => env('DISCORD_CHANNEL_POST'),
+            'post_report' => env('DISCORD_CHANNEL_POST_REPORT'),
         ],
         'bot'       => env('DISCORD_BOT'),
         'yasmin'    => [
