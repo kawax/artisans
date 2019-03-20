@@ -6,16 +6,18 @@
             <li>ユーザー登録はGitHubでのログインのみ。</li>
             <li><strong>情報提供</strong>のみのサービスです。連絡等は外部で行ってください。</li>
             <li>余計な情報は預からないのでメールアドレスさえも保存してません。</li>
-            @if(Starter::can(config('artisans.starter.step1')))
-                <li>通知先
+            <li>通知先
+                <a href="https://twitter.com/kawaxbiz" class="tag is-dark" target="_blank"
+                   rel="noopener noreferrer">Twitter</a>
+                @if(Starter::can(config('artisans.starter.step1')))
                     <a href="https://discord.gg/5VSJv5j" class="tag is-dark">Discord</a>
                     <b-tooltip label="無期限の招待リンクが作れないので保留"
                                type="is-dark"
                                position="is-right">
                         <del>Slack</del>
                     </b-tooltip>
-                </li>
-            @endif
+                @endif
+            </li>
         </ul>
     </div>
     @guest
