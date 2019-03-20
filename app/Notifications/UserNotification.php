@@ -51,6 +51,10 @@ class UserNotification extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
+        if ($this->user->hidden) {
+            return [];
+        }
+
         return [DiscordChannel::class, SlackWebhookChannel::class];
     }
 
