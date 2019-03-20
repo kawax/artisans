@@ -76,11 +76,7 @@ class User extends Authenticatable implements Feedable
     {
         return $query->latest('updated_at')
                      ->whereHidden(false)
-                     ->with([
-                         'tags' => function ($query) {
-                             $query->orderBy('tag');
-                         },
-                     ])
+                     ->with('tags')
                      ->paginate($page);
     }
 
@@ -124,7 +120,7 @@ class User extends Authenticatable implements Feedable
      */
     public function tags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class)->orderBy('tag');
     }
 
     /**
