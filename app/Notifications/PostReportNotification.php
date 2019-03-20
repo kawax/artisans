@@ -57,7 +57,6 @@ class PostReportNotification extends Notification implements ShouldQueue
     public function via($notifiable)
     {
         return [DiscordChannel::class];
-
     }
 
     public function toDiscord($notifiable)
