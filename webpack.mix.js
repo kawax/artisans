@@ -13,4 +13,5 @@ const mix = require('laravel-mix')
 
 mix.js('resources/js/app.js', 'public/js').
     sass('resources/sass/app.scss', 'public/css').
-    version()
+    copy('resources/font', 'public/fonts').
+    version(['public/js', 'public/css'])
