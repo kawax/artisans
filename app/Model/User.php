@@ -118,6 +118,21 @@ class User extends Authenticatable implements Feedable
     }
 
     /**
+     * @param  mixed $value
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
+    public function resolveRouteBinding($value)
+    {
+        return $this->whereName($value)->with([
+                'tags',
+                'posts' => function ($query) {
+                    $query->latest('updated_at')->limit(5);
+                },
+            ])->first() ?? abort(404);
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function tags()

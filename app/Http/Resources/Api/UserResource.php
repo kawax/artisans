@@ -23,6 +23,7 @@ class UserResource extends JsonResource
                 'avatar',
                 'title',
                 'message',
+                'created_at',
                 'updated_at',
             ]),
             'tags',
