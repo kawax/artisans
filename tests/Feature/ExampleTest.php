@@ -56,4 +56,18 @@ class ExampleTest extends TestCase
                  ->assertViewHas('tag')
                  ->assertSee('test');
     }
+
+    public function testLogin()
+    {
+        $response = $this->get('/login');
+
+        $response->assertRedirect();
+    }
+
+    public function testLogout()
+    {
+        $response = $this->get('/logout');
+
+        $response->assertRedirect();
+    }
 }
