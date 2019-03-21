@@ -42,3 +42,5 @@ const app = new Vue({
 })
 
 require('./bulma')
+
+require('./twttr')
