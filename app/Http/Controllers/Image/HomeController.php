@@ -10,6 +10,8 @@ use Intervention\Image\Facades\Image;
 class HomeController extends Controller
 {
     /**
+     * HomeのOGP画像
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request

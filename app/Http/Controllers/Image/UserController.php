@@ -12,6 +12,8 @@ use App\Model\User;
 class UserController extends Controller
 {
     /**
+     * UserのOGP画像
+     *
      * Handle the incoming request.
      *
      * @param  Request $request

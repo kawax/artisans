@@ -13,6 +13,8 @@ use App\Model\Post;
 class PostController extends Controller
 {
     /**
+     * PostのOGP画像
+     *
      * Handle the incoming request.
      *
      * @param  Request $request

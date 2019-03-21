@@ -10,6 +10,8 @@ use App\Model\Tag;
 class UpdateController extends Controller
 {
     /**
+     * プロフィール変更
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request

@@ -12,10 +12,12 @@ use App\Model\Post;
 class ReportController extends Controller
 {
     /**
+     * 報告
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Post                      $post
+     * @param  Post                     $post
      *
      * @return \Illuminate\Http\Response
      */

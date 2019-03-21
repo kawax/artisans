@@ -10,6 +10,8 @@ use App\Model\Post;
 class ConfirmController extends Controller
 {
     /**
+     * 削除確認
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request
@@ -20,8 +22,6 @@ class ConfirmController extends Controller
      */
     public function __invoke(Request $request, Post $post)
     {
-        $this->authorize('delete', $post);
-
         return view('post.confirm')->with(compact('post'));
     }
 }

@@ -10,18 +10,18 @@ use App\Model\Post;
 class EditController extends Controller
 {
     /**
+     * 変更時用のjsonデータ
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param Post                      $post
+     * @param  Post                     $post
      *
      * @return \Illuminate\Http\Response
      * @throws
      */
     public function __invoke(Request $request, Post $post)
     {
-        $this->authorize('update', $post);
-
         return $post->only([
             'id',
             'title',

@@ -39,13 +39,13 @@ Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(functi
 });
 
 Route::middleware(['starter:' . config('artisans.starter.step1')])->group(function () {
-    Route::get('post/edit/{post}', 'Post\EditController');
-
-    Route::get('post/confirm/{post}', 'Post\ConfirmController')->name('post.confirm');
+    Route::namespace('Post')->group(function () {
+        Route::get('post/edit/{post}', 'EditController')->middleware('can:update,post');
+        Route::get('post/confirm/{post}', 'ConfirmController')->name('post.confirm')->middleware('can:delete,post');
+        Route::post('post/report/{post}', 'ReportController')->name('post.report')->middleware('auth');
+    });
 
     Route::resource('post', 'PostController');
-
-    Route::post('post/report/{post}', 'Post\ReportController')->name('post.report')->middleware('auth');
 });
 
 

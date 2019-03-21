@@ -19,17 +19,17 @@ class PostReportNotification extends Notification implements ShouldQueue
     /**
      * @var Post
      */
-    protected $post;
+    public $post;
 
     /**
      * @var User
      */
-    protected $user;
+    public $user;
 
     /**
      * @var string
      */
-    protected $reason;
+    public $reason;
 
     /**
      * Create a new notification instance.

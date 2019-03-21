@@ -10,6 +10,8 @@ use App\Http\Resources\Profile\UserResource;
 class MeController extends Controller
 {
     /**
+     * 変更時用のjsonデータ
+     *
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request $request
