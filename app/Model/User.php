@@ -122,7 +122,7 @@ class User extends Authenticatable implements Feedable
      */
     public function tags()
     {
-        return $this->belongsToMany(Tag::class)->orderBy('tag');
+        return $this->belongsToMany(Tag::class);//->orderBy('tag');
     }
 
     /**
