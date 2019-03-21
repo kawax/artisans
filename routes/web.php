@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('login', 'LoginController@login')->name('login');
-Route::get('callback', 'LoginController@callback')->name('callback');
-Route::any('logout', 'LoginController@logout')->name('logout');
+Route::namespace('Auth')->group(function () {
+    Route::get('login', 'LoginController@login')->name('login');
+    Route::get('callback', 'LoginController@callback')->name('callback');
+    Route::any('logout', 'LoginController@logout')->name('logout');
+});
 
 Route::get('@{user}', 'UserController')->name('user');
 Route::view('user', 'user.index')->name('user.index');
@@ -48,7 +50,7 @@ Route::middleware(['starter:' . config('artisans.starter.step1')])->group(functi
 
 
 Route::view('terms', 'pages.terms')->name('pages.terms')->middleware(['starter:' . config('artisans.starter.step1')]);
-Route::view('privacy', 'pages.privacy')->name('privacy');
+Route::view('privacy', 'pages.privacy')->name('pages.privacy');
 Route::view('api', 'pages.api')->name('pages.api');
 
 Route::get('/', 'HomeController')->name('home');
