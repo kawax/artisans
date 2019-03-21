@@ -16,7 +16,7 @@
                         </div>
                         <div class="message-body">
                             すべて<code>{{ route('pages.api') }}</code>以下へ。
-                            認証は不要。レート制限は1分間に60回。
+                            認証は不要。CORS対応。レート制限は1分間に60回。
                         </div>
                     </article>
 
