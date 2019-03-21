@@ -9,14 +9,12 @@
             <li>通知先
                 <a href="https://twitter.com/kawaxbiz" class="tag is-dark" target="_blank"
                    rel="noopener noreferrer">Twitter</a>
-                @if(Starter::can(config('artisans.starter.step1')))
-                    <a href="https://discord.gg/5VSJv5j" class="tag is-dark">Discord</a>
-                    <b-tooltip label="無期限の招待リンクが作れないので保留"
-                               type="is-dark"
-                               position="is-right">
-                        <del>Slack</del>
-                    </b-tooltip>
-                @endif
+                <a href="{{ config('artisans.discord_url') }}" class="tag is-dark">Discord</a>
+                <b-tooltip label="無期限の招待リンクが作れないので保留"
+                           type="is-dark"
+                           position="is-right">
+                    <del>Slack</del>
+                </b-tooltip>
             </li>
             <li>ハッシュタグ
                 <b-tooltip label="#Laravel職人を探す は自動ツイートをミュートしたい人用"

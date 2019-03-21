@@ -7,10 +7,12 @@ return [
 
     'font' => 'fonts/NotoSansCJKjp-Black.ttf',
 
+    'discord_url' => 'https://discord.gg/5VSJv5j',
+
     'analytics' => env('GOOGLE_ANALYTICS', ''),
 
     //TODO:後で削除
-    'starter' => [
+    'starter'   => [
         'step1' => 50,
         'step2' => 100,
         'step3' => 150,
