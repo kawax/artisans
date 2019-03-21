@@ -18,6 +18,13 @@
                     </b-tooltip>
                 @endif
             </li>
+            <li>ハッシュタグ
+                <b-tooltip label="#Laravel職人を探す は自動ツイートをミュートしたい人用"
+                           type="is-dark"
+                           position="is-right">
+                    <span class="tag is-dark">#laravel_jp</span>
+                </b-tooltip>
+            </li>
         </ul>
     </div>
     @guest

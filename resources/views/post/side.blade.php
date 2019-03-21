@@ -8,7 +8,7 @@
             <li>トップやタグページでは一定期間後に掲載終了します。個別の投稿ページは残ります。更新日で判断してるので更新すれば再度表示されます。</li>
             <li>業務委託・求人情報の場合、法的なことに関しては「情報提供」の範囲を守ってください。
                 （<a href="https://www.mhlw.go.jp/www2/topics/seido/anteikyoku/minkan/"
-                    target="_blank" rel="noopener noreferrer">ソース</a>）
+                    target="_blank" rel="noopener noreferrer">参考</a>）
             </li>
             <li>気軽な募集であれば自由にどうぞ。オープンソースプロジェクトを手伝って欲しいとか職人チームを作りたいとか。</li>
         </ol>

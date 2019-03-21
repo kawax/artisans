@@ -99,10 +99,12 @@ class User extends Authenticatable implements Feedable
      */
     public static function getFeedItems()
     {
-        return self::latest()
-                   ->whereHidden(false)
-                   ->take(50)
-                   ->get();
+        return cache()->remember('feed.users', now()->addHours(12), function () {
+            return self::latest()
+                       ->whereHidden(false)
+                       ->take(50)
+                       ->get();
+        });
     }
 
     /**

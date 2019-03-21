@@ -20,6 +20,8 @@ class UserObserver
     {
         info('created', $user->toArray());
 
+        cache()->forget('feed.users');
+
         Notification::route('discord', config('services.discord.channel.user'))
                     ->route('slack', config('services.slack.user'))
                     ->notify((new UserNotification($user, 'created'))->delay(now()->addMinutes(10)));
@@ -36,6 +38,8 @@ class UserObserver
     {
         info('updated', $user->toArray());
 
+        cache()->forget('feed.users');
+
         //        Notification::route('discord', config('services.discord.channel.user'))
         //                    ->route('slack', config('services.slack.user'))
         //                    ->notify(new UserNotification($user, 'updated'));
@@ -51,6 +55,8 @@ class UserObserver
     public function deleted(User $user)
     {
         info('deleted', $user->toArray());
+
+        cache()->forget('feed.users');
     }
 
     /**

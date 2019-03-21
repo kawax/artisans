@@ -15,12 +15,7 @@
                         </div>
 
                         <profile-component></profile-component>
-
                     </div>
-                </div>
-
-                <div class="has-text-right is-size-7">
-                    <a href="{{ route('profile.destroy') }}">アカウント削除</a>
                 </div>
             </div>
         </div>

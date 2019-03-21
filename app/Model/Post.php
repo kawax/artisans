@@ -73,10 +73,12 @@ class Post extends Model implements Feedable
      */
     public static function getFeedItems()
     {
-        return self::latest()
-                   ->with('user')
-                   ->take(50)
-                   ->get();
+        return cache()->remember('feed.posts', now()->addHours(12), function () {
+            return self::latest()
+                       ->with('user')
+                       ->take(50)
+                       ->get();
+        });
     }
 
     /**
