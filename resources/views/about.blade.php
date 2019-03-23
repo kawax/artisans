@@ -16,6 +16,10 @@
                     <del>Slack</del>
                 </b-tooltip>
             </li>
+            <li>
+                <a href="https://widget.kawax.biz/" class="tag is-dark" target="_blank"
+                   rel="noopener noreferrer">Widget</a>
+            </li>
             <li>ハッシュタグ
                 <b-tooltip label="#Laravel職人を探す は自動ツイートをミュートしたい人用"
                            type="is-dark"
