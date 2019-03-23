@@ -13,9 +13,9 @@ return [
 
     //TODO:後で削除
     'starter'   => [
-        'step1' => 50,
-        'step2' => 100,
-        'step3' => 150,
+        'step1' => 20,
+        'step2' => 50,
+        'step3' => 100,
         'step4' => 200,
     ],
 ];

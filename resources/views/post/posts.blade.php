@@ -7,7 +7,11 @@
             @foreach($posts as $post)
                 <article class="media">
                     <figure class="media-left image is-32x32">
-                        <img src="{{ $post->user->avatar }}" class="is-rounded" alt="{{ $post->user->name }}" title="{{ $post->user->name }}" lazyload="on">
+                        <img src="{{ $post->user->avatar }}"
+                             class="is-rounded"
+                             alt="{{ $post->user->name }}"
+                             title="{{ $post->user->name }}"
+                             lazyload="on">
                     </figure>
                     <div class="media-content">
                         <div class="content">
@@ -18,6 +22,7 @@
                             </p>
                             <article class="message is-dark">
                                 <div class="message-body">
+                                    {{--<img src="{{ route('image.post', $post) }}" alt="{{ $post->title }}">--}}
                                     @markdown(Str::limit($post->message, 300))
                                 </div>
                             </article>
