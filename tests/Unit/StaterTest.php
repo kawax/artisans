@@ -20,7 +20,7 @@ class StaterTest extends TestCase
 
         $this->assertTrue(Starter::can(config('artisans.starter.step1')));
         $this->assertTrue(Starter::can(config('artisans.starter.step2')));
-        $this->assertFalse(Starter::can(config('artisans.starter.step3')));
+        $this->assertTrue(Starter::can(config('artisans.starter.step3')));
         $this->assertFalse(Starter::can(config('artisans.starter.step4')));
     }
 
@@ -28,6 +28,6 @@ class StaterTest extends TestCase
     {
         $users = factory(User::class, 100)->create();
 
-        $this->assertEquals(20, Starter::expired());
+        $this->assertEquals(30, Starter::expired());
     }
 }
