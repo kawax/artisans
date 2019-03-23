@@ -43,6 +43,11 @@ class Kernel extends HttpKernel
             'bindings',
             \Barryvdh\Cors\HandleCors::class,
         ],
+
+        'image' => [
+            'bindings',
+            'cache.headers:etag;max_age=300;s_maxage=300'
+        ],
     ];
 
     /**

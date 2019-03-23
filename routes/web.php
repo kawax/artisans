@@ -22,13 +22,6 @@ Route::view('user', 'user.index')->name('user.index');
 
 Route::get('tag/{tag}', 'TagController')->name('tag');
 
-Route::prefix('image')->namespace('Image')->group(function () {
-    Route::get('/user/{user}', 'UserController')->name('image.user');
-    Route::get('/post/{post}', 'PostController')->name('image.post');
-    Route::get('/home', 'HomeController')->name('image.home');
-});
-
-
 Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function () {
     Route::view('/', 'profile.edit')->name('profile.edit');
     Route::get('/me', 'MeController')->name('profile.me');
