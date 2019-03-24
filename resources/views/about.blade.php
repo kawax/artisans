@@ -21,7 +21,7 @@
                    rel="noopener noreferrer">Widget</a>
             </li>
             <li>ハッシュタグ
-                <b-tooltip label="#Laravel職人を探す は自動ツイートをミュートしたい人用"
+                <b-tooltip label="#自動 は自動ツイートをミュートしたい人用"
                            type="is-dark"
                            position="is-right">
                     <span class="tag is-dark">#laravel_jp</span>
