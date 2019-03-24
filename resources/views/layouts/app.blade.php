@@ -55,6 +55,10 @@
                             プロフィール
                         </a>
 
+                        @if(Starter::can(config('artisans.starter.step1')))
+                            <a href="{{ route('post.create') }}" class="navbar-item">新規募集</a>
+                        @endif
+
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>
 
