@@ -39,11 +39,14 @@
             </div>
 
             <div class="navbar-menu" id="navMenu">
-                <div class="navbar-start"></div>
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{ route('user.index') }}">職人</a>
+                    <a class="navbar-item" href="{{ route('post.index') }}">募集</a>
+                </div>
 
                 <div class="navbar-end">
                     @if (Auth::guest())
-                        <a class="navbar-item " href="{{ route('login') }}">Login</a>
+                        <a class="navbar-item" href="{{ route('login') }}">Login</a>
                     @else
                         <a href="{{ route('user', auth()->user()->name) }}" class="navbar-item">
                             マイページ

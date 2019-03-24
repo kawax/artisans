@@ -21,7 +21,7 @@
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">{{ config('artisans.starter.step3') }}</p>
-                <p class="title is-5">掲載30日</p>
+                <p class="title is-5">Chrome拡張開発開始<br>掲載30日</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
