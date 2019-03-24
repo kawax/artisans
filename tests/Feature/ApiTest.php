@@ -33,6 +33,9 @@ class ApiTest extends TestCase
                              'avatar',
                              'title',
                              'message',
+                             'url',
+                             'image',
+                             'created_at',
                              'updated_at',
                              'tags',
                          ],
@@ -82,6 +85,8 @@ class ApiTest extends TestCase
                      'data' => [
                          [
                              'id',
+                             'url',
+                             'image',
                              'title',
                              'message',
                              'created_at',

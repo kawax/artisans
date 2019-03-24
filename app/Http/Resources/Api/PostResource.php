@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Arr;
+use Illuminate\Mail\Markdown;
 
 class PostResource extends JsonResource
 {
@@ -16,19 +16,18 @@ class PostResource extends JsonResource
      */
     public function toArray($request)
     {
-        return Arr::add(
-            Arr::only(parent::toArray($request), [
-                'id',
-                'title',
-                'message',
-                'created_at',
-                'updated_at',
-            ]),
-            'user',
-            $this->user->only([
+        return [
+            'id'         => $this->id,
+            'title'      => $this->title,
+            'message'    => Markdown::parse(e($this->message))->toHtml(),
+            'url'        => route('post.show', $this),
+            'image'      => route('image.post', $this),
+            'user'       => $this->user->only([
                 'name',
                 'avatar',
-            ])
-        );
+            ]),
+            'created_at' => $this->created_at->toDateTimeString(),
+            'updated_at' => $this->updated_at->toDateTimeString(),
+        ];
     }
 }

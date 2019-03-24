@@ -13,12 +13,14 @@
                 <pre>{{ collect([
                 'data' => [[
                     'id' => "1",
+                    'title' => 'text',
+                    'message' => 'html',
+                    'url' => 'http://',
+                    'image' => 'http://',
                     'user' => [
                         'name' => 'test',
                         'avatar' => 'https://',
                     ],
-                    'title' => 'text',
-                    'message' => 'markdown',
                     'created_at' => now()->toDateTimeString(),
                     'updated_at' => now()->toDateTimeString(),
                 ]],
