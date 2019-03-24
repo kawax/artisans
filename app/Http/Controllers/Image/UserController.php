@@ -32,7 +32,7 @@ class UserController extends Controller
             $font->valign('top');
         });
 
-        $img->text(Str::wordwrap($user->title, 12), 30, 100, function ($font) {
+        $img->text(Str::wordwrap(mb_convert_kana($user->title, 'a'), 12), 30, 100, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(62);
             $font->color('#fff');

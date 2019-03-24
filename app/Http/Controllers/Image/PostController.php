@@ -30,7 +30,7 @@ class PostController extends Controller
             $draw->background('#fff');
         });
 
-        $img->text(Str::wordwrap($post->title, 12), 30, 20, function ($font) {
+        $img->text(Str::wordwrap(mb_convert_kana($post->title, 'a'), 12), 30, 20, function ($font) {
             $font->file(config('artisans.font'));
             $font->size(62);
             $font->color(config('artisans.primary'));
