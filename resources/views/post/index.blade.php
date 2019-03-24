@@ -23,9 +23,6 @@
                 @endauth
 
                 @include('post.posts')
-
-                {{ $posts->links() }}
-
             </div>
         </div>
     </div>

@@ -47,10 +47,10 @@ class Post extends Model implements Feedable
     {
         //TODO:後で変更
         //$expired = now()->subRealDays(30);
-        $expired = now()->subRealDays(Starter::expired());
+        //$expired = now()->subRealDays(Starter::expired());
 
         return $query->latest('updated_at')
-                     ->where('updated_at', '>=', $expired)
+            //->where('updated_at', '>=', $expired)
                      ->with('user');
     }
 

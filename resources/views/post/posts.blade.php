@@ -1,6 +1,6 @@
 <article class="message is-primary mb-1">
     <div class="message-header">
-        <p>募集したい側</p>
+        <p>募集したい側（{{ $posts->total() }}）</p>
     </div>
     <div class="message-body is-paddingless has-background-white">
         @if(Starter::can(config('artisans.starter.step1')))
@@ -49,6 +49,9 @@
         @else
             準備中。ユーザーがある程度増えたら開始。
         @endif
-
     </div>
 </article>
+
+<div class="mb-1">
+    {{ $posts->onEachSide(2)->links() }}
+</div>

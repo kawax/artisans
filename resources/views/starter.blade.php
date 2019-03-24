@@ -9,19 +9,19 @@
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">{{ config('artisans.starter.step1') }}</p>
-                <p class="title is-5">募集投稿解放<br>掲載期間10日</p>
+                <p class="title is-5">募集投稿解放</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">{{ config('artisans.starter.step2') }}</p>
-                <p class="title is-5">募集検索<br>掲載20日</p>
+                <p class="title is-5">募集検索</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">{{ config('artisans.starter.step3') }}</p>
-                <p class="title is-5">Chrome拡張開発開始<br>掲載30日</p>
+                <p class="title is-5">Chrome拡張開発開始</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
@@ -32,6 +32,9 @@
         </div>
     </nav>
 
-    <progress class="progress is-primary is-large" value="{{ $user_count }}" max="{{ config('artisans.starter.step4') }}"></progress>
+    <progress class="progress is-primary is-large"
+              value="{{ $user_count }}"
+              max="{{ config('artisans.starter.step4') }}">
+    </progress>
 
 </div>

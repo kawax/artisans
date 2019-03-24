@@ -18,7 +18,6 @@ class PostObserver
      */
     public function created(Post $post)
     {
-        cache()->forget('posts.all');
         cache()->forget('feed.posts');
 
         Notification::route('discord', config('services.discord.channel.post'))
@@ -35,7 +34,6 @@ class PostObserver
      */
     public function updated(Post $post)
     {
-        cache()->forget('posts.all');
         cache()->forget('feed.posts');
 
         Notification::route('discord', config('services.discord.channel.post'))
@@ -52,7 +50,6 @@ class PostObserver
      */
     public function deleted(Post $post)
     {
-        cache()->forget('posts.all');
         cache()->forget('feed.posts');
 
         info('deleted', $post->toArray());

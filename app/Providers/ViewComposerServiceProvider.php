@@ -18,7 +18,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer(
-            ['home', 'tag.show'],
+            'post.posts',
             PostComposer::class
         );
 
