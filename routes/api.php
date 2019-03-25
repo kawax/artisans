@@ -15,5 +15,5 @@ use Illuminate\Http\Request;
 
 Route::namespace('Api')->group(function () {
     Route::get('user', 'UserController');
-    Route::get('post', 'PostController')->middleware(['starter:' . config('artisans.starter.step1')]);
+    Route::get('post', 'PostController');
 });
