@@ -55,9 +55,9 @@
                         </div>
 
                         <div class="content">
-                            <p class="has-text-centered has-text-primary has-text-weight-bold is-size-2">
+                            <h2 class="has-text-centered has-text-primary has-text-weight-bold is-size-2">
                                 {{ $post->title }}
-                            </p>
+                            </h2>
 
                             <article class="message is-primary">
                                 <div class="message-body">
