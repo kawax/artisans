@@ -24,7 +24,7 @@ class UserObserver
 
         Notification::route('discord', config('services.discord.channel.user'))
                     ->route('slack', config('services.slack.user'))
-                    ->notify((new UserNotification($user, 'created'))->delay(now()->addMinutes(10)));
+                    ->notify((new UserNotification($user, 'created'))->delay(now()->addMinutes(5)));
     }
 
     /**
