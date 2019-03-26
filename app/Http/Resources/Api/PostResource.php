@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\MarkDown;
+use App\Markdown;
 
 class PostResource extends JsonResource
 {

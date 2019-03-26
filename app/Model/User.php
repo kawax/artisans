@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Builder;
 
-use App\MarkDown;
+use App\Markdown;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;

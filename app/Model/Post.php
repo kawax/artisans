@@ -5,7 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
-use App\MarkDown;
+use App\Markdown;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;

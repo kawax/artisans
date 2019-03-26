@@ -5,7 +5,7 @@ namespace App;
 use Parsedown;
 use Illuminate\Support\HtmlString;
 
-class MarkDown
+class Markdown
 {
     /**
      * Parse the given Markdown text into HTML.
