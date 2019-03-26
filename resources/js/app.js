@@ -11,6 +11,13 @@ import Buefy from 'buefy'
 
 Vue.use(Buefy)
 
+import VueLazyload from "vue-lazyload";
+
+Vue.use(VueLazyload, {
+    error: "https://dummyimage.com/64x64/e74530/ffffff.jpg&text=L",
+    loading: "https://dummyimage.com/64x64/e74530/ffffff.jpg&text=L"
+});
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

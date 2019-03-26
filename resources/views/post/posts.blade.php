@@ -1,4 +1,4 @@
-<article class="message is-primary mb-1">
+<article class="message is-primary mb-1" v-lazy-container="{ selector: 'img[lazyload=on]' }">
     <div class="message-header">
         <p>募集したい側（{{ $posts->total() }}）</p>
     </div>
@@ -7,7 +7,7 @@
             @foreach($posts as $post)
                 <article class="media">
                     <figure class="media-left image is-32x32">
-                        <img src="{{ $post->user->avatar }}"
+                        <img data-src="{{ $post->user->avatar }}"
                              class="is-rounded"
                              alt="{{ $post->user->name }}"
                              title="{{ $post->user->name }}"

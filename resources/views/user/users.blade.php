@@ -1,4 +1,4 @@
-<article class="message is-primary">
+<article class="message is-primary" v-lazy-container="{ selector: 'img[lazyload=on]' }">
     <div class="message-header">
         <p>Laravel職人（{{ $users->total() }}）</p>
     </div>
@@ -10,7 +10,12 @@
                 <tr>
                     <td>
                         <figure class="image is-32x32">
-                            <img src="{{ $user->avatar }}" class="is-rounded" alt="{{ $user->name }}" title="{{ $user->name }}" lazyload="on">
+                            <img data-src="{{ $user->avatar }}"
+                                 class="is-rounded"
+                                 alt="{{ $user->name }}"
+                                 title="{{ $user->name }}"
+                                 lazyload="on"
+                            >
                         </figure>
                     </td>
                     <td>
