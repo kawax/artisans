@@ -23,7 +23,7 @@
                             <article class="message is-dark">
                                 <div class="message-body">
                                     {{--<img src="{{ route('image.post', $post) }}" alt="{{ $post->title }}">--}}
-                                    @markdown(Str::limit($post->message, 300))
+                                    @markdown($post->message)
                                 </div>
                             </article>
                         </div>
