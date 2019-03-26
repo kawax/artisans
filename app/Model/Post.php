@@ -5,7 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
-use Illuminate\Mail\Markdown;
+use App\MarkDown;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
@@ -62,7 +62,7 @@ class Post extends Model implements Feedable
         return FeedItem::create()
                        ->id('post/' . $this->id)
                        ->title($this->title ?? 'no title')
-                       ->summary(Markdown::parse(e($this->message)))
+                       ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)
                        ->link(route('post.show', $this))
                        ->author($this->user->name);

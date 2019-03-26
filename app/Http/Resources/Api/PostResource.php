@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Mail\Markdown;
+use App\MarkDown;
 
 class PostResource extends JsonResource
 {
@@ -19,7 +19,7 @@ class PostResource extends JsonResource
         return [
             'id'         => $this->id,
             'title'      => $this->title,
-            'message'    => Markdown::parse(e($this->message))->toHtml(),
+            'message'    => Markdown::parse($this->message)->toHtml(),
             'url'        => route('post.show', $this),
             'image'      => route('image.post', $this),
             'user'       => $this->user->only([

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Builder;
 
-use Illuminate\Mail\Markdown;
+use App\MarkDown;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
@@ -88,7 +88,7 @@ class User extends Authenticatable implements Feedable
         return FeedItem::create()
                        ->id('user/' . $this->id)
                        ->title($this->title ?? $this->name ?? 'no title')
-                       ->summary(Markdown::parse(e($this->message)))
+                       ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)
                        ->link(route('user', $this))
                        ->author($this->name);

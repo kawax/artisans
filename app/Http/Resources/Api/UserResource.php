@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Mail\Markdown;
+use App\MarkDown;
 
 class UserResource extends JsonResource
 {
@@ -21,7 +21,7 @@ class UserResource extends JsonResource
             'name'       => $this->name,
             'avatar'     => $this->avatar,
             'title'      => $this->title,
-            'message'    => Markdown::parse(e($this->message))->toHtml(),
+            'message'    => Markdown::parse($this->message)->toHtml(),
             'url'        => route('user', $this),
             'image'      => route('image.user', $this),
             'tags'       => $this->tags()->pluck('tag'),
