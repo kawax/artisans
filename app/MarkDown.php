@@ -16,8 +16,8 @@ class MarkDown
      */
     public static function parse($text)
     {
-        $parsedown = new Parsedown;
+        $parsedown = (new Parsedown)->setSafeMode(true);
 
-        return new HtmlString($parsedown->setSafeMode(true)->text($text));
+        return new HtmlString($parsedown->text($text));
     }
 }
