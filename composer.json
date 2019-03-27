@@ -22,13 +22,13 @@
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.4",
+        "laravel-notification-channels/discord": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/horizon": "^3.0",
         "laravel/slack-notification-channel": "^2.0",
         "laravel/socialite": "^4.1",
         "laravel/tinker": "^1.0",
         "predis/predis": "^1.1",
-        "laravel-notification-channels/discord": "^1.0",
         "spatie/laravel-feed": "^2.2",
         "tomschlick/laravel-http2-server-push": "dev-patch"
     },
@@ -40,6 +40,9 @@
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^7.5"
+    },
+    "conflict": {
+        "cakephp/core": "*"
     },
     "config": {
         "optimize-autoloader": true,
