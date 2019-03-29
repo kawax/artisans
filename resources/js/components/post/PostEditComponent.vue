@@ -42,12 +42,15 @@
         },
         methods: {
             async post () {
-                const res = await axios.put('/post/' + this.postId, {
-                    title: this.title,
-                    message: this.message,
-                })
-
-                document.location = '/post/' + this.postId
+                try {
+                    const res = await axios.put('/post/' + this.postId, {
+                        title: this.title,
+                        message: this.message,
+                    })
+                }
+                finally {
+                    document.location = '/post/' + this.postId
+                }
             },
         },
     }

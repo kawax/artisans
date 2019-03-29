@@ -61,14 +61,17 @@
         },
         methods: {
             async post () {
-                const res = await axios.put('/profile', {
-                    title: this.title,
-                    message: this.message,
-                    hidden: this.hidden,
-                    tags: this.tags,
-                })
-
-                document.location = '/@' + this.name
+                try {
+                    const res = await axios.put('/profile', {
+                        title: this.title,
+                        message: this.message,
+                        hidden: this.hidden,
+                        tags: this.tags,
+                    })
+                }
+                finally {
+                    document.location = '/@' + this.name
+                }
             },
         },
     }

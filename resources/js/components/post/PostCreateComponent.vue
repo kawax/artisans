@@ -17,7 +17,10 @@
         </div>
 
 
-        <button class="button is-fullwidth is-primary" :disabled="!terms || title.length === 0 || message.length === 0" @click="post">送信</button>
+        <button class="button is-fullwidth is-primary"
+                :disabled="enablePost"
+                @click="post">送信
+        </button>
 
     </section>
 </template>
@@ -29,19 +32,25 @@
                 title: '',
                 message: '### 連絡方法',
                 terms: false,
+                errors: null,
             }
         },
-        mounted () {
-
+        computed: {
+            enablePost () {
+                return !this.terms || this.title.length === 0 || this.message.length === 0
+            },
         },
         methods: {
-            async post () {
-                const res = await axios.post('/post', {
+            post () {
+                axios.post('/post', {
                     title: this.title,
                     message: this.message,
+                }).then(res => {
+                    document.location = '/post/' + res.data.id
+                }).error(error => {
+                    this.errors = error.errors
+                    //console.log(error)
                 })
-
-                document.location = '/post/' + res.data.id
             },
         },
     }
