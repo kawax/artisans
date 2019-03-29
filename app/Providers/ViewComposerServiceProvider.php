@@ -23,7 +23,7 @@ class ViewComposerServiceProvider extends ServiceProvider
         );
 
         view()->composer(
-            'user.index',
+            ['home', 'user.index'],
             UserComposer::class
         );
 
