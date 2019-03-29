@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 
-use App\Model\Tag;
+use App\Jobs\ProfileUpdateJob;
 
 class UpdateController extends Controller
 {
@@ -14,28 +15,13 @@ class UpdateController extends Controller
      *
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  Request  $request
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function __invoke(Request $request)
     {
-        $request->user()->fill($request->only([
-            'title',
-            'message',
-            'hidden',
-        ]))->save();
-
-
-        $tag_id = [];
-
-        foreach ($request->tags as $tag) {
-            $tag_id[] = Tag::firstOrCreate([
-                'tag' => $tag,
-            ])->id;
-        }
-
-        $request->user()->tags()->sync($tag_id);
+        ProfileUpdateJob::dispatchNow($request);
 
         return response()->json(['message' => 'OK']);
     }
