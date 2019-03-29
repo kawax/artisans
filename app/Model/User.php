@@ -8,14 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Builder;
 
-use App\Markdown;
-
 use Spatie\Feed\Feedable;
-use Spatie\Feed\FeedItem;
 
 class User extends Authenticatable implements Feedable
 {
     use Notifiable;
+    use Feed\UserFeed;
 
     public $incrementing = false;
 
@@ -78,33 +76,6 @@ class User extends Authenticatable implements Feedable
                      ->whereHidden(false)
                      ->with('tags')
                      ->paginate($page);
-    }
-
-    /**
-     * @return array|FeedItem
-     */
-    public function toFeedItem()
-    {
-        return FeedItem::create()
-                       ->id('user/' . $this->id)
-                       ->title($this->title ?? $this->name ?? 'no title')
-                       ->summary(Markdown::parse($this->message))
-                       ->updated($this->updated_at)
-                       ->link(route('user', $this))
-                       ->author($this->name);
-    }
-
-    /**
-     * @return mixed
-     */
-    public static function getFeedItems()
-    {
-        return cache()->remember('feed.users', now()->addHours(12), function () {
-            return self::latest()
-                       ->whereHidden(false)
-                       ->take(50)
-                       ->get();
-        });
     }
 
     /**
