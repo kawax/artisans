@@ -26,6 +26,8 @@ class MacroServiceProvider extends ServiceProvider
     public function boot()
     {
         Str::macro('wordwrap', function ($str, $width = 10, $break = PHP_EOL) {
+            $str = mb_convert_kana($str, 'a');
+
             $c = mb_strlen($str);
             $arr = [];
             for ($i = 0; $i <= $c; $i += $width) {
