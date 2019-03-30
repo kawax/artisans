@@ -4,7 +4,7 @@ namespace App\Model\Feed;
 
 use Spatie\Feed\FeedItem;
 
-use App\Markdown;
+use App\Support\Markdown;
 
 trait UserFeed
 {
