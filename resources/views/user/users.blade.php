@@ -1,6 +1,7 @@
 <article class="message is-primary" v-lazy-container="{ selector: 'img[lazyload=on]' }">
     <div class="message-header">
-        <p>Laravel職人（{{ $users->total() }}）</p>
+        <p>Laravel職人</p>
+        {{--        （{{ $users->total() }}）--}}
     </div>
     <div class="message-body is-paddingless">
 
@@ -45,5 +46,5 @@
 </article>
 
 <div class="mb-1">
-    {{ $users->onEachSide(2)->links() }}
+    {{--    {{ $users->onEachSide(2)->links() }}--}}
 </div>

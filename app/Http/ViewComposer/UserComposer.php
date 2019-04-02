@@ -15,7 +15,11 @@ class UserComposer
 
     public function compose(View $view)
     {
-        $users = User::artisans();
+        //$users = User::artisans();
+        $users = User::inRandomOrder()
+                     ->whereHidden(false)
+                     ->with('tags')
+                     ->get();
 
         $view->with(compact('users'));
     }
