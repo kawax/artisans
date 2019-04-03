@@ -12,9 +12,11 @@ class PostObserver
     /**
      * Handle the post "created" event.
      *
-     * @param  \App\Model\Post $post
+     * @param  Post  $post
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function created(Post $post)
     {
@@ -28,9 +30,11 @@ class PostObserver
     /**
      * Handle the post "updated" event.
      *
-     * @param  \App\Model\Post $post
+     * @param  Post  $post
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function updated(Post $post)
     {
@@ -44,21 +48,25 @@ class PostObserver
     /**
      * Handle the post "deleted" event.
      *
-     * @param  \App\Model\Post $post
+     * @param  Post  $post
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function deleted(Post $post)
     {
         cache()->forget('feed.posts');
 
-        info('deleted', $post->toArray());
+        Notification::route('discord', config('services.discord.channel.post'))
+                    ->route('slack', config('services.slack.post'))
+                    ->notify((new PostNotification($post, 'deleted'))->delay(now()->addMinutes(5)));
     }
 
     /**
      * Handle the post "restored" event.
      *
-     * @param  \App\Model\Post $post
+     * @param  Post  $post
      *
      * @return void
      */
@@ -70,7 +78,7 @@ class PostObserver
     /**
      * Handle the post "force deleted" event.
      *
-     * @param  \App\Model\Post $post
+     * @param  Post  $post
      *
      * @return void
      */
