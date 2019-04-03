@@ -12,13 +12,15 @@ class UserObserver
     /**
      * Handle the user "created" event.
      *
-     * @param  \App\Model\User $user
+     * @param  User  $user
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function created(User $user)
     {
-        info('created', $user->toArray());
+        //info('created', $user->toArray());
 
         cache()->forget('feed.users');
 
@@ -30,27 +32,31 @@ class UserObserver
     /**
      * Handle the user "updated" event.
      *
-     * @param  \App\Model\User $user
+     * @param  User  $user
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function updated(User $user)
     {
-        info('updated', $user->toArray());
+        //info('updated', $user->toArray());
 
         cache()->forget('feed.users');
 
-        //        Notification::route('discord', config('services.discord.channel.user'))
-        //                    ->route('slack', config('services.slack.user'))
-        //                    ->notify(new UserNotification($user, 'updated'));
+        Notification::route('discord', config('services.discord.channel.user'))
+                    ->route('slack', config('services.slack.user'))
+                    ->notify((new UserNotification($user, 'updated'))->delay(now()->addMinutes(5)));
     }
 
     /**
      * Handle the user "deleted" event.
      *
-     * @param  \App\Model\User $user
+     * @param  User  $user
      *
      * @return void
+     *
+     * @throws \Exception
      */
     public function deleted(User $user)
     {
@@ -62,7 +68,7 @@ class UserObserver
     /**
      * Handle the user "restored" event.
      *
-     * @param  \App\Model\User $user
+     * @param  User  $user
      *
      * @return void
      */
@@ -74,7 +80,7 @@ class UserObserver
     /**
      * Handle the user "force deleted" event.
      *
-     * @param  \App\Model\User $user
+     * @param  User  $user
      *
      * @return void
      */
