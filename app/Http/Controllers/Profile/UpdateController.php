@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Profile;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 
 use App\Jobs\ProfileUpdateJob;
+use App\Http\Requests\User\UpdateRequest;
 
 class UpdateController extends Controller
 {
@@ -15,11 +15,11 @@ class UpdateController extends Controller
      *
      * Handle the incoming request.
      *
-     * @param  Request  $request
+     * @param  UpdateRequest  $request
      *
      * @return Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(UpdateRequest $request)
     {
         ProfileUpdateJob::dispatchNow($request);
 
