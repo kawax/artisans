@@ -11,7 +11,7 @@
                              class="is-rounded"
                              alt="{{ $post->user->name }}"
                              title="{{ $post->user->name }}"
-                             lazyload="on">
+                        >
                     </figure>
                     <div class="media-content">
                         <div class="content">

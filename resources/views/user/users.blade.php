@@ -15,7 +15,6 @@
                                  class="is-rounded"
                                  alt="{{ $user->name }}"
                                  title="{{ $user->name }}"
-                                 lazyload="on"
                             >
                         </figure>
                     </td>
