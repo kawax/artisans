@@ -18,7 +18,7 @@
                             すべて<code>{{ route('pages.api') }}</code>以下へ。
                             認証は不要。CORS対応。レート制限は1分間に60回。
 
-                            messageのhtmlはサニタイズ後のMarkdownをhtmlに変換してるのでそのまま表示しても安全（バグがなければ）。その他はエスケープが必要。
+                            <p>messageのhtmlはサニタイズ後のMarkdownをhtmlに変換してるのでそのまま表示しても安全（バグがなければ）。その他はエスケープが必要。</p>
                         </div>
                     </article>
 
