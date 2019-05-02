@@ -11,10 +11,11 @@
                 <tr>
                     <td>
                         <figure class="image is-32x32">
-                            <img data-src="{{ $user->avatar }}"
+                            <img src="{{ $user->avatar }}"
                                  class="is-rounded"
                                  alt="{{ $user->name }}"
                                  title="{{ $user->name }}"
+                                 loading="lazy"
                             >
                         </figure>
                     </td>

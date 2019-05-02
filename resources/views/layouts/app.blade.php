@@ -17,9 +17,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-    @if(Starter::can(config('artisans.starter.step1')))
-        @include('feed::links')
-    @endif
+    @include('feed::links')
 
     @yield('card')
 
@@ -55,9 +53,7 @@
                             プロフィール
                         </a>
 
-                        @if(Starter::can(config('artisans.starter.step1')))
-                            <a href="{{ route('post.create') }}" class="navbar-item">新規募集</a>
-                        @endif
+                        <a href="{{ route('post.create') }}" class="navbar-item">新規募集</a>
 
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>

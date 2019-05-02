@@ -20,7 +20,6 @@ class PostTest extends TestCase
 
     public function testStore()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $response = $this->actingAs($user1)
@@ -39,7 +38,6 @@ class PostTest extends TestCase
 
     public function testEdit()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -53,7 +51,6 @@ class PostTest extends TestCase
 
     public function testEditDataAnother()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -61,14 +58,13 @@ class PostTest extends TestCase
         $user2 = factory(User::class)->create();
 
         $response = $this->actingAs($user2)
-                         ->get('post/edit/' . $post->id);
+                         ->get('post/edit/'.$post->id);
 
         $response->assertStatus(403);
     }
 
     public function testUpdate()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -89,7 +85,6 @@ class PostTest extends TestCase
 
     public function testUpdateAnother()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -111,7 +106,6 @@ class PostTest extends TestCase
 
     public function testDestroy()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -129,7 +123,6 @@ class PostTest extends TestCase
 
     public function testDestroyAnother()
     {
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
@@ -151,7 +144,6 @@ class PostTest extends TestCase
     {
         Notification::fake();
 
-        $users = factory(User::class, 100)->create();
         $user1 = factory(User::class)->create();
 
         $post = $user1->posts()->create(factory(Post::class)->make()->toArray());

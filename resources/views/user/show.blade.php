@@ -91,28 +91,25 @@
                     </div>
                 </div>
 
-                @if(Starter::can(config('artisans.starter.step1')))
-                    @if($user->posts->count() > 0)
-                        <article class="message is-primary">
-                            <div class="message-header">
-                                <p>最近の募集</p>
-                            </div>
-                            <div class="message-body content">
-                                <ul>
-                                    @foreach($user->posts as $post)
-                                        <li>
-                                            <a href="{{ route('post.show', $post) }}"
-                                               class="has-text-weight-semibold has-text-primary">
-                                                {{ $post->title }}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </article>
-                    @endif
+                @if($user->posts->count() > 0)
+                    <article class="message is-primary">
+                        <div class="message-header">
+                            <p>最近の募集</p>
+                        </div>
+                        <div class="message-body content">
+                            <ul>
+                                @foreach($user->posts as $post)
+                                    <li>
+                                        <a href="{{ route('post.show', $post) }}"
+                                           class="has-text-weight-semibold has-text-primary">
+                                            {{ $post->title }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </article>
                 @endif
-
 
                 @auth
                     @if(auth()->user()->id === $user->id)

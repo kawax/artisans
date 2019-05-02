@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Http\ViewComposer\PostComposer;
 use App\Http\ViewComposer\UserComposer;
-use App\Http\ViewComposer\StarterComposer;
 
 class ViewComposerServiceProvider extends ServiceProvider
 {
@@ -25,11 +24,6 @@ class ViewComposerServiceProvider extends ServiceProvider
         view()->composer(
             ['home', 'user.index'],
             UserComposer::class
-        );
-
-        view()->composer(
-            'starter',
-            StarterComposer::class
         );
     }
 }

@@ -116,10 +116,7 @@
                     </div>
                 @endauth
 
-                @if(Starter::can(config('artisans.starter.step2')))
-                    <post-search-component></post-search-component>
-                @endif
-
+                <post-search-component></post-search-component>
 
             </div>
         </div>

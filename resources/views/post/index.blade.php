@@ -11,15 +11,11 @@
 
             <div class="column is-full">
 
-                @if(Starter::can(config('artisans.starter.step2')))
-                    <post-search-component></post-search-component>
-                @endif
+                <post-search-component></post-search-component>
 
                 @auth
-                    @if(Starter::can(config('artisans.starter.step1')))
-                        <a href="{{ route('post.create') }}"
-                           class="button is-medium is-primary is-outlined is-fullwidth mb-1">新規募集</a>
-                    @endif
+                    <a href="{{ route('post.create') }}"
+                       class="button is-medium is-primary is-outlined is-fullwidth mb-1">新規募集</a>
                 @endauth
 
                 @include('post.posts')

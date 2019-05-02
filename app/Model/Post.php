@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 use Spatie\Feed\Feedable;
 
-use App\Starter;
-
 class Post extends Model implements Feedable
 {
     use Feed\PostFeed;
@@ -24,7 +22,7 @@ class Post extends Model implements Feedable
     ];
 
     /**
-     * @param  Builder $query
+     * @param  Builder  $query
      * @param  string  $search
      *
      * @return Builder
@@ -32,24 +30,19 @@ class Post extends Model implements Feedable
     public function scopeSearch($query, ?string $search)
     {
         return $query->when($search, function (Builder $query, $search) {
-            return $query->where('title', 'LIKE', '%' . $search . '%')
-                         ->orWhere('message', 'LIKE', '%' . $search . '%');
+            return $query->where('title', 'LIKE', '%'.$search.'%')
+                         ->orWhere('message', 'LIKE', '%'.$search.'%');
         });
     }
 
     /**
-     * @param  Builder $query
+     * @param  Builder  $query
      *
      * @return Builder
      */
     public function scopeJobs($query)
     {
-        //TODO:後で変更
-        //$expired = now()->subRealDays(30);
-        //$expired = now()->subRealDays(Starter::expired());
-
         return $query->latest('updated_at')
-            //->where('updated_at', '>=', $expired)
                      ->with('user');
     }
 
