@@ -13,7 +13,7 @@
                 {{-- Array Of Links --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
-                        @if ($page == $paginator->currentPage())
+                        @if ($page === $paginator->currentPage())
                             <li>
                                 <a class="pagination-link is-current" aria-label="Page {{ $page }}"
                                    aria-current="page">{{ $page }}</a>
