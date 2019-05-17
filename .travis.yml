@@ -19,7 +19,7 @@ cache:
 
 script:
 - vendor/bin/phpunit
-- php artisan insights
+- php artisan insights --no-interaction
 
 after_success:
    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then curl -s "$FORGE"; fi'
