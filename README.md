@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/kawax/artisans.svg?branch=master)](https://travis-ci.com/kawax/artisans)
 ![Style CI](https://github.styleci.io/repos/175811820/shield)
 [![Maintainability](https://api.codeclimate.com/v1/badges/88f07994dc91784c2877/maintainability)](https://codeclimate.com/github/kawax/artisans/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/88f07994dc91784c2877/test_coverage)](https://codeclimate.com/github/kawax/artisans/test_coverage)
 
 WIP
 
