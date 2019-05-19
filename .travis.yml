@@ -8,6 +8,9 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source --no-progress --no-suggest
   - cp .env.example .env
   - php artisan key:generate
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 branches:
   only:
@@ -20,6 +23,9 @@ cache:
 script:
 - vendor/bin/phpunit
 - php artisan insights --no-interaction
+
+after_script:
+  - ./cc-test-reporter after-build  -t clover --exit-code $TRAVIS_TEST_RESULT
 
 after_success:
    - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then curl -s "$FORGE"; fi'
