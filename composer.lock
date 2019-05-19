@@ -5625,19 +5625,20 @@
         },
         {
             "name": "nunomaduro/phpinsights",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/phpinsights.git",
-                "reference": "bc68204b316ccd9c9520ada6adc7ddda99009c3a"
+                "reference": "f5d3902d638db4f8ea9553573221eace2a06baa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/phpinsights/zipball/bc68204b316ccd9c9520ada6adc7ddda99009c3a",
-                "reference": "bc68204b316ccd9c9520ada6adc7ddda99009c3a",
+                "url": "https://api.github.com/repos/nunomaduro/phpinsights/zipball/f5d3902d638db4f8ea9553573221eace2a06baa4",
+                "reference": "f5d3902d638db4f8ea9553573221eace2a06baa4",
                 "shasum": ""
             },
             "require": {
+                "ext-iconv": "*",
                 "ext-json": "*",
                 "league/container": "^3.2",
                 "object-calisthenics/phpcs-calisthenics-rules": "^3.5",
@@ -5697,7 +5698,7 @@
                 "quality",
                 "source"
             ],
-            "time": "2019-05-16T21:35:16+00:00"
+            "time": "2019-05-18T19:18:31+00:00"
         },
         {
             "name": "object-calisthenics/phpcs-calisthenics-rules",
