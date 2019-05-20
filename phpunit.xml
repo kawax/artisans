@@ -26,6 +26,8 @@
                 <directory suffix=".php">./app/Notifications/</directory>
                 <directory suffix=".php">./app/Observers/</directory>
                 <directory suffix=".php">./app/Policies/</directory>
+                <directory>./app/Http/Kernel.php</directory>
+                <directory>./app/Http/Controllers/Controller.php</directory>
             </exclude>
         </whitelist>
     </filter>
