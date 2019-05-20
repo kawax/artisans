@@ -18,6 +18,36 @@ class PostTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function testIndex()
+    {
+        $response = $this->get(route('post.index'));
+
+        $response->assertSuccessful();
+    }
+
+    public function testShow()
+    {
+        $user1 = factory(User::class)->create();
+
+        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+
+        $response = $this->actingAs($user1)
+                         ->get(route('post.show', $post));
+
+        $response->assertSuccessful()
+                 ->assertViewHas('post');
+    }
+
+    public function testCreate()
+    {
+        $user1 = factory(User::class)->create();
+
+        $response = $this->actingAs($user1)
+                         ->get(route('post.create'));
+
+        $response->assertSuccessful();
+    }
+
     public function testStore()
     {
         $user1 = factory(User::class)->create();
@@ -49,6 +79,23 @@ class PostTest extends TestCase
                  ->assertViewHas('post');
     }
 
+    public function testEditData()
+    {
+        $user1 = factory(User::class)->create();
+
+        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+
+        $response = $this->actingAs($user1)
+                         ->get('post/edit/'.$post->id);
+
+        $response->assertSuccessful()
+                 ->assertJsonStructure([
+                     'id',
+                     'title',
+                     'message',
+                 ]);
+    }
+
     public function testEditDataAnother()
     {
         $user1 = factory(User::class)->create();
@@ -71,16 +118,18 @@ class PostTest extends TestCase
 
         $response = $this->actingAs($user1)
                          ->put(route('post.update', $post), [
-                             'title' => 'test',
+                             'title'   => 'test',
+                             'message' => 'test',
                          ]);
 
-        $this->assertDatabaseMissing('posts', [
+        $this->assertDatabaseHas('posts', [
             'id'      => $post->id,
             'user_id' => $user1->id,
             'title'   => 'test',
+            'message' => 'test',
         ]);
 
-        $response->assertRedirect();
+        $response->assertSuccessful();
     }
 
     public function testUpdateAnother()
@@ -96,10 +145,36 @@ class PostTest extends TestCase
                              'title' => 'test',
                          ]);
 
-        $this->assertDatabaseHas('posts', [
-            'id'      => $post->id,
-            'user_id' => $user1->id,
+        $this->assertDatabaseMissing('posts', [
+            'id'    => $post->id,
+            'title' => 'test',
         ]);
+
+        $response->assertStatus(403);
+    }
+
+    public function testDestroyConfirm()
+    {
+        $user1 = factory(User::class)->create();
+
+        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+
+        $response = $this->actingAs($user1)
+                         ->get(route('post.confirm', $post));
+
+        $response->assertViewHas('post', $post);
+    }
+
+    public function testDestroyConfirmAnother()
+    {
+        $user1 = factory(User::class)->create();
+
+        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+
+        $user2 = factory(User::class)->create();
+
+        $response = $this->actingAs($user2)
+                         ->get(route('post.confirm', $post));
 
         $response->assertStatus(403);
     }
