@@ -73,7 +73,7 @@ class ApiTest extends TestCase
         $user->posts()->saveMany(factory(Post::class, 100)->make());
 
         $response = $this->withoutMiddleware()
-                         ->get('/api/post');
+                         ->get('/api/post?q=a');
 
         $response->assertStatus(200)
                  ->assertJson([
