@@ -23,6 +23,9 @@
             <exclude>
                 <directory suffix=".php">./app/Http/Middleware/</directory>
                 <directory suffix=".php">./app/Providers/</directory>
+                <directory suffix=".php">./app/Notifications/</directory>
+                <directory suffix=".php">./app/Observers/</directory>
+                <directory suffix=".php">./app/Policies/</directory>
             </exclude>
         </whitelist>
     </filter>
