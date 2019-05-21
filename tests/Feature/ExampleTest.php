@@ -76,12 +76,13 @@ class ExampleTest extends TestCase
 
     public function testCallback()
     {
-        Socialite::shouldReceive('driver->user')->andReturn(new class
-        {
-            public $id       = 'id';
-            public $nickname = 'name';
-            public $avatar   = 'avatar';
-        });
+        $user = (new \Laravel\Socialite\Two\User())->map([
+            'id'       => 'id',
+            'nickname' => 'name',
+            'avatar'   => 'avatar',
+        ]);
+
+        Socialite::shouldReceive('driver->user')->andReturn($user);
 
         $response = $this->get('/callback?code=test');
 
