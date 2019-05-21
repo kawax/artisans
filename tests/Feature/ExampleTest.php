@@ -8,6 +8,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Model\User;
 use App\Model\Tag;
 
+use Laravel\Socialite\Facades\Socialite;
+
 class ExampleTest extends TestCase
 {
     use RefreshDatabase;
@@ -69,5 +71,29 @@ class ExampleTest extends TestCase
         $response = $this->get('/logout');
 
         $response->assertRedirect();
+        $this->assertGuest();
+    }
+
+    public function testCallback()
+    {
+        Socialite::shouldReceive('driver->user')->andReturn(new class
+        {
+            public $id       = 'id';
+            public $nickname = 'name';
+            public $avatar   = 'avatar';
+        });
+
+        $response = $this->get('/callback?code=test');
+
+        $response->assertRedirect(route('user', 'name'));
+        $this->assertAuthenticated();
+    }
+
+    public function testCallbackFail()
+    {
+        $response = $this->get('/callback');
+
+        $response->assertRedirect('/');
+        $this->assertGuest();
     }
 }

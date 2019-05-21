@@ -22,7 +22,6 @@ class LoginController extends Controller
      * @param  Request  $request
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     * @codeCoverageIgnore
      */
     public function callback(Request $request)
     {
