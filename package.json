@@ -13,7 +13,7 @@
         "ide-helper:models": "php artisan ide-helper:models -N"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.7.2",
+        "@fortawesome/fontawesome-free": "^5.8.2",
         "axios": "^0.18",
         "buefy": "^0.7.3",
         "cross-env": "^5.1",
