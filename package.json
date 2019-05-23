@@ -19,7 +19,7 @@
         "cross-env": "^5.1",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
