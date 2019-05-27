@@ -4446,12 +4446,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-http2-server-push.git",
-                "reference": "5849ba481afcb34d941f34d40670adbdedac1ce8"
+                "reference": "270f5b833e379086b20b22fbee0ae0effbce2189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-http2-server-push/zipball/5849ba481afcb34d941f34d40670adbdedac1ce8",
-                "reference": "5849ba481afcb34d941f34d40670adbdedac1ce8",
+                "url": "https://api.github.com/repos/kawax/laravel-http2-server-push/zipball/270f5b833e379086b20b22fbee0ae0effbce2189",
+                "reference": "270f5b833e379086b20b22fbee0ae0effbce2189",
                 "shasum": ""
             },
             "require": {
@@ -4461,8 +4461,8 @@
                 "php": ">=7.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "^3.1",
-                "phpunit/phpunit": "^5.4"
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^7.5"
             },
             "type": "library",
             "extra": {
@@ -4498,7 +4498,7 @@
             "support": {
                 "source": "https://github.com/kawax/laravel-http2-server-push/tree/patch"
             },
-            "time": "2018-09-05T01:32:52+00:00"
+            "time": "2019-05-27T03:07:21+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
