@@ -63,7 +63,8 @@ class PostTest extends TestCase
             'title'   => 'test',
         ]);
 
-        $response->assertStatus(201);
+        $response->assertStatus(201)
+                 ->assertHeaderMissing('Link');
     }
 
     public function testEdit()

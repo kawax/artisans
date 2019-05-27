@@ -29,20 +29,25 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200)
                  ->assertViewHas('users')
-                 ->assertSee('test');
+                 ->assertSee('test')
+                 ->assertHeader('Link');
     }
 
     public function testUser()
     {
         $user = factory(User::class)->create([
-            'name' => 'test',
+            'name'    => 'test',
+            'title'   => '<script>title</script>',
+            'message' => '<script>message</script>',
         ]);
 
         $response = $this->get('/@test');
 
         $response->assertStatus(200)
                  ->assertViewHas('user')
-                 ->assertSee('test');
+                 ->assertSee('test')
+                 ->assertSee('&lt;script&gt;')
+                 ->assertDontSee('<script>');
     }
 
     public function testTag()

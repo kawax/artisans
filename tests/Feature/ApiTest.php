@@ -20,6 +20,7 @@ class ApiTest extends TestCase
         $response = $this->get('/api/user');
 
         $response->assertStatus(200)
+                 ->assertHeaderMissing('Link')
                  ->assertJson([
                      'meta' => [
                          'total' => 100,

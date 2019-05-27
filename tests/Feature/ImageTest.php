@@ -24,7 +24,9 @@ class ImageTest extends TestCase
     {
         $response = $this->get(route('image.home'));
 
-        $response->assertStatus(200);
+        $response->assertStatus(200)
+                 ->assertHeader('Content-Type', 'image/jpeg')
+                 ->assertHeaderMissing('Link');
     }
 
     public function testUser()
