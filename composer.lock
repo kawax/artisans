@@ -3005,16 +3005,16 @@
         },
         {
             "name": "revolution/laravel-server-push",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-server-push.git",
-                "reference": "41eeb690cbfe81305e534f36aaecd345708d7dfc"
+                "reference": "509b69e9c96c48a820df0f592379a002e4ba237c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/41eeb690cbfe81305e534f36aaecd345708d7dfc",
-                "reference": "41eeb690cbfe81305e534f36aaecd345708d7dfc",
+                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/509b69e9c96c48a820df0f592379a002e4ba237c",
+                "reference": "509b69e9c96c48a820df0f592379a002e4ba237c",
                 "shasum": ""
             },
             "require": {
@@ -3057,7 +3057,7 @@
                 "laravel",
                 "server-push"
             ],
-            "time": "2019-05-27T11:54:37+00:00"
+            "time": "2019-05-27T12:30:38+00:00"
         },
         {
             "name": "seld/jsonlint",
