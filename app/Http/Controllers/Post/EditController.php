@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Post;
 
+use App\Model\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-use App\Model\Post;
 
 class EditController extends Controller
 {

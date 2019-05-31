@@ -2,9 +2,8 @@
 
 namespace App\Http\Resources\Profile;
 
-use Illuminate\Http\Resources\Json\JsonResource;
-
 use Illuminate\Support\Arr;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
 {

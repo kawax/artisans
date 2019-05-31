@@ -2,17 +2,14 @@
 
 namespace App\Notifications;
 
+use App\Model\Post;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-
-use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
-
-use Illuminate\Notifications\Channels\SlackWebhookChannel;
+use NotificationChannels\Discord\DiscordChannel;
 use Illuminate\Notifications\Messages\SlackMessage;
-
-use App\Model\Post;
+use Illuminate\Notifications\Channels\SlackWebhookChannel;
 
 class PostNotification extends Notification implements ShouldQueue
 {

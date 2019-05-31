@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\Http\Resources\Profile\UserResource;
 
 class MeController extends Controller

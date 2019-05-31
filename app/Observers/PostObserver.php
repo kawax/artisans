@@ -2,10 +2,9 @@
 
 namespace App\Observers;
 
-use Illuminate\Support\Facades\Notification;
-
 use App\Model\Post;
 use App\Notifications\PostNotification;
+use Illuminate\Support\Facades\Notification;
 
 class PostObserver
 {

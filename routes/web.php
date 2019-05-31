@@ -45,10 +45,14 @@ Route::prefix('profile')
 Route::namespace('Post')->group(function () {
     Route::get('post/edit/{post}', 'EditController')
          ->middleware('can:update,post');
+
     Route::get('post/confirm/{post}', 'ConfirmController')
-         ->name('post.confirm')->middleware('can:delete,post');
+         ->name('post.confirm')
+         ->middleware('can:delete,post');
+
     Route::post('post/report/{post}', 'ReportController')
-         ->name('post.report')->middleware('auth');
+         ->name('post.report')
+         ->middleware('auth');
 });
 
 Route::resource('post', 'PostController');

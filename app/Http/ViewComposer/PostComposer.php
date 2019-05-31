@@ -2,9 +2,8 @@
 
 namespace App\Http\ViewComposer;
 
-use Illuminate\View\View;
-
 use App\Model\Post;
+use Illuminate\View\View;
 
 class PostComposer
 {

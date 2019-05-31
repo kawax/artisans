@@ -2,13 +2,12 @@
 
 namespace App\Model;
 
+use Spatie\Feed\Feedable;
 use Illuminate\Notifications\Notifiable;
-//use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use Illuminate\Database\Eloquent\Builder;
-
-use Spatie\Feed\Feedable;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class User extends Authenticatable implements Feedable
 {

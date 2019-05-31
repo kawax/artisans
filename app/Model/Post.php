@@ -2,10 +2,9 @@
 
 namespace App\Model;
 
+use Spatie\Feed\Feedable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-
-use Spatie\Feed\Feedable;
 
 class Post extends Model implements Feedable
 {

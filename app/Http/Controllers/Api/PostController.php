@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Model\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\Http\Resources\Api\PostResource;
-use App\Model\Post;
 
 class PostController extends Controller
 {

@@ -2,10 +2,9 @@
 
 namespace App\Observers;
 
-use Illuminate\Support\Facades\Notification;
-
 use App\Model\User;
 use App\Notifications\UserNotification;
+use Illuminate\Support\Facades\Notification;
 
 class UserObserver
 {

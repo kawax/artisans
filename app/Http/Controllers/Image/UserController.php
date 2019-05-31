@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Image;
 
+use App\Model\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-use App\Model\User;
 
 class UserController extends Controller
 {
