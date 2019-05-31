@@ -46,7 +46,7 @@ class Kernel extends HttpKernel
 
         'image' => [
             'bindings',
-            'cache.headers:etag;max_age=3600;s_maxage=3600'
+            'cache.headers:etag;max_age=3600;s_maxage=3600',
         ],
     ];
 

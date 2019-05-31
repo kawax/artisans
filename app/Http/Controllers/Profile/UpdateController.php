@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Profile;
 
-use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 
 use App\Jobs\ProfileUpdateJob;
@@ -17,7 +16,7 @@ class UpdateController extends Controller
      *
      * @param  UpdateRequest  $request
      *
-     * @return Response
+     * @return mixed
      */
     public function __invoke(UpdateRequest $request)
     {

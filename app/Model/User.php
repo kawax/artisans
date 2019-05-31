@@ -3,7 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Illuminate\Database\Eloquent\Builder;
@@ -50,7 +50,7 @@ class User extends Authenticatable implements Feedable
     ];
 
     /**
-     * @param  Builder $query
+     * @param  Builder  $query
      * @param  string  $search
      *
      * @return Builder
@@ -58,15 +58,15 @@ class User extends Authenticatable implements Feedable
     public function scopeSearch($query, ?string $search)
     {
         return $query->when($search, function (Builder $query, $search) {
-            return $query->where('title', 'LIKE', '%' . $search . '%')
-                         ->orWhere('message', 'LIKE', '%' . $search . '%')
-                         ->orWhere('name', 'LIKE', '%' . $search . '%');
+            return $query->where('title', 'LIKE', '%'.$search.'%')
+                         ->orWhere('message', 'LIKE', '%'.$search.'%')
+                         ->orWhere('name', 'LIKE', '%'.$search.'%');
         });
     }
 
     /**
-     * @param  Builder $query
-     * @param  int     $page
+     * @param  Builder  $query
+     * @param  int  $page
      *
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
@@ -89,18 +89,19 @@ class User extends Authenticatable implements Feedable
     }
 
     /**
-     * @param  mixed $value
+     * @param  mixed  $value
      *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
     public function resolveRouteBinding($value)
     {
-        return $this->whereName($value)->with([
-                'tags',
-                'posts' => function ($query) {
-                    $query->latest('updated_at')->limit(5);
-                },
-            ])->first() ?? abort(404);
+        return $this->whereName($value)
+                    ->with([
+                        'tags',
+                        'posts' => function ($query) {
+                            $query->latest('updated_at')->limit(5);
+                        },
+                    ])->first() ?? abort(404);
     }
 
     /**

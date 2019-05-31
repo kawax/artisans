@@ -31,8 +31,8 @@ class UserNotification extends Notification implements ShouldQueue
     /**
      * Create a new notification instance.
      *
-     * @param User   $user
-     * @param string $event
+     * @param  User  $user
+     * @param  string  $event
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class UserNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed $notifiable
+     * @param  mixed  $notifiable
      *
      * @return array
      */
@@ -73,12 +73,12 @@ class UserNotification extends Notification implements ShouldQueue
             'color'       => 15156272,
         ];
 
-        return DiscordMessage::create("[{$this->event}]" . PHP_EOL . route('user', $this->user));
+        return DiscordMessage::create("[{$this->event}]".PHP_EOL.route('user', $this->user));
     }
 
     public function toSlack($notifiable)
     {
-        return (new SlackMessage)->from('artisans')
-                                 ->content("[{$this->event}]" . PHP_EOL . route('user', $this->user));
+        return (new SlackMessage())->from('artisans')
+                                   ->content("[{$this->event}]".PHP_EOL.route('user', $this->user));
     }
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Model\Post;
-use Illuminate\Http\Request;
 use App\Http\Requests\Post\StoreRequest;
 
 class PostController extends Controller
@@ -44,12 +43,12 @@ class PostController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $post = $request->user()->posts()->create($request->only([
-            'title',
-            'message',
-        ]));
-
-        return $post;
+        return $request->user()
+                       ->posts()
+                       ->create($request->only([
+                           'title',
+                           'message',
+                       ]));
     }
 
     /**

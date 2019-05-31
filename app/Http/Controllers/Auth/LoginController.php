@@ -37,14 +37,12 @@ class LoginController extends Controller
         /**
          * @var \App\Model\User $loginUser
          */
-        $loginUser = User::updateOrCreate(
-            [
-                'id' => $user->id,
-            ],
-            [
-                'name'   => $user->nickname,
-                'avatar' => $user->avatar,
-            ]);
+        $loginUser = User::updateOrCreate([
+            'id' => $user->id,
+        ], [
+            'name'   => $user->nickname,
+            'avatar' => $user->avatar,
+        ]);
 
         auth()->login($loginUser, true);
 

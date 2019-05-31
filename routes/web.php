@@ -12,9 +12,12 @@
 */
 
 Route::namespace('Auth')->group(function () {
-    Route::get('login', 'LoginController@login')->name('login');
-    Route::get('callback', 'LoginController@callback')->name('callback');
-    Route::any('logout', 'LoginController@logout')->name('logout');
+    Route::get('login', 'LoginController@login')
+         ->name('login');
+    Route::get('callback', 'LoginController@callback')
+         ->name('callback');
+    Route::any('logout', 'LoginController@logout')
+         ->name('logout');
 });
 
 Route::get('@{user}', 'UserController')->name('user');
@@ -22,19 +25,30 @@ Route::view('user', 'user.index')->name('user.index');
 
 Route::get('tag/{tag}', 'TagController')->name('tag');
 
-Route::prefix('profile')->namespace('Profile')->middleware('auth')->group(function () {
-    Route::view('/', 'profile.edit')->name('profile.edit');
-    Route::get('/me', 'MeController')->name('profile.me');
-    Route::put('/', 'UpdateController')->name('profile.update');
+Route::prefix('profile')
+     ->namespace('Profile')
+     ->middleware('auth')
+     ->group(function () {
+         Route::view('/', 'profile.edit')
+              ->name('profile.edit');
+         Route::get('/me', 'MeController')
+              ->name('profile.me');
+         Route::put('/', 'UpdateController')
+              ->name('profile.update');
 
-    Route::view('destroy', 'profile.destroy')->name('profile.destroy');
-    Route::delete('destroy', 'DestroyController')->name('profile.delete');
-});
+         Route::view('destroy', 'profile.destroy')
+              ->name('profile.destroy');
+         Route::delete('destroy', 'DestroyController')
+              ->name('profile.delete');
+     });
 
 Route::namespace('Post')->group(function () {
-    Route::get('post/edit/{post}', 'EditController')->middleware('can:update,post');
-    Route::get('post/confirm/{post}', 'ConfirmController')->name('post.confirm')->middleware('can:delete,post');
-    Route::post('post/report/{post}', 'ReportController')->name('post.report')->middleware('auth');
+    Route::get('post/edit/{post}', 'EditController')
+         ->middleware('can:update,post');
+    Route::get('post/confirm/{post}', 'ConfirmController')
+         ->name('post.confirm')->middleware('can:delete,post');
+    Route::post('post/report/{post}', 'ReportController')
+         ->name('post.report')->middleware('auth');
 });
 
 Route::resource('post', 'PostController');

@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
 use Illuminate\Support\Str;
 
 class MacroServiceProvider extends ServiceProvider
@@ -28,9 +27,9 @@ class MacroServiceProvider extends ServiceProvider
         Str::macro('wordwrap', function ($str, $width = 10, $break = PHP_EOL) {
             $str = mb_convert_kana($str, 'a');
 
-            $c = mb_strlen($str);
+            $length = mb_strlen($str);
             $arr = [];
-            for ($i = 0; $i <= $c; $i += $width) {
+            for ($i = 0; $i <= $length; $i += $width) {
                 $arr[] = mb_substr($str, $i, $width);
             }
 

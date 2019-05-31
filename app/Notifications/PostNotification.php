@@ -31,8 +31,8 @@ class PostNotification extends Notification implements ShouldQueue
     /**
      * Create a new notification instance.
      *
-     * @param Post   $post
-     * @param string $event
+     * @param  Post  $post
+     * @param  string  $event
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class PostNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed $notifiable
+     * @param  mixed  $notifiable
      *
      * @return array
      */
@@ -56,7 +56,7 @@ class PostNotification extends Notification implements ShouldQueue
 
     public function toDiscord($notifiable)
     {
-        return DiscordMessage::create("[{$this->event}]" . PHP_EOL . route('post.show', $this->post), [
+        return DiscordMessage::create("[{$this->event}]".PHP_EOL.route('post.show', $this->post), [
             'author'    => [
                 'name'     => $this->post->user->name,
                 'url'      => route('user', $this->post->user),
@@ -75,11 +75,11 @@ class PostNotification extends Notification implements ShouldQueue
 
     public function toSlack($notifiable)
     {
-        return (new SlackMessage)->from('artisans')
-                                 ->content("[{$this->event}]" . PHP_EOL . route('post.show', $this->post))
-                                 ->attachment(function ($attachment) {
-                                     $attachment->title($this->post->title, route('post.show', $this->post))
-                                                ->color(config('artisans.primary'));
-                                 });
+        return (new SlackMessage())->from('artisans')
+                                   ->content("[{$this->event}]".PHP_EOL.route('post.show', $this->post))
+                                   ->attachment(function ($attachment) {
+                                       $attachment->title($this->post->title, route('post.show', $this->post))
+                                                  ->color(config('artisans.primary'));
+                                   });
     }
 }
