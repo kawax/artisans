@@ -9,6 +9,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
+    /**
+     * @return mixed
+     */
     public function login()
     {
         return Socialite::driver('github')
@@ -26,26 +29,34 @@ class LoginController extends Controller
             return redirect('/');
         }
 
-        /**
-         * @var \Laravel\Socialite\Two\User $user
-         */
-        $user = Socialite::driver('github')->user();
-
-        /**
-         * @var \App\Model\User $loginUser
-         */
-        $loginUser = User::updateOrCreate([
-            'id' => $user->id,
-        ], [
-            'name'   => $user->nickname,
-            'avatar' => $user->avatar,
-        ]);
+        $loginUser = $this->user();
 
         auth()->login($loginUser, true);
 
         return redirect()->route('user', $loginUser->name);
     }
 
+    /**
+     * @return User
+     */
+    protected function user()
+    {
+        /**
+         * @var \Laravel\Socialite\Two\User $user
+         */
+        $user = Socialite::driver('github')->user();
+
+        return User::updateOrCreate([
+            'id' => $user->id,
+        ], [
+            'name'   => $user->nickname,
+            'avatar' => $user->avatar,
+        ]);
+    }
+
+    /**
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function logout()
     {
         auth()->logout();
