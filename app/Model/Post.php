@@ -23,7 +23,6 @@ class Post extends Model implements Feedable
     /**
      * @param  Builder  $query
      * @param  string  $search
-     *
      * @return Builder
      */
     public function scopeSearch($query, ?string $search)
@@ -36,7 +35,6 @@ class Post extends Model implements Feedable
 
     /**
      * @param  Builder  $query
-     *
      * @return Builder
      */
     public function scopeJobs($query)

@@ -10,12 +10,10 @@ class ConfirmController extends Controller
 {
     /**
      * 削除確認
-     *
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  Post                     $post
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  Post  $post
      * @return \Illuminate\Http\Response
      * @throws
      */

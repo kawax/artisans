@@ -12,12 +12,10 @@ class PostController extends Controller
 {
     /**
      * PostのOGP画像
-     *
      * Handle the incoming request.
      *
      * @param  Request  $request
-     * @param  Post     $post
-     *
+     * @param  Post  $post
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request, Post $post)

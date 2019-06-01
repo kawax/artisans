@@ -23,7 +23,6 @@ class ProfileUpdateJob implements ShouldQueue
      * Create a new job instance.
      *
      * @param  Request  $request
-     *
      * @return void
      */
     public function __construct(Request $request)

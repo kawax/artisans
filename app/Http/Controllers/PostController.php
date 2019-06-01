@@ -38,7 +38,6 @@ class PostController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  StoreRequest  $request
-     *
      * @return mixed
      */
     public function store(StoreRequest $request)
@@ -55,7 +54,6 @@ class PostController extends Controller
      * Display the specified resource.
      *
      * @param  Post  $post
-     *
      * @return \Illuminate\Http\Response
      */
     public function show(Post $post)
@@ -67,7 +65,6 @@ class PostController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  Post  $post
-     *
      * @return \Illuminate\Http\Response
      * @throws
      */
@@ -81,7 +78,6 @@ class PostController extends Controller
      *
      * @param  StoreRequest  $request
      * @param  Post  $post
-     *
      * @return mixed
      * @throws
      */
@@ -99,7 +95,6 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  Post  $post
-     *
      * @return \Illuminate\Http\Response
      * @throws
      */

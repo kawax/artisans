@@ -30,7 +30,6 @@ class PostNotification extends Notification implements ShouldQueue
      *
      * @param  Post  $post
      * @param  string  $event
-     *
      * @return void
      */
     public function __construct(Post $post, string $event = 'created')
@@ -43,7 +42,6 @@ class PostNotification extends Notification implements ShouldQueue
      * Get the notification's delivery channels.
      *
      * @param  mixed  $notifiable
-     *
      * @return array
      */
     public function via($notifiable)

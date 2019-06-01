@@ -12,8 +12,7 @@ class PostController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  Request $request
-     *
+     * @param  Request  $request
      * @return mixed
      */
     public function __invoke(Request $request)

@@ -13,7 +13,7 @@ trait UserFeed
     public function toFeedItem()
     {
         return FeedItem::create()
-                       ->id('user/' . $this->id)
+                       ->id('user/'.$this->id)
                        ->title($this->title ?? $this->name ?? 'no title')
                        ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)

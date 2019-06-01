@@ -10,11 +10,9 @@ class UpdateController extends Controller
 {
     /**
      * プロフィール変更
-     *
      * Handle the incoming request.
      *
      * @param  UpdateRequest  $request
-     *
      * @return mixed
      */
     public function __invoke(UpdateRequest $request)

@@ -30,7 +30,6 @@ class UserNotification extends Notification implements ShouldQueue
      *
      * @param  User  $user
      * @param  string  $event
-     *
      * @return void
      */
     public function __construct(User $user, string $event = 'created')
@@ -43,7 +42,6 @@ class UserNotification extends Notification implements ShouldQueue
      * Get the notification's delivery channels.
      *
      * @param  mixed  $notifiable
-     *
      * @return array
      */
     public function via($notifiable)

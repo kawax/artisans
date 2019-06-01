@@ -13,7 +13,7 @@ trait PostFeed
     public function toFeedItem()
     {
         return FeedItem::create()
-                       ->id('post/' . $this->id)
+                       ->id('post/'.$this->id)
                        ->title($this->title ?? 'no title')
                        ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)

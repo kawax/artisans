@@ -51,7 +51,6 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  Builder  $query
      * @param  string  $search
-     *
      * @return Builder
      */
     public function scopeSearch($query, ?string $search)
@@ -66,7 +65,6 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  Builder  $query
      * @param  int  $page
-     *
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
     public function scopeArtisans($query, ?int $page = 20)
@@ -89,7 +87,6 @@ class User extends Authenticatable implements Feedable
 
     /**
      * @param  mixed  $value
-     *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
     public function resolveRouteBinding($value)

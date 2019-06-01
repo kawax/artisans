@@ -10,12 +10,10 @@ class EditController extends Controller
 {
     /**
      * 変更時用のjsonデータ
-     *
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  Post                     $post
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  Post  $post
      * @return \Illuminate\Http\Response
      * @throws
      */

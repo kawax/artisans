@@ -12,12 +12,10 @@ class ReportController extends Controller
 {
     /**
      * 報告
-     *
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  Post                     $post
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  Post  $post
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request, Post $post)

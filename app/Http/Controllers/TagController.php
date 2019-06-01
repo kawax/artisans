@@ -10,9 +10,8 @@ class TagController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  Request $request
-     * @param  Tag     $tag
-     *
+     * @param  Request  $request
+     * @param  Tag  $tag
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request, Tag $tag)

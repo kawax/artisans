@@ -15,7 +15,6 @@ class PostPolicy
      *
      * @param  \App\Model\User  $user
      * @param  \App\Model\Post  $post
-     *
      * @return mixed
      */
     public function view(?User $user, Post $post)
@@ -27,7 +26,6 @@ class PostPolicy
      * Determine whether the user can create posts.
      *
      * @param  \App\Model\User  $user
-     *
      * @return mixed
      */
     public function create(User $user)
@@ -40,7 +38,6 @@ class PostPolicy
      *
      * @param  \App\Model\User  $user
      * @param  \App\Model\Post  $post
-     *
      * @return mixed
      */
     public function update(User $user, Post $post)
@@ -53,7 +50,6 @@ class PostPolicy
      *
      * @param  \App\Model\User  $user
      * @param  \App\Model\Post  $post
-     *
      * @return mixed
      */
     public function delete(User $user, Post $post)
@@ -66,7 +62,6 @@ class PostPolicy
      *
      * @param  \App\Model\User  $user
      * @param  \App\Model\Post  $post
-     *
      * @return mixed
      */
     public function restore(User $user, Post $post)
@@ -79,7 +74,6 @@ class PostPolicy
      *
      * @param  \App\Model\User  $user
      * @param  \App\Model\Post  $post
-     *
      * @return mixed
      */
     public function forceDelete(User $user, Post $post)

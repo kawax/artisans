@@ -32,10 +32,9 @@ class PostReportNotification extends Notification implements ShouldQueue
     /**
      * Create a new notification instance.
      *
-     * @param Post   $post
-     * @param User   $user
-     * @param string $reason
-     *
+     * @param  Post  $post
+     * @param  User  $user
+     * @param  string  $reason
      * @return void
      */
     public function __construct(Post $post, User $user, string $reason)
@@ -48,8 +47,7 @@ class PostReportNotification extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed $notifiable
-     *
+     * @param  mixed  $notifiable
      * @return array
      */
     public function via($notifiable)
