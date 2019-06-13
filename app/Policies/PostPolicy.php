@@ -11,6 +11,17 @@ class PostPolicy
     use HandlesAuthorization;
 
     /**
+     * Determine whether the user can view any post.
+     *
+     * @param  \App\Model\User  $user
+     * @return mixed
+     */
+    public function viewAny(?User $user)
+    {
+        return true;
+    }
+
+    /**
      * Determine whether the user can view the post.
      *
      * @param  \App\Model\User  $user
