@@ -3172,16 +3172,16 @@
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "b8dc5ce330d61c4b4edc851014b54cf0e0b7b68f"
+                "reference": "a273e4e316915ee0a0001adece7a3accf7222cfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/b8dc5ce330d61c4b4edc851014b54cf0e0b7b68f",
-                "reference": "b8dc5ce330d61c4b4edc851014b54cf0e0b7b68f",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/a273e4e316915ee0a0001adece7a3accf7222cfb",
+                "reference": "a273e4e316915ee0a0001adece7a3accf7222cfb",
                 "shasum": ""
             },
             "require": {
@@ -3212,22 +3212,22 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "name": "Jolita Grazyte",
+                    "role": "Developer",
+                    "email": "jolita@spatie.be",
+                    "homepage": "https://spatie.be"
                 },
                 {
                     "name": "Freek Van der Herten",
+                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "homepage": "https://spatie.be"
                 },
                 {
-                    "name": "Jolita Grazyte",
-                    "email": "jolita@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "name": "Sebastian De Deyne",
+                    "role": "Developer",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be"
                 }
             ],
             "description": "Generates rss feed",
@@ -3238,7 +3238,7 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2019-03-06T11:44:14+00:00"
+            "time": "2019-07-24T19:17:42+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
