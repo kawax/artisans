@@ -8298,16 +8298,16 @@
         },
         {
             "name": "symplify/coding-standard",
-            "version": "v6.0.4",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/CodingStandard.git",
-                "reference": "adf215f9b2061859aa651dc9e6fd07ec3a3ffe9b"
+                "reference": "0b54e62481f3edc843e1cd5b6d36a6f3b3742c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/CodingStandard/zipball/adf215f9b2061859aa651dc9e6fd07ec3a3ffe9b",
-                "reference": "adf215f9b2061859aa651dc9e6fd07ec3a3ffe9b",
+                "url": "https://api.github.com/repos/Symplify/CodingStandard/zipball/0b54e62481f3edc843e1cd5b6d36a6f3b3742c5e",
+                "reference": "0b54e62481f3edc843e1cd5b6d36a6f3b3742c5e",
                 "shasum": ""
             },
             "require": {
@@ -8317,13 +8317,13 @@
                 "php": "^7.1",
                 "phpstan/phpdoc-parser": "^0.3.4",
                 "squizlabs/php_codesniffer": "^3.4",
-                "symplify/package-builder": "^6.0.4"
+                "symplify/package-builder": "^6.0.5"
             },
             "require-dev": {
                 "nette/application": "^2.4|^3.0",
                 "phpunit/phpunit": "^7.5|^8.0",
-                "symplify/easy-coding-standard-tester": "^6.0.4",
-                "symplify/package-builder": "^6.0.4"
+                "symplify/easy-coding-standard-tester": "^6.0.5",
+                "symplify/package-builder": "^6.0.5"
             },
             "type": "library",
             "extra": {
@@ -8342,20 +8342,20 @@
                 "MIT"
             ],
             "description": "Set of Symplify rules for PHP_CodeSniffer and PHP CS Fixer.",
-            "time": "2019-06-26T20:13:26+00:00"
+            "time": "2019-07-26T14:48:44+00:00"
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "v6.0.4",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/EasyCodingStandard.git",
-                "reference": "5fb76e1e4f756ba866e4d94b37c8681bdffadc04"
+                "reference": "d4d9c0f4a7bda18b97c98588fbdc9c4715b07981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/EasyCodingStandard/zipball/5fb76e1e4f756ba866e4d94b37c8681bdffadc04",
-                "reference": "5fb76e1e4f756ba866e4d94b37c8681bdffadc04",
+                "url": "https://api.github.com/repos/Symplify/EasyCodingStandard/zipball/d4d9c0f4a7bda18b97c98588fbdc9c4715b07981",
+                "reference": "d4d9c0f4a7bda18b97c98588fbdc9c4715b07981",
                 "shasum": ""
             },
             "require": {
@@ -8376,12 +8376,12 @@
                 "symfony/finder": "^3.4|^4.2",
                 "symfony/http-kernel": "^3.4|^4.2",
                 "symfony/yaml": "^3.4|^4.2",
-                "symplify/coding-standard": "^6.0.4",
-                "symplify/package-builder": "^6.0.4"
+                "symplify/coding-standard": "^6.0.5",
+                "symplify/package-builder": "^6.0.5"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.5|^8.0",
-                "symplify/easy-coding-standard-tester": "^6.0.4"
+                "symplify/easy-coding-standard-tester": "^6.0.5"
             },
             "bin": [
                 "bin/ecs"
@@ -8406,20 +8406,20 @@
                 "MIT"
             ],
             "description": "Use Coding Standard with 0-knowledge of PHP-CS-Fixer and PHP_CodeSniffer.",
-            "time": "2019-06-26T20:13:26+00:00"
+            "time": "2019-07-26T14:48:44+00:00"
         },
         {
             "name": "symplify/package-builder",
-            "version": "v6.0.4",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/PackageBuilder.git",
-                "reference": "14db22e0c9667aeb81873468b4984a490d2183b6"
+                "reference": "bd961b17c8e5467940c47836666d921bce17d1dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/PackageBuilder/zipball/14db22e0c9667aeb81873468b4984a490d2183b6",
-                "reference": "14db22e0c9667aeb81873468b4984a490d2183b6",
+                "url": "https://api.github.com/repos/Symplify/PackageBuilder/zipball/bd961b17c8e5467940c47836666d921bce17d1dd",
+                "reference": "bd961b17c8e5467940c47836666d921bce17d1dd",
                 "shasum": ""
             },
             "require": {
@@ -8453,7 +8453,7 @@
                 "MIT"
             ],
             "description": "Dependency Injection, Console and Kernel toolkit for Symplify packages.",
-            "time": "2019-06-26T20:10:56+00:00"
+            "time": "2019-07-22T21:06:43+00:00"
         },
         {
             "name": "theseer/fdomdocument",
