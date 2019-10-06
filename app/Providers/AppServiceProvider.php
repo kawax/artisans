@@ -2,13 +2,13 @@
 
 namespace App\Providers;
 
-use App\Model\User;
 use App\Model\Post;
-use App\Observers\UserObserver;
+use App\Model\User;
 use App\Observers\PostObserver;
+use App\Observers\UserObserver;
+use Illuminate\Http\Resources\Json\Resource;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Http\Resources\Json\Resource;
 
 class AppServiceProvider extends ServiceProvider
 {

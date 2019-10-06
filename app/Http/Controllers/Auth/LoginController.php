@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use App\Model\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -42,7 +42,7 @@ class LoginController extends Controller
     protected function user()
     {
         /**
-         * @var \Laravel\Socialite\Two\User $user
+         * @var \Laravel\Socialite\Two\User
          */
         $user = Socialite::driver('github')->user();
 

@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use Spatie\Feed\Feedable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Spatie\Feed\Feedable;
 
 //use Illuminate\Contracts\Auth\MustVerifyEmail;
 
@@ -76,7 +76,7 @@ class User extends Authenticatable implements Feedable
     }
 
     /**
-     * モデルのルートキーの取得
+     * モデルのルートキーの取得.
      *
      * @return string
      */

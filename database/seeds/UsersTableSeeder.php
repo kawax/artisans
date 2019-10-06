@@ -1,10 +1,9 @@
 <?php
 
-use Illuminate\Database\Seeder;
-
-use App\Model\User;
-use App\Model\Tag;
 use App\Model\Post;
+use App\Model\Tag;
+use App\Model\User;
+use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {

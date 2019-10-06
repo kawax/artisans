@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Post;
 use App\Http\Requests\Post\StoreRequest;
+use App\Model\Post;
 
 class PostController extends Controller
 {

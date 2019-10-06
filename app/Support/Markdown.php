@@ -2,8 +2,8 @@
 
 namespace App\Support;
 
-use Parsedown;
 use Illuminate\Support\HtmlString;
+use Parsedown;
 
 class Markdown
 {

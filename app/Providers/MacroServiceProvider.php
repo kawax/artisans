@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class MacroServiceProvider extends ServiceProvider
 {

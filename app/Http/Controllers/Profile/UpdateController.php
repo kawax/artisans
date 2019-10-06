@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Profile;
 
-use App\Jobs\ProfileUpdateJob;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\UpdateRequest;
+use App\Jobs\ProfileUpdateJob;
 
 class UpdateController extends Controller
 {
