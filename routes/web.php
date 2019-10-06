@@ -57,7 +57,6 @@ Route::namespace('Post')->group(function () {
 
 Route::resource('post', 'PostController');
 
-
 Route::view('terms', 'pages.terms')->name('pages.terms');
 Route::view('privacy', 'pages.privacy')->name('pages.privacy');
 Route::view('api', 'pages.api')->name('pages.api');

@@ -2,8 +2,8 @@
 
 namespace App\Model\Feed;
 
-use Spatie\Feed\FeedItem;
 use App\Support\Markdown;
+use Spatie\Feed\FeedItem;
 
 trait PostFeed
 {

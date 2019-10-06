@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Image;
 
-use App\Model\User;
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
 class UserController extends Controller

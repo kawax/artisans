@@ -4,12 +4,12 @@ namespace App\Notifications;
 
 use App\Model\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use NotificationChannels\Discord\DiscordMessage;
-use NotificationChannels\Discord\DiscordChannel;
-use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Channels\SlackWebhookChannel;
+use Illuminate\Notifications\Messages\SlackMessage;
+use Illuminate\Notifications\Notification;
+use NotificationChannels\Discord\DiscordChannel;
+use NotificationChannels\Discord\DiscordMessage;
 
 class UserNotification extends Notification implements ShouldQueue
 {

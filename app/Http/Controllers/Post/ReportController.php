@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Post;
 
-use App\Model\Post;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Notification;
+use App\Model\Post;
 use App\Notifications\PostReportNotification;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class ReportController extends Controller
 {

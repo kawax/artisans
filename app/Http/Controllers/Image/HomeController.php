@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Image;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
 class HomeController extends Controller
