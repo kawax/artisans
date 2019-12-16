@@ -23,6 +23,7 @@ class ProfileUpdateJob implements ShouldQueue
      * Create a new job instance.
      *
      * @param  Request  $request
+     *
      * @return void
      */
     public function __construct(Request $request)
@@ -37,18 +38,24 @@ class ProfileUpdateJob implements ShouldQueue
      */
     public function handle()
     {
-        $this->request->user()->fill($this->request->only([
-            'title',
-            'message',
-            'hidden',
-        ]))->save();
+        $this->request->user()->fill(
+            $this->request->only(
+                [
+                    'title',
+                    'message',
+                    'hidden',
+                ]
+            )
+        )->save();
 
         $tag_id = [];
 
         foreach ($this->request->tags as $tag) {
-            $tag_id[] = Tag::firstOrCreate([
-                'tag' => $tag,
-            ])->id;
+            $tag_id[] = Tag::firstOrCreate(
+                [
+                    'tag' => $tag,
+                ]
+            )->id;
         }
 
         $this->request->user()->tags()->sync($tag_id);
