@@ -19,9 +19,11 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $user = factory(User::class)->create([
-            'name' => 'test',
-        ]);
+        $user = factory(User::class)->create(
+            [
+                'name' => 'test',
+            ]
+        );
 
         $response = $this->get('/');
 
@@ -33,11 +35,13 @@ class ExampleTest extends TestCase
 
     public function testUser()
     {
-        $user = factory(User::class)->create([
-            'name'    => 'test',
-            'title'   => '<script>title</script>',
-            'message' => '<script>message</script>',
-        ]);
+        $user = factory(User::class)->create(
+            [
+                'name'    => 'test',
+                'title'   => '<script>title</script>',
+                'message' => '<script>message</script>',
+            ]
+        );
 
         $response = $this->get('/@test');
 
@@ -48,11 +52,20 @@ class ExampleTest extends TestCase
                  ->assertDontSee('<script>');
     }
 
+    public function testUserNotFound()
+    {
+        $response = $this->get('/@test');
+
+        $response->assertStatus(404);
+    }
+
     public function testTag()
     {
-        $user = factory(User::class)->create()->each(function (User $user) {
-            $user->tags()->sync(factory(Tag::class)->create(['tag' => 'test'])->pluck('id'));
-        });
+        $user = factory(User::class)->create()->each(
+            function (User $user) {
+                $user->tags()->sync(factory(Tag::class)->create(['tag' => 'test'])->pluck('id'));
+            }
+        );
 
         $response = $this->get('/tag/test');
 
@@ -79,11 +92,13 @@ class ExampleTest extends TestCase
 
     public function testCallback()
     {
-        $user = (new \Laravel\Socialite\Two\User())->map([
-            'id'       => 'id',
-            'nickname' => 'name',
-            'avatar'   => 'avatar',
-        ]);
+        $user = (new \Laravel\Socialite\Two\User())->map(
+            [
+                'id'       => 'id',
+                'nickname' => 'name',
+                'avatar'   => 'avatar',
+            ]
+        );
 
         Socialite::shouldReceive('driver->user')->andReturn($user);
 

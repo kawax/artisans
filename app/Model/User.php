@@ -95,21 +95,15 @@ class User extends Authenticatable implements Feedable
      */
     public function resolveRouteBinding($value)
     {
-        $user = $this->whereName($value)
-                     ->with(
-                         [
-                             'tags',
-                             'posts' => function ($query) {
-                                 $query->latest('updated_at')->limit(5);
-                             },
-                         ]
-                     )->first();
-
-        if (blank($user)) {
-            abort(404);
-        }
-
-        return $user;
+        return $this->whereName($value)
+                    ->with(
+                        [
+                            'tags',
+                            'posts' => function ($query) {
+                                $query->latest('updated_at')->limit(5);
+                            },
+                        ]
+                    )->first();
     }
 
     /**
