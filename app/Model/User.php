@@ -7,8 +7,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Feed\Feedable;
 
-//use Illuminate\Contracts\Auth\MustVerifyEmail;
-
 class User extends Authenticatable implements Feedable
 {
     use Notifiable;
@@ -51,20 +49,25 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  Builder  $query
      * @param  string  $search
+     *
      * @return Builder
      */
     public function scopeSearch($query, ?string $search)
     {
-        return $query->when($search, function (Builder $query, $search) {
-            return $query->where('title', 'LIKE', '%'.$search.'%')
-                         ->orWhere('message', 'LIKE', '%'.$search.'%')
-                         ->orWhere('name', 'LIKE', '%'.$search.'%');
-        });
+        return $query->when(
+            $search,
+            function (Builder $query, $search) {
+                return $query->where('title', 'LIKE', '%'.$search.'%')
+                             ->orWhere('message', 'LIKE', '%'.$search.'%')
+                             ->orWhere('name', 'LIKE', '%'.$search.'%');
+            }
+        );
     }
 
     /**
      * @param  Builder  $query
      * @param  int  $page
+     *
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
     public function scopeArtisans($query, ?int $page = 20)
@@ -87,17 +90,26 @@ class User extends Authenticatable implements Feedable
 
     /**
      * @param  mixed  $value
+     *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
     public function resolveRouteBinding($value)
     {
-        return $this->whereName($value)
-                    ->with([
-                        'tags',
-                        'posts' => function ($query) {
-                            $query->latest('updated_at')->limit(5);
-                        },
-                    ])->first() ?? abort(404);
+        $user = $this->whereName($value)
+                     ->with(
+                         [
+                             'tags',
+                             'posts' => function ($query) {
+                                 $query->latest('updated_at')->limit(5);
+                             },
+                         ]
+                     )->first();
+
+        if (blank($user)) {
+            abort(404);
+        }
+
+        return $user;
     }
 
     /**
