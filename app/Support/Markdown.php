@@ -29,6 +29,6 @@ class Markdown
             'allow_unsafe_links' => false,
         ], $environment);
 
-        return new HtmlString($converter->convertToHtml($text));
+        return new HtmlString($converter->convertToHtml($text ?? ''));
     }
 }
