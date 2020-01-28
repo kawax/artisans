@@ -230,7 +230,7 @@ class PostTest extends TestCase
                          ]);
 
         Notification::assertSentTo(
-            new AnonymousNotifiable, PostReportNotification::class,
+            new AnonymousNotifiable(), PostReportNotification::class,
             function ($notification, $channels) use ($post) {
                 return $notification->post->id === $post->id;
             }
