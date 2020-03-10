@@ -2725,16 +2725,16 @@
         },
         {
             "name": "revolution/laravel-server-push",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-server-push.git",
-                "reference": "1564bc7fa177e4fef890e03406e37c13a43fffb1"
+                "reference": "eff88ffa2b32330d02f1987019824c18199dd8b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/1564bc7fa177e4fef890e03406e37c13a43fffb1",
-                "reference": "1564bc7fa177e4fef890e03406e37c13a43fffb1",
+                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/eff88ffa2b32330d02f1987019824c18199dd8b5",
+                "reference": "eff88ffa2b32330d02f1987019824c18199dd8b5",
                 "shasum": ""
             },
             "require": {
@@ -2775,7 +2775,7 @@
                 "laravel",
                 "server-push"
             ],
-            "time": "2020-03-04T13:59:58+00:00"
+            "time": "2020-03-08T01:40:33+00:00"
         },
         {
             "name": "spatie/laravel-feed",
