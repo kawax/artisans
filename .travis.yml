@@ -5,7 +5,7 @@ php:
 - 7.4
 
 before_script:
-  - travis_retry composer install --no-interaction --prefer-source --no-progress --no-suggest
+  - travis_retry composer install --no-interaction --prefer-dist --no-progress --no-suggest
   - cp .env.example .env
   - php artisan key:generate
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
