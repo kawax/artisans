@@ -28,7 +28,7 @@ class BladeServiceProvider extends ServiceProvider
             return "<?php echo App\Support\Markdown::parse(${text}); ?>";
         });
 
-        Blade::component('components.card', 'card');
-        Blade::component('components.tweet', 'tweet');
+        Blade::aliasComponent('components.card', 'card');
+        Blade::aliasComponent('components.tweet', 'tweet');
     }
 }
