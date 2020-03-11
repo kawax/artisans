@@ -33,4 +33,5 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
+    'expires' => env('APP_ENV') !== 'production',
 ];
