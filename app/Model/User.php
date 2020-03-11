@@ -90,12 +90,12 @@ class User extends Authenticatable implements Feedable
 
     /**
      * @param  mixed  $value
-     *
+     * @param  string|null  $field
      * @return \Illuminate\Database\Eloquent\Model|null
      */
-    public function resolveRouteBinding($value)
+    public function resolveRouteBinding($value, $field = null)
     {
-        return $this->whereName($value)
+        return $this->where($field ?? 'name', $value)
                     ->with(
                         [
                             'tags',
