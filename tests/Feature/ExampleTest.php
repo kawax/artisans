@@ -48,8 +48,8 @@ class ExampleTest extends TestCase
         $response->assertStatus(200)
                  ->assertViewHas('user')
                  ->assertSee('test')
-                 ->assertSee('&lt;script&gt;')
-                 ->assertDontSee('<script>');
+                 ->assertSee('&lt;script&gt;', false)
+                 ->assertDontSee('<script>', false);
     }
 
     public function testUserNotFound()
