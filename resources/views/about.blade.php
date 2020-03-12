@@ -38,7 +38,6 @@
         </p>
     @endguest
     <p>
-        @tweet
-        @endtweet
+        <x-tweet :url="route('home')"/>
     </p>
 </div>

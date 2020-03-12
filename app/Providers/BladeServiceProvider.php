@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\View\Components\Card;
+use App\View\Components\Tweet;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,11 +26,14 @@ class BladeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive('markdown', function ($text) {
-            return "<?php echo App\Support\Markdown::parse(${text}); ?>";
-        });
+        Blade::directive(
+            'markdown',
+            function ($text) {
+                return "<?php echo App\Support\Markdown::parse(${text}); ?>";
+            }
+        );
 
-        Blade::aliasComponent('components.card', 'card');
-        Blade::aliasComponent('components.tweet', 'tweet');
+        Blade::component(Card::class, 'card');
+        Blade::component(Tweet::class, 'tweet');
     }
 }

@@ -1,21 +1,20 @@
 @extends('layouts.app')
 
 @section('card')
-    @card
 
-    @slot('name')
-        @kawaxbiz
-    @endslot
+    <x-card>
+        <x-slot name="title">
+            {{ $title ?? config('app.name') }}
+        </x-slot>
 
-    @slot('description')
-        {{ config('app.name') }}
-    @endslot
+        <x-slot name="description">
+            {{ config('app.name')  }}
+        </x-slot>
 
-    @slot('image')
-        {{ route('image.home') }}
-    @endslot
-
-    @endcard
+        <x-slot name="image">
+            {{ route('image.home') }}
+        </x-slot>
+    </x-card>
 @endsection
 
 @section('content')

@@ -3,25 +3,20 @@
 @section('title', $post->title . ' / ' . config('app.name'))
 
 @section('card')
-    @card
 
-    @slot('name')
-        {{ $post->user->name }}
-    @endslot
+    <x-card>
+        <x-slot name="title">
+            {{ $post->title }} / {{ config('app.name') }}
+        </x-slot>
 
-    @slot('title')
-        {{ config('app.name') }}
-    @endslot
+        <x-slot name="description">
+            {{ $post->title }}
+        </x-slot>
 
-    @slot('description')
-        {{ $post->title }}
-    @endslot
-
-    @slot('image')
-        {{ route('image.post', $post) }}?id={{ $post->updated_at->timestamp }}
-    @endslot
-
-    @endcard
+        <x-slot name="image">
+            {{ route('image.post', $post) }}?id={{ $post->updated_at->timestamp }}
+        </x-slot>
+    </x-card>
 @endsection
 
 @section('content')
@@ -85,9 +80,7 @@
                                 </div>
                             </div>
 
-                            @tweet
-
-                            @endtweet
+                            <x-tweet/>
                         </div>
                     </div>
                 </div>
