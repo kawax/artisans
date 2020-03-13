@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::namespace('Image')->group(function () {
-    Route::get('/user/{user}', 'UserController')->name('image.user');
+    Route::get('/user/{user:name}', 'UserController')->name('image.user');
     Route::get('/post/{post}', 'PostController')->name('image.post');
     Route::get('/home', 'HomeController')->name('image.home');
 });

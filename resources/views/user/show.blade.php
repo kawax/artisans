@@ -14,7 +14,7 @@
         </x-slot>
 
         <x-slot name="image">
-            {{ route('image.user', $user->name) }}?id={{ $user->updated_at->timestamp }}
+            {{ route('image.user', $user) }}?id={{ $user->updated_at->timestamp }}
         </x-slot>
     </x-card>
 @endsection
@@ -54,7 +54,7 @@
                             <div class="tags">
                                 @foreach($user->tags as $tag)
                                     <span class="tag is-white">
-                                        <a href="{{ route('tag', $tag->tag) }}">
+                                        <a href="{{ route('tag', $tag) }}">
                                         {{ $tag->tag ?? '' }}
                                         </a>
                                     </span>

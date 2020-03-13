@@ -95,7 +95,7 @@ class User extends Authenticatable implements Feedable
      */
     public function resolveRouteBinding($value, $field = null)
     {
-        return $this->where($field ?? 'name', $value)
+        return $this->where($field ?? $this->getRouteKeyName(), $value)
                     ->with(
                         [
                             'tags',
@@ -103,7 +103,7 @@ class User extends Authenticatable implements Feedable
                                 $query->latest('updated_at')->limit(5);
                             },
                         ]
-                    )->first();
+                    )->firstOrFail();
     }
 
     /**

@@ -20,7 +20,7 @@
                         </figure>
                     </td>
                     <td>
-                        <a href="{{ route('user', $user->name) }}" class="has-text-weight-semibold has-text-primary">
+                        <a href="{{ route('user', $user) }}" class="has-text-weight-semibold has-text-primary">
                             {{ $user->name }}
                         </a>
                     </td>
@@ -30,7 +30,7 @@
                         <div class="tags">
                             @foreach($user->tags as $tag)
                                 <span class="tag is-primary">
-                                <a href="{{ route('tag', $tag->tag) }}">
+                                <a href="{{ route('tag', $tag) }}">
                                         {{ $tag->tag ?? '' }}
                                         </a>
                                 </span>

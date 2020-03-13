@@ -22,10 +22,10 @@ Route::namespace('Auth')->group(function () {
          ->name('logout');
 });
 
-Route::get('@{user}', 'UserController')->name('user');
+Route::get('@{user:name}', 'UserController')->name('user');
 Route::view('user', 'user.index')->name('user.index');
 
-Route::get('tag/{tag}', 'TagController')->name('tag');
+Route::get('tag/{tag:tag}', 'TagController')->name('tag');
 
 Route::prefix('profile')
      ->namespace('Profile')
