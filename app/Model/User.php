@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Feed\Feedable;
@@ -91,7 +92,7 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  mixed  $value
      * @param  string|null  $field
-     * @return \Illuminate\Database\Eloquent\Model|null
+     * @return Model|null
      */
     public function resolveRouteBinding($value, $field = null)
     {
@@ -103,7 +104,7 @@ class User extends Authenticatable implements Feedable
                                 $query->latest('updated_at')->limit(5);
                             },
                         ]
-                    )->firstOrFail();
+                    )->first();
     }
 
     /**
