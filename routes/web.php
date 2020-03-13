@@ -28,20 +28,21 @@ Route::view('user', 'user.index')->name('user.index');
 Route::get('tag/{tag:tag}', 'TagController')->name('tag');
 
 Route::prefix('profile')
+    ->name('profile.')
      ->namespace('Profile')
      ->middleware('auth')
      ->group(function () {
          Route::view('/', 'profile.edit')
-              ->name('profile.edit');
+              ->name('edit');
          Route::get('/me', 'MeController')
-              ->name('profile.me');
+              ->name('me');
          Route::put('/', 'UpdateController')
-              ->name('profile.update');
+              ->name('update');
 
          Route::view('destroy', 'profile.destroy')
-              ->name('profile.destroy');
+              ->name('destroy');
          Route::delete('destroy', 'DestroyController')
-              ->name('profile.delete');
+              ->name('delete');
      });
 
 Route::namespace('Post')->group(function () {
