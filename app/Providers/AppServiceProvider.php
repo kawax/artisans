@@ -29,14 +29,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (app()->environment('production')) {
+        if (app()->isProduction()) {
             User::observe(UserObserver::class);
             Post::observe(PostObserver::class);
         }
 
         JsonResource::withoutWrapping();
 
-        Paginator::defaultView('vendor.pagination.bulma');
-        Paginator::defaultSimpleView('vendor.pagination.simple-bulma');
+        Paginator::defaultView('pagination-bulma::bulma');
+        Paginator::defaultSimpleView('pagination-bulma::simple-bulma');
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58fdd3d4789054dae20d9fdcfc17f849",
+    "content-hash": "9ea8c1ded234478c6e7b9cc1f2b859f2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2727,6 +2727,58 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
+        },
+        {
+            "name": "revolution/laravel-pagination-bulma",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kawax/laravel-pagination-bulma.git",
+                "reference": "885870d8b0e61c680f8666f4cc5a22e8702cc51b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/885870d8b0e61c680f8666f4cc5a22e8702cc51b",
+                "reference": "885870d8b0e61c680f8666f4cc5a22e8702cc51b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "*",
+                "php": "^7.2||^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0||^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Revolution\\Pagination\\Bulma\\BulmaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Revolution\\Pagination\\Bulma\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kawax",
+                    "email": "kawaxbiz@gmail.com"
+                }
+            ],
+            "description": "Laravel pagination template for Bulma",
+            "keywords": [
+                "bulma",
+                "laravel",
+                "pagination"
+            ],
+            "time": "2020-03-13T15:08:37+00:00"
         },
         {
             "name": "revolution/laravel-server-push",
