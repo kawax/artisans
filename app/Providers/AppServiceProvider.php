@@ -37,6 +37,6 @@ class AppServiceProvider extends ServiceProvider
         JsonResource::withoutWrapping();
 
         Paginator::defaultView('pagination-bulma::bulma');
-        Paginator::defaultSimpleView('pagination-bulma::simple-bulma');
+        Paginator::defaultSimpleView('pagination-bulma::bulma-simple');
     }
 }
