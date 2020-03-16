@@ -2730,16 +2730,16 @@
         },
         {
             "name": "revolution/laravel-pagination-bulma",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-pagination-bulma.git",
-                "reference": "b1a6eda1f4aa3a71c71c8f8c5543d3aada39e87e"
+                "reference": "7f76e7c162050531ef061d52db7b2d001f66e8b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/b1a6eda1f4aa3a71c71c8f8c5543d3aada39e87e",
-                "reference": "b1a6eda1f4aa3a71c71c8f8c5543d3aada39e87e",
+                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/7f76e7c162050531ef061d52db7b2d001f66e8b8",
+                "reference": "7f76e7c162050531ef061d52db7b2d001f66e8b8",
                 "shasum": ""
             },
             "require": {
@@ -2778,20 +2778,20 @@
                 "laravel",
                 "pagination"
             ],
-            "time": "2020-03-14T06:03:05+00:00"
+            "time": "2020-03-15T08:53:33+00:00"
         },
         {
             "name": "revolution/laravel-server-push",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-server-push.git",
-                "reference": "eff88ffa2b32330d02f1987019824c18199dd8b5"
+                "reference": "4ff4fe1baec976de0458abbd8ba9b767598f735a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/eff88ffa2b32330d02f1987019824c18199dd8b5",
-                "reference": "eff88ffa2b32330d02f1987019824c18199dd8b5",
+                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/4ff4fe1baec976de0458abbd8ba9b767598f735a",
+                "reference": "4ff4fe1baec976de0458abbd8ba9b767598f735a",
                 "shasum": ""
             },
             "require": {
@@ -2832,7 +2832,7 @@
                 "laravel",
                 "server-push"
             ],
-            "time": "2020-03-08T01:40:33+00:00"
+            "time": "2020-03-15T08:59:58+00:00"
         },
         {
             "name": "spatie/laravel-feed",
