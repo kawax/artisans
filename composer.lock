@@ -2240,20 +2240,20 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.7.2",
+            "version": "1.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959"
+                "reference": "4acfd6a4b33a509d8c88f50e5222f734b6aeebae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
-                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/4acfd6a4b33a509d8c88f50e5222f734b6aeebae",
+                "reference": "4acfd6a4b33a509d8c88f50e5222f734b6aeebae",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9 || ^7.0"
+                "php": "^5.5.9 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.3",
@@ -2291,7 +2291,7 @@
                 "php",
                 "type"
             ],
-            "time": "2019-12-15T19:35:24+00:00"
+            "time": "2020-03-21T18:07:53+00:00"
         },
         {
             "name": "psr/container",
@@ -2535,16 +2535,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.0",
+            "version": "v0.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e361c8b7e5114534078e0ce04ddc442b39018a3c"
+                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e361c8b7e5114534078e0ce04ddc442b39018a3c",
-                "reference": "e361c8b7e5114534078e0ce04ddc442b39018a3c",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/573c2362c3cdebe846b4adae4b630eecb350afd8",
+                "reference": "573c2362c3cdebe846b4adae4b630eecb350afd8",
                 "shasum": ""
             },
             "require": {
@@ -2604,7 +2604,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-03-15T22:52:37+00:00"
+            "time": "2020-03-21T06:55:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -2735,24 +2735,21 @@
         },
         {
             "name": "revolution/laravel-pagination-bulma",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-pagination-bulma.git",
-                "reference": "7f76e7c162050531ef061d52db7b2d001f66e8b8"
+                "reference": "7a92ef594f74249b90281caa88d88885cbab0768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/7f76e7c162050531ef061d52db7b2d001f66e8b8",
-                "reference": "7f76e7c162050531ef061d52db7b2d001f66e8b8",
+                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/7a92ef594f74249b90281caa88d88885cbab0768",
+                "reference": "7a92ef594f74249b90281caa88d88885cbab0768",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "*",
                 "php": "^7.2||^8.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^4.0||^5.0"
             },
             "type": "library",
             "extra": {
@@ -2783,7 +2780,7 @@
                 "laravel",
                 "pagination"
             ],
-            "time": "2020-03-15T08:53:33+00:00"
+            "time": "2020-03-21T06:31:54+00:00"
         },
         {
             "name": "revolution/laravel-server-push",
