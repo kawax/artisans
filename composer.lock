@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ea8c1ded234478c6e7b9cc1f2b859f2",
+    "content-hash": "6343b6fb647258a971e88a75fbfeaa4e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1645,140 +1645,6 @@
                 }
             ],
             "time": "2020-04-24T13:39:56+00:00"
-        },
-        {
-            "name": "league/commonmark-ext-autolink",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/commonmark-ext-autolink.git",
-                "reference": "1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark-ext-autolink/zipball/1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12",
-                "reference": "1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12",
-                "shasum": ""
-            },
-            "require": {
-                "league/commonmark": "^1.3",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5"
-            },
-            "type": "commonmark-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\CommonMark\\Ext\\Autolink\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Colin O'Dell",
-                    "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com",
-                    "role": "Lead Developer"
-                }
-            ],
-            "description": "Extension for league/commonmark which autolinks URLs, emails, and @-mentions",
-            "homepage": "https://github.com/thephpleague/commonmark-ext-autolink",
-            "keywords": [
-                "autolink",
-                "commonmark",
-                "extension",
-                "gfm",
-                "github",
-                "markdown",
-                "twitter"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/colinodell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/colinodell",
-                    "type": "patreon"
-                }
-            ],
-            "abandoned": "league/commonmark",
-            "time": "2020-04-04T14:19:36+00:00"
-        },
-        {
-            "name": "league/commonmark-ext-table",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/commonmark-ext-table.git",
-                "reference": "3228888ea69636e855efcf6636ff8e6316933fe7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark-ext-table/zipball/3228888ea69636e855efcf6636ff8e6316933fe7",
-                "reference": "3228888ea69636e855efcf6636ff8e6316933fe7",
-                "shasum": ""
-            },
-            "require": {
-                "league/commonmark": "~0.19.3|^1.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "phpstan/phpstan": "~0.11",
-                "phpunit/phpunit": "^7.0|^8.0",
-                "symfony/var-dumper": "^4.0",
-                "vimeo/psalm": "^3.0"
-            },
-            "type": "commonmark-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\CommonMark\\Ext\\Table\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Martin Hasoň",
-                    "email": "martin.hason@gmail.com"
-                },
-                {
-                    "name": "Webuni s.r.o.",
-                    "homepage": "https://www.webuni.cz"
-                },
-                {
-                    "name": "Colin O'Dell",
-                    "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com"
-                }
-            ],
-            "description": "Table extension for league/commonmark",
-            "homepage": "https://github.com/thephpleague/commonmark-ext-table",
-            "keywords": [
-                "commonmark",
-                "extension",
-                "markdown",
-                "table"
-            ],
-            "abandoned": "league/commonmark",
-            "time": "2019-09-26T13:28:33+00:00"
         },
         {
             "name": "league/flysystem",

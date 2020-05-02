@@ -22,9 +22,7 @@
     "laravel/slack-notification-channel": "^2.0",
     "laravel/socialite": "^4.1",
     "laravel/tinker": "^2.0",
-    "league/commonmark": "^1.2",
-    "league/commonmark-ext-autolink": "^1.0",
-    "league/commonmark-ext-table": "^2.1",
+    "league/commonmark": "^1.4",
     "revolution/laravel-pagination-bulma": "^1.0",
     "revolution/laravel-server-push": "^1.0",
     "spatie/laravel-feed": "^2.2"

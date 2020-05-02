@@ -3,10 +3,7 @@
 namespace App\Support;
 
 use Illuminate\Support\HtmlString;
-use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Environment;
-use League\CommonMark\Ext\Autolink\AutolinkExtension;
-use League\CommonMark\Ext\Table\TableExtension;
+use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 class Markdown
 {
@@ -19,15 +16,12 @@ class Markdown
      */
     public static function parse($text)
     {
-        $environment = Environment::createCommonMarkEnvironment();
-
-        $environment->addExtension(new TableExtension());
-        $environment->addExtension(new AutolinkExtension());
-
-        $converter = new CommonMarkConverter([
-            'html_input'         => 'escape',
-            'allow_unsafe_links' => false,
-        ], $environment);
+        $converter = new GithubFlavoredMarkdownConverter(
+            [
+                'html_input'         => 'escape',
+                'allow_unsafe_links' => false,
+            ]
+        );
 
         return new HtmlString($converter->convertToHtml($text ?? ''));
     }
