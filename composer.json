@@ -13,7 +13,7 @@
     "ext-mbstring": "*",
     "doctrine/dbal": "^2.9",
     "fideloper/proxy": "^4.2",
-    "fruitcake/laravel-cors": "^1.0",
+    "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^6.3",
     "intervention/image": "^2.4",
     "laravel-notification-channels/discord": "^1.0",
