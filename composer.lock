@@ -695,16 +695,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.18",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441"
+                "reference": "840d5603eb84cc81a6a0382adac3293e57c1c64c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/cfa3d44471c7f5bfb684ac2b0da7114283d78441",
-                "reference": "cfa3d44471c7f5bfb684ac2b0da7114283d78441",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/840d5603eb84cc81a6a0382adac3293e57c1c64c",
+                "reference": "840d5603eb84cc81a6a0382adac3293e57c1c64c",
                 "shasum": ""
             },
             "require": {
@@ -749,7 +749,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-06-16T20:11:17+00:00"
+            "time": "2020-08-08T21:28:19+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -7756,16 +7756,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.3.2",
+            "version": "9.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "eacb57f3857cb6706550bd39ea500f9b1097b0bf"
+                "reference": "7e3942a29e7705cf109aa58c6e5d80997796d1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/eacb57f3857cb6706550bd39ea500f9b1097b0bf",
-                "reference": "eacb57f3857cb6706550bd39ea500f9b1097b0bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7e3942a29e7705cf109aa58c6e5d80997796d1dc",
+                "reference": "7e3942a29e7705cf109aa58c6e5d80997796d1dc",
                 "shasum": ""
             },
             "require": {
@@ -7850,7 +7850,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-07T09:12:30+00:00"
+            "time": "2020-08-08T05:12:01+00:00"
         },
         {
             "name": "scrivo/highlight.php",
