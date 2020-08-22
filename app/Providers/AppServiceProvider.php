@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Model\Post;
-use App\Model\User;
+use App\Models\Post;
+use App\Models\User;
 use App\Observers\PostObserver;
 use App\Observers\UserObserver;
 use Illuminate\Http\Resources\Json\JsonResource;

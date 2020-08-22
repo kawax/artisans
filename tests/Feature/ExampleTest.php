@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Model\Tag;
-use App\Model\User;
+use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Laravel\Socialite\Facades\Socialite;
 use Tests\TestCase;

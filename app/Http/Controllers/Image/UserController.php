@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Image;
 
 use App\Http\Controllers\Controller;
-use App\Model\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;

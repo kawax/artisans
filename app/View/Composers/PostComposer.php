@@ -2,7 +2,7 @@
 
 namespace App\View\Composers;
 
-use App\Model\Post;
+use App\Models\Post;
 use Illuminate\View\View;
 
 class PostComposer

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Model\Feed;
+namespace App\Models\Feed;
 
 use App\Support\Markdown;
 use Spatie\Feed\FeedItem;
 
-trait UserFeed
+trait PostFeed
 {
     /**
      * @return array|FeedItem
@@ -13,12 +13,12 @@ trait UserFeed
     public function toFeedItem()
     {
         return FeedItem::create()
-                       ->id('user/'.$this->id)
-                       ->title($this->title ?? $this->name ?? 'no title')
+                       ->id('post/'.$this->id)
+                       ->title($this->title ?? 'no title')
                        ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)
-                       ->link(route('user', $this))
-                       ->author($this->name);
+                       ->link(route('post.show', $this))
+                       ->author($this->user->name);
     }
 
     /**
@@ -27,9 +27,9 @@ trait UserFeed
      */
     public static function getFeedItems()
     {
-        return cache()->remember('feed.users', now()->addHours(12), function () {
+        return cache()->remember('feed.posts', now()->addHours(12), function () {
             return self::latest()
-                       ->whereHidden(false)
+                       ->with('user')
                        ->take(50)
                        ->get();
         });

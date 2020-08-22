@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Model\Post;
-use App\Model\User;
+use App\Models\Post;
+use App\Models\User;
 use App\Notifications\PostReportNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

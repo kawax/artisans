@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
-use App\Model\Post;
+use App\Models\Post;
 use App\Notifications\PostReportNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;

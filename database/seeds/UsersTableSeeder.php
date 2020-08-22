@@ -1,8 +1,8 @@
 <?php
 
-use App\Model\Post;
-use App\Model\Tag;
-use App\Model\User;
+use App\Models\Post;
+use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder

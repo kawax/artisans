@@ -2,7 +2,7 @@
 
 namespace App\View\Composers;
 
-use App\Model\User;
+use App\Models\User;
 use Illuminate\View\View;
 
 class UserComposer

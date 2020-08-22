@@ -11,7 +11,7 @@ return [
              * You can also pass an argument to that method:
              * ['App\Model@getAllFeedItems', 'argument']
              */
-            'items' => 'App\Model\User@getFeedItems',
+            'items' => 'App\Models\User@getFeedItems',
 
             /*
              * The feed will be available on this url.
@@ -34,7 +34,7 @@ return [
              * You can also pass an argument to that method:
              * ['App\Model@getAllFeedItems', 'argument']
              */
-            'items' => 'App\Model\Post@getFeedItems',
+            'items' => 'App\Models\Post@getFeedItems',
 
             /*
              * The feed will be available on this url.

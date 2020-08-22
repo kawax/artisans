@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Post\StoreRequest;
-use App\Model\Post;
+use App\Models\Post;
 
 class PostController extends Controller
 {
