@@ -1,7 +1,14 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Post\ConfirmController;
+use App\Http\Controllers\Post\EditController;
+use App\Http\Controllers\Post\ReportController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Profile\DestroyController;
 use App\Http\Controllers\Profile\MeController;
+use App\Http\Controllers\Profile\UpdateController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -17,63 +24,56 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('Auth')->group(
-    function () {
-        Route::get('login', [LoginController::class, 'login'])
-             ->name('login');
-        Route::get('callback', [LoginController::class, 'callback'])
-             ->name('callback');
-        Route::any('logout', [LoginController::class, 'logout'])
-             ->name('logout');
-    }
-);
+// Auth
+Route::get('login', [LoginController::class, 'login'])
+     ->name('login');
+Route::get('callback', [LoginController::class, 'callback'])
+     ->name('callback');
+Route::any('logout', [LoginController::class, 'logout'])
+     ->name('logout');
 
-Route::get('@{user:name}', [UserController::class, '__invoke'])->name('user');
+
+Route::get('@{user:name}', UserController::class)->name('user');
 Route::view('user', 'user.index')->name('user.index');
 
-Route::get('tag/{tag:tag}', 'TagController')->name('tag');
+Route::get('tag/{tag:tag}', TagController::class)->name('tag');
 
+// Profile
 Route::prefix('profile')
      ->name('profile.')
-     ->namespace('Profile')
      ->middleware('auth')
      ->group(
          function () {
              Route::view('/', 'profile.edit')
                   ->name('edit');
-             Route::get('/me', 'MeController')
+             Route::get('/me', MeController::class)
                   ->name('me');
-             Route::put('/', 'UpdateController')
+             Route::put('/', UpdateController::class)
                   ->name('update');
 
              Route::view('destroy', 'profile.destroy')
                   ->name('destroy');
-             Route::delete('destroy', 'DestroyController')
+             Route::delete('destroy', DestroyController::class)
                   ->name('delete');
          }
      );
 
-Route::namespace('Post')->group(
-    function () {
-        Route::get('post/edit/{post}', 'EditController')
-             ->middleware('can:update,post');
+// Post
+Route::get('post/edit/{post}', EditController::class)
+     ->middleware('can:update,post');
+Route::get('post/confirm/{post}', ConfirmController::class)
+     ->name('post.confirm')
+     ->middleware('can:delete,post');
+Route::post('post/report/{post}', ReportController::class)
+     ->name('post.report')
+     ->middleware('auth');
 
-        Route::get('post/confirm/{post}', 'ConfirmController')
-             ->name('post.confirm')
-             ->middleware('can:delete,post');
-
-        Route::post('post/report/{post}', 'ReportController')
-             ->name('post.report')
-             ->middleware('auth');
-    }
-);
-
-Route::resource('post', 'PostController');
+Route::resource('post', PostController::class);
 
 Route::view('terms', 'pages.terms')->name('pages.terms');
 Route::view('privacy', 'pages.privacy')->name('pages.privacy');
 Route::view('api', 'pages.api')->name('pages.api');
 
-Route::get('/', 'HomeController')->name('home');
+Route::get('/', HomeController::class)->name('home');
 
 Route::feeds();

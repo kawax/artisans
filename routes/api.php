@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('Api')->group(function () {
-    Route::get('user', 'UserController');
-    Route::get('post', 'PostController');
-});
+Route::get('user', UserController::class);
+Route::get('post', PostController::class);
