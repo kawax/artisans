@@ -32,7 +32,6 @@ Route::get('callback', [LoginController::class, 'callback'])
 Route::any('logout', [LoginController::class, 'logout'])
      ->name('logout');
 
-
 Route::get('@{user:name}', UserController::class)->name('user');
 Route::view('user', 'user.index')->name('user.index');
 
