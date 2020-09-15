@@ -1,9 +1,28 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Models\Tag::class, function (Faker $faker) {
-    return [
-        'tag' => $faker->unique()->words(2, true),
-    ];
-});
+use App\Models\Tag;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class TagFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Tag::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'tag' => $this->faker->unique()->words(2, true),
+        ];
+    }
+}

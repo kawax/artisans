@@ -13,7 +13,7 @@ class ProfileTest extends TestCase
 
     public function testProfileEdit()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
         $response = $this->actingAs($user)->get('/profile');
 
@@ -23,58 +23,78 @@ class ProfileTest extends TestCase
 
     public function testProfileMe()
     {
-        $user = factory(User::class)->create([
-            'name' => 'test',
-        ]);
+        $user = User::factory()->create(
+            [
+                'name' => 'test',
+            ]
+        );
 
         $response = $this->actingAs($user)->get('/profile/me');
 
         $response->assertStatus(200)
-                 ->assertJson([
-                     'name' => 'test',
-                 ])
-                 ->assertJsonStructure([
-                     'id',
-                     'name',
-                     'title',
-                     'message',
-                     'tags',
-                 ]);
+                 ->assertJson(
+                     [
+                         'name' => 'test',
+                     ]
+                 )
+                 ->assertJsonStructure(
+                     [
+                         'id',
+                         'name',
+                         'title',
+                         'message',
+                         'tags',
+                     ]
+                 );
     }
 
     public function testProfileUpdate()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
-        $response = $this->actingAs($user)->put('/profile', [
-            'title'   => 'test',
-            'message' => 'test',
-            'tags'    => ['test'],
-        ]);
+        $response = $this->actingAs($user)->put(
+            '/profile',
+            [
+                'title'   => 'test',
+                'message' => 'test',
+                'tags'    => ['test'],
+            ]
+        );
 
-        $this->assertDatabaseHas('users', [
-            'title'   => 'test',
-            'message' => 'test',
-        ]);
+        $this->assertDatabaseHas(
+            'users',
+            [
+                'title'   => 'test',
+                'message' => 'test',
+            ]
+        );
 
-        $this->assertDatabaseHas('tags', [
-            'tag' => 'test',
-        ]);
+        $this->assertDatabaseHas(
+            'tags',
+            [
+                'tag' => 'test',
+            ]
+        );
 
         $response->assertStatus(200);
     }
 
     public function testProfileDestroy()
     {
-        $user = factory(User::class)->create([
-            'name' => 'test',
-        ]);
+        $user = User::factory()->create(
+            [
+                'name' => 'test',
+            ]
+        );
 
         $response = $this->actingAs($user)->delete('/profile/destroy');
 
-        $this->assertDatabaseMissing('users', [
-            'name' => 'test',
-        ]);
+        $this->assertDatabaseMissing(
+            'users',
+            [
+                'name' => 'test',
+            ]
+        );
 
         $response->assertRedirect();
     }

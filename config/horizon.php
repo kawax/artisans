@@ -94,12 +94,30 @@ return [
     */
 
     'trim' => [
-        'recent'    => 60 * 24,
-        'pending' => 60,
-        'completed' => 60,
+        'recent'        => 60 * 24,
+        'pending'       => 60,
+        'completed'     => 60,
         'recent_failed' => 10080,
-        'failed' => 10080,
-        'monitored' => 10080,
+        'failed'        => 10080,
+        'monitored'     => 10080,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Metrics
+    |--------------------------------------------------------------------------
+    |
+    | Here you can configure how many snapshots should be kept to display in
+    | the metrics graph. This will get used in combination with Horizon's
+    | `horizon:snapshot` schedule to define how long to retain metrics.
+    |
+    */
+
+    'metrics' => [
+        'trim_snapshots' => [
+            'job'   => 24,
+            'queue' => 24,
+        ],
     ],
 
     /*
@@ -140,25 +158,29 @@ return [
     | queued jobs and will be provisioned by Horizon during deployment.
     |
     */
+    'defaults'     => [
+        'supervisor-1' => [
+            'connection'   => 'redis',
+            'queue'        => ['artisans'],
+            'balance'      => 'auto',
+            'maxProcesses' => 1,
+            'tries'        => 1,
+            'nice'         => 0,
+        ],
+    ],
 
     'environments' => [
         'production' => [
             'supervisor-1' => [
-                'connection' => 'redis',
-                'queue'      => ['artisans'],
-                'balance'    => 'auto',
-                'processes'  => 3,
-                'tries'      => 3,
+                'maxProcesses'    => 10,
+                'balanceMaxShift' => 1,
+                'balanceCooldown' => 3,
             ],
         ],
 
         'local' => [
             'supervisor-1' => [
-                'connection' => 'redis',
-                'queue'      => ['default'],
-                'balance'    => 'simple',
-                'processes'  => 3,
-                'tries'      => 3,
+                'maxProcesses' => 3,
             ],
         ],
     ],

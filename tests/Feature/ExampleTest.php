@@ -19,7 +19,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $user = factory(User::class)->create(
+        $user = User::factory()->create(
             [
                 'name' => 'test',
             ]
@@ -35,7 +35,7 @@ class ExampleTest extends TestCase
 
     public function testUser()
     {
-        $user = factory(User::class)->create(
+        $user = User::factory()->create(
             [
                 'name'    => 'test',
                 'title'   => '<script>title</script>',
@@ -61,9 +61,9 @@ class ExampleTest extends TestCase
 
     public function testTag()
     {
-        $user = factory(User::class)->create()->each(
+        $user = User::factory()->create()->each(
             function (User $user) {
-                $user->tags()->sync(factory(Tag::class)->create(['tag' => 'test'])->pluck('id'));
+                $user->tags()->sync(Tag::factory()->create(['tag' => 'test'])->pluck('id'));
             }
         );
 

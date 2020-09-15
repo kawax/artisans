@@ -1,10 +1,29 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Models\Post::class, function (Faker $faker) {
-    return [
-        'title'   => $faker->sentence,
-        'message' => $faker->text,
-    ];
-});
+use App\Models\Post;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class PostFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Post::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'title'   => $this->faker->sentence,
+            'message' => $this->faker->text,
+        ];
+    }
+}

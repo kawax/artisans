@@ -25,9 +25,9 @@ class PostTest extends TestCase
 
     public function testShow()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
                          ->get(route('post.show', $post));
@@ -38,7 +38,7 @@ class PostTest extends TestCase
 
     public function testCreate()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
         $response = $this->actingAs($user1)
                          ->get(route('post.create'));
@@ -48,18 +48,24 @@ class PostTest extends TestCase
 
     public function testStore()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
         $response = $this->actingAs($user1)
-                         ->post(route('post.store'), [
-                             'title'   => 'test',
-                             'message' => 'test',
-                         ]);
+                         ->post(
+                             route('post.store'),
+                             [
+                                 'title'   => 'test',
+                                 'message' => 'test',
+                             ]
+                         );
 
-        $this->assertDatabaseHas('posts', [
-            'user_id' => $user1->id,
-            'title'   => 'test',
-        ]);
+        $this->assertDatabaseHas(
+            'posts',
+            [
+                'user_id' => $user1->id,
+                'title'   => 'test',
+            ]
+        );
 
         $response->assertStatus(201)
                  ->assertHeaderMissing('Link');
@@ -67,9 +73,9 @@ class PostTest extends TestCase
 
     public function testEdit()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
                          ->get(route('post.edit', $post));
@@ -80,28 +86,30 @@ class PostTest extends TestCase
 
     public function testEditData()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
                          ->get('post/edit/'.$post->id);
 
         $response->assertSuccessful()
-                 ->assertJsonStructure([
-                     'id',
-                     'title',
-                     'message',
-                 ]);
+                 ->assertJsonStructure(
+                     [
+                         'id',
+                         'title',
+                         'message',
+                     ]
+                 );
     }
 
     public function testEditDataAnother()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
-        $user2 = factory(User::class)->create();
+        $user2 = User::factory()->create();
 
         $response = $this->actingAs($user2)
                          ->get('post/edit/'.$post->id);
@@ -111,52 +119,64 @@ class PostTest extends TestCase
 
     public function testUpdate()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
-                         ->put(route('post.update', $post), [
-                             'title'   => 'test',
-                             'message' => 'test',
-                         ]);
+                         ->put(
+                             route('post.update', $post),
+                             [
+                                 'title'   => 'test',
+                                 'message' => 'test',
+                             ]
+                         );
 
-        $this->assertDatabaseHas('posts', [
-            'id'      => $post->id,
-            'user_id' => $user1->id,
-            'title'   => 'test',
-            'message' => 'test',
-        ]);
+        $this->assertDatabaseHas(
+            'posts',
+            [
+                'id'      => $post->id,
+                'user_id' => $user1->id,
+                'title'   => 'test',
+                'message' => 'test',
+            ]
+        );
 
         $response->assertSuccessful();
     }
 
     public function testUpdateAnother()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
-        $user2 = factory(User::class)->create();
+        $user2 = User::factory()->create();
 
         $response = $this->actingAs($user2)
-                         ->put(route('post.update', $post), [
-                             'title' => 'test',
-                         ]);
+                         ->put(
+                             route('post.update', $post),
+                             [
+                                 'title' => 'test',
+                             ]
+                         );
 
-        $this->assertDatabaseMissing('posts', [
-            'id'    => $post->id,
-            'title' => 'test',
-        ]);
+        $this->assertDatabaseMissing(
+            'posts',
+            [
+                'id'    => $post->id,
+                'title' => 'test',
+            ]
+        );
 
         $response->assertStatus(403);
     }
 
     public function testDestroyConfirm()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
                          ->get(route('post.confirm', $post));
@@ -166,11 +186,11 @@ class PostTest extends TestCase
 
     public function testDestroyConfirmAnother()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
-        $user2 = factory(User::class)->create();
+        $user2 = User::factory()->create();
 
         $response = $this->actingAs($user2)
                          ->get(route('post.confirm', $post));
@@ -180,36 +200,42 @@ class PostTest extends TestCase
 
     public function testDestroy()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->actingAs($user1)
                          ->delete(route('post.destroy', $post));
 
-        $this->assertDatabaseMissing('posts', [
-            'id'      => $post->id,
-            'user_id' => $user1->id,
-        ]);
+        $this->assertDatabaseMissing(
+            'posts',
+            [
+                'id'      => $post->id,
+                'user_id' => $user1->id,
+            ]
+        );
 
         $response->assertRedirect();
     }
 
     public function testDestroyAnother()
     {
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
-        $user2 = factory(User::class)->create();
+        $user2 = User::factory()->create();
 
         $response = $this->actingAs($user2)
                          ->delete(route('post.destroy', $post));
 
-        $this->assertDatabaseHas('posts', [
-            'id'      => $post->id,
-            'user_id' => $user1->id,
-        ]);
+        $this->assertDatabaseHas(
+            'posts',
+            [
+                'id'      => $post->id,
+                'user_id' => $user1->id,
+            ]
+        );
 
         $response->assertStatus(403);
     }
@@ -218,19 +244,23 @@ class PostTest extends TestCase
     {
         Notification::fake();
 
-        $user1 = factory(User::class)->create();
+        $user1 = User::factory()->create();
 
-        $post = $user1->posts()->create(factory(Post::class)->make()->toArray());
+        $post = $user1->posts()->create(Post::factory()->make()->toArray());
 
-        $user2 = factory(User::class)->create();
+        $user2 = User::factory()->create();
 
         $response = $this->actingAs($user2)
-                         ->post(route('post.report', $post), [
-                             'reason' => 'test',
-                         ]);
+                         ->post(
+                             route('post.report', $post),
+                             [
+                                 'reason' => 'test',
+                             ]
+                         );
 
         Notification::assertSentTo(
-            new AnonymousNotifiable(), PostReportNotification::class,
+            new AnonymousNotifiable(),
+            PostReportNotification::class,
             function ($notification, $channels) use ($post) {
                 return $notification->post->id === $post->id;
             }

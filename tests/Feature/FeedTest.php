@@ -14,7 +14,7 @@ class FeedTest extends TestCase
 
     public function testUser()
     {
-        $user = factory(User::class, 10)->create();
+        $user = User::factory()->count(10)->create();
 
         $response = $this->get('/feed/user');
 
@@ -23,8 +23,8 @@ class FeedTest extends TestCase
 
     public function testPost()
     {
-        $users = factory(User::class, 10)->create();
-        $post = $users->first()->posts()->create(factory(Post::class)->make()->toArray());
+        $users = User::factory()->count(10)->create();
+        $post = $users->first()->posts()->create(Post::factory()->make()->toArray());
 
         $response = $this->get('/feed/post');
 
