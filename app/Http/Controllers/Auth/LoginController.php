@@ -25,7 +25,7 @@ class LoginController extends Controller
      */
     public function callback(Request $request)
     {
-        if (! $request->has('code')) {
+        if ($request->missing('code')) {
             return redirect('/');
         }
 
