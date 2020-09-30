@@ -17,16 +17,13 @@ class WordWrap
     {
         return function (string $str, int $width = 10, string $break = PHP_EOL) {
             return Str::of(mb_convert_kana($str, 'KVa'))
-                      ->split('/\B/u')
-                      ->chunk($width)
-                      ->mapSpread(
-                          function (...$strings) {
-                              $collect = collect($strings);
-                              $collect->pop();
-
-                              return $collect->implode('');
-                          }
-                      )->implode($break);
+                ->split('/\B/u')
+                ->chunk($width)
+                ->mapSpread(function (...$strings) {
+                    return tap(collect($strings), function ($collect) {
+                        $collect->pop();
+                    })->implode('');
+                })->implode($break);
         };
     }
 }
