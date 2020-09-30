@@ -23,16 +23,23 @@ class MacroServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Str::macro('wordwrap', function ($str, $width = 10, $break = PHP_EOL) {
-            $str = mb_convert_kana($str, 'a');
+        Str::macro(
+            'wordwrap',
+            function ($str, $width = 10, $break = PHP_EOL) {
+                $arr = Str::of(mb_convert_kana($str, 'KVa'))
+                          ->split('/\B/u')
+                          ->chunk($width)
+                          ->mapSpread(
+                              function (...$strings) {
+                                  $collect = collect($strings);
+                                  $collect->pop();
 
-            $length = mb_strlen($str);
-            $arr = [];
-            for ($i = 0; $i <= $length; $i += $width) {
-                $arr[] = mb_substr($str, $i, $width);
+                                  return $collect->implode('');
+                              }
+                          );
+
+                return $arr->implode($break);
             }
-
-            return implode($break, $arr);
-        });
+        );
     }
 }
