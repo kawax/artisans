@@ -20,9 +20,7 @@ class WordWrap
                 ->split('/\B/u')
                 ->chunk($width)
                 ->mapSpread(function (...$strings) {
-                    return tap(collect($strings), function ($collect) {
-                        $collect->pop();
-                    })->implode('');
+                    return tap(collect($strings))->pop()->implode('');
                 })->implode($break);
         };
     }
