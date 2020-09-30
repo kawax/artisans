@@ -26,12 +26,9 @@ class BladeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive(
-            'markdown',
-            function ($text) {
-                return "<?php echo App\Support\Markdown::parse(${text}); ?>";
-            }
-        );
+        Blade::directive('markdown', function ($text) {
+            return "<?php echo App\Support\Markdown::parse(${text}); ?>";
+        });
 
         Blade::component(Card::class, 'card');
         Blade::component(Tweet::class, 'tweet');
