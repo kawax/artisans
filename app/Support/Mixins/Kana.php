@@ -5,7 +5,7 @@ namespace App\Support\Mixins;
 class Kana
 {
     /**
-     * mb_convert_kana()
+     * mb_convert_kana().
      *
      * @param  string|null  $str
      * @param  string  $option

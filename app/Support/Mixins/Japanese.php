@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 class Japanese
 {
     /**
-     * mb_convert_kana()
+     * mb_convert_kana().
      *
      * @param  string  $option
      * @param  string  $encoding
