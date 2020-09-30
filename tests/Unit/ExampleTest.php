@@ -24,4 +24,18 @@ class ExampleTest extends TestCase
 
         $this->assertEquals('abc'.PHP_EOL.'あいう'.PHP_EOL.'アイウ', $text);
     }
+
+    public function testStrKana()
+    {
+        $text = Str::kana('abｃあいうｱｲｳ', 'KVa');
+
+        $this->assertEquals('abcあいうアイウ', $text);
+    }
+
+    public function testStringableKana()
+    {
+        $text = Str::of('abｃあいうｱｲｳ')->kana('KVa');
+
+        $this->assertEquals('abcあいうアイウ', $text);
+    }
 }

@@ -16,7 +16,8 @@ class WordWrap
     public function wordwrap()
     {
         return function (string $str, int $width = 10, string $break = PHP_EOL) {
-            return Str::of(mb_convert_kana($str, 'KVa'))
+            return Str::of($str)
+                ->kana('KVa')
                 ->split('/\B/u')
                 ->chunk($width)
                 ->mapSpread(function (...$strings) {
