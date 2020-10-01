@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0de18ad7604b6e348f9210bbd3dba60e",
+    "content-hash": "5e0df60163eb9281a3a8e927f9a84423",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3129,25 +3129,26 @@
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "0.0.1",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-str-mixins.git",
-                "reference": "52a2853c552a5e2c9006c095ce1d3b99419353f3"
+                "reference": "3fa196ba951d7561aa31110ea95f617f8c562ffa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/52a2853c552a5e2c9006c095ce1d3b99419353f3",
-                "reference": "52a2853c552a5e2c9006c095ce1d3b99419353f3",
+                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/3fa196ba951d7561aa31110ea95f617f8c562ffa",
+                "reference": "3fa196ba951d7561aa31110ea95f617f8c562ffa",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^8.0",
+                "ext-mbstring": "*",
+                "illuminate/support": "^7.0||^8.0",
                 "php": "^7.3||^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.4.2",
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^5.0||^6.0",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
@@ -3179,7 +3180,7 @@
                 "mixins",
                 "str"
             ],
-            "time": "2020-10-01T04:54:14+00:00"
+            "time": "2020-10-01T09:41:34+00:00"
         },
         {
             "name": "spatie/laravel-feed",
