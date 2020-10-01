@@ -3129,16 +3129,16 @@
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-str-mixins.git",
-                "reference": "3fa196ba951d7561aa31110ea95f617f8c562ffa"
+                "reference": "d0d53a6d34278f2b1909860254dca8cab8829c34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/3fa196ba951d7561aa31110ea95f617f8c562ffa",
-                "reference": "3fa196ba951d7561aa31110ea95f617f8c562ffa",
+                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/d0d53a6d34278f2b1909860254dca8cab8829c34",
+                "reference": "d0d53a6d34278f2b1909860254dca8cab8829c34",
                 "shasum": ""
             },
             "require": {
@@ -3180,7 +3180,7 @@
                 "mixins",
                 "str"
             ],
-            "time": "2020-10-01T09:41:34+00:00"
+            "time": "2020-10-01T11:34:52+00:00"
         },
         {
             "name": "spatie/laravel-feed",
