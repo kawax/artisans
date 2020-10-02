@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "132450d20641374131f2eac1de867aec",
+    "content-hash": "3edcf4a564cc15a118fcf8a1d4e919b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3129,22 +3129,22 @@
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-str-mixins.git",
-                "reference": "b1f00e24bef2f6008f1b0f391d2764d6a22dd458"
+                "reference": "3a2ff1e38baca5b12e83bb5edd3bc3adaac52223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/b1f00e24bef2f6008f1b0f391d2764d6a22dd458",
-                "reference": "b1f00e24bef2f6008f1b0f391d2764d6a22dd458",
+                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/3a2ff1e38baca5b12e83bb5edd3bc3adaac52223",
+                "reference": "3a2ff1e38baca5b12e83bb5edd3bc3adaac52223",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "illuminate/support": "^7.0||^8.0",
-                "php": "^7.3||^8.0"
+                "php": "^7.4||^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.4.2",
@@ -3180,7 +3180,7 @@
                 "mixins",
                 "str"
             ],
-            "time": "2020-10-02T04:05:41+00:00"
+            "time": "2020-10-02T09:33:47+00:00"
         },
         {
             "name": "spatie/laravel-feed",
@@ -10043,7 +10043,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3",
+        "php": "^7.4",
         "ext-json": "*",
         "ext-mbstring": "*"
     },
