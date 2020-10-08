@@ -3075,16 +3075,16 @@
         },
         {
             "name": "revolution/laravel-server-push",
-            "version": "1.1.7",
+            "version": "1.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-server-push.git",
-                "reference": "26814adc6527776813e04c882666a7bfa69bb832"
+                "reference": "003b94b013f2edd370ac07ab06e3318c85686bb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/26814adc6527776813e04c882666a7bfa69bb832",
-                "reference": "26814adc6527776813e04c882666a7bfa69bb832",
+                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/003b94b013f2edd370ac07ab06e3318c85686bb4",
+                "reference": "003b94b013f2edd370ac07ab06e3318c85686bb4",
                 "shasum": ""
             },
             "require": {
@@ -3093,7 +3093,7 @@
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^4.0||^5.0",
+                "orchestra/testbench": "^4.0||^5.0||^6.0",
                 "phpunit/phpunit": "^8.0||^9.0"
             },
             "type": "library",
@@ -3125,7 +3125,7 @@
                 "laravel",
                 "server-push"
             ],
-            "time": "2020-03-23T10:31:42+00:00"
+            "time": "2020-10-07T04:46:07+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
@@ -3328,12 +3328,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00"
+                "reference": "ae789a8a2ad189ce7e8216942cdb9b77319f5eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
-                "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ae789a8a2ad189ce7e8216942cdb9b77319f5eb8",
+                "reference": "ae789a8a2ad189ce7e8216942cdb9b77319f5eb8",
                 "shasum": ""
             },
             "require": {
