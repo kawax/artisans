@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3edcf4a564cc15a118fcf8a1d4e919b6",
+    "content-hash": "1ec55cad17cbb80519008e60858d7cb8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3148,6 +3148,54 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "revolution/laravel-namespaced-helpers",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kawax/laravel-namespaced-helpers.git",
+                "reference": "2b3534dfccbcf5930367474b703c84bc95534859"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kawax/laravel-namespaced-helpers/zipball/2b3534dfccbcf5930367474b703c84bc95534859",
+                "reference": "2b3534dfccbcf5930367474b703c84bc95534859",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0||^7.0||^8.0",
+                "php": "^7.2||^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0||^5.0||^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kawax",
+                    "email": "kawaxbiz@gmail.com"
+                }
+            ],
+            "description": "Laravel Namespaced helpers",
+            "keywords": [
+                "helpers",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/kawax/laravel-namespaced-helpers/issues",
+                "source": "https://github.com/kawax/laravel-namespaced-helpers/tree/1.0.0"
+            },
+            "time": "2020-10-25T23:04:15+00:00"
         },
         {
             "name": "revolution/laravel-pagination-bulma",

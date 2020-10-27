@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use function Revolution\Illuminate\Support\env;
 
 return [
 

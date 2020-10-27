@@ -1,5 +1,7 @@
 <?php
 
+use function Revolution\Illuminate\Support\env;
+
 return [
 
     /*
