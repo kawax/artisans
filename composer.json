@@ -33,7 +33,7 @@
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^2.6",
     "facade/ignition": "^2.0",
-    "fzaninotto/faker": "^1.9.1",
+    "fakerphp/faker": "^1.9.1",
     "mockery/mockery": "^1.3",
     "nunomaduro/collision": "^5.0",
     "nunomaduro/phpinsights": "^1.14",
