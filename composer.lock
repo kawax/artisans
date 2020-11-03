@@ -1264,16 +1264,16 @@
         },
         {
             "name": "laravel-notification-channels/discord",
-            "version": "v1.1.5",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-notification-channels/discord.git",
-                "reference": "32d5714692c28982b8b785554173f5005ef40546"
+                "reference": "7e4e28fea51101f7bd9c805c6b21f5bce965edec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-notification-channels/discord/zipball/32d5714692c28982b8b785554173f5005ef40546",
-                "reference": "32d5714692c28982b8b785554173f5005ef40546",
+                "url": "https://api.github.com/repos/laravel-notification-channels/discord/zipball/7e4e28fea51101f7bd9c805c6b21f5bce965edec",
+                "reference": "7e4e28fea51101f7bd9c805c6b21f5bce965edec",
                 "shasum": ""
             },
             "require": {
@@ -1326,9 +1326,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel-notification-channels/discord/issues",
-                "source": "https://github.com/laravel-notification-channels/discord/tree/v1.1.5"
+                "source": "https://github.com/laravel-notification-channels/discord/tree/v1.2.0"
             },
-            "time": "2020-10-13T01:05:44+00:00"
+            "time": "2020-11-02T22:25:23+00:00"
         },
         {
             "name": "laravel/framework",
