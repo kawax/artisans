@@ -20,6 +20,10 @@ jobs:
           coverage: xdebug
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-progress --prefer-dist --optimize-autoloader
+      - name: Laravel env
+        run: |
+          cp .env.example .env
+          php artisan key:generate
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
