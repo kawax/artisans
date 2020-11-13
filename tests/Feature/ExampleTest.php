@@ -29,7 +29,8 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200)
                  ->assertViewHas('users')
-                 ->assertSee('test');
+                 ->assertSee('test')
+                 ->assertHeader('Link');
     }
 
     public function testUser()
