@@ -41,7 +41,7 @@ return [
              */
             'url'   => '/feed/post',
 
-            'title' => 'Laravel職人を探す - 募集',
+            'title' => 'Laravel職人を探す - 投稿',
 
             /*
              * The view that will render the feed.
