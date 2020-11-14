@@ -24,7 +24,7 @@
         data () {
             return {
                 title: '',
-                message: '### 連絡方法',
+                message: '',
                 errors: null,
             }
         },
