@@ -20,7 +20,7 @@ class PostController extends Controller
         $page = max(1, min(100, $request->input('limit', 20)));
 
         $posts = Post::search($request->input('q'))
-                     ->jobs()
+                     ->articles()
                      ->paginate($page)
                      ->appends('q', $request->input('q'));
 

@@ -9,7 +9,7 @@ class PostComposer
 {
     public function compose(View $view)
     {
-        $posts = Post::jobs()->paginate(10, ['*'], 'post');
+        $posts = Post::articles()->paginate(10, ['*'], 'post');
 
         $view->with(compact('posts'));
     }

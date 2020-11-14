@@ -39,7 +39,7 @@ class Post extends Model implements Feedable
      * @param  Builder  $query
      * @return Builder
      */
-    public function scopeJobs($query)
+    public function scopeArticles($query)
     {
         return $query->latest('updated_at')
                      ->with('user');
