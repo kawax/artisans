@@ -10,7 +10,7 @@
                 <div class="card mb-1">
                     <div class="card-content">
                         <div class="content">
-                            <h1>新規募集投稿</h1>
+                            <h1>新規投稿</h1>
                         </div>
 
                         <post-create-component></post-create-component>

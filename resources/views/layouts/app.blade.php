@@ -39,7 +39,7 @@
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
                     <a class="navbar-item" href="{{ route('user.index') }}">職人</a>
-                    <a class="navbar-item" href="{{ route('post.index') }}">募集</a>
+                    <a class="navbar-item" href="{{ route('post.index') }}">投稿</a>
                 </div>
 
                 <div class="navbar-end">
@@ -53,7 +53,7 @@
                             プロフィール
                         </a>
 
-                        <a href="{{ route('post.create') }}" class="navbar-item">新規募集</a>
+                        <a href="{{ route('post.create') }}" class="navbar-item">新規投稿</a>
 
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="#">{{ Auth::user()->name }}</a>

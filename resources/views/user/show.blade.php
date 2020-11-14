@@ -83,7 +83,7 @@
                 @if($user->posts->count() > 0)
                     <article class="message is-primary">
                         <div class="message-header">
-                            <p>最近の募集</p>
+                            <p>最近の投稿</p>
                         </div>
                         <div class="message-body content">
                             <ul>

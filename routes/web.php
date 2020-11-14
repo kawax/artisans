@@ -69,7 +69,6 @@ Route::post('post/report/{post}', ReportController::class)
 
 Route::resource('post', PostController::class);
 
-Route::view('terms', 'pages.terms')->name('pages.terms');
 Route::view('privacy', 'pages.privacy')->name('pages.privacy');
 Route::view('api', 'pages.api')->name('pages.api');
 

@@ -1,6 +1,6 @@
 <article class="message is-primary mb-1" v-lazy-container="{ selector: 'img[lazyload=on]' }">
     <div class="message-header">
-        <p>募集したい側（{{ $posts->total() }}）</p>
+        <p>投稿（{{ $posts->total() }}）</p>
     </div>
     <div class="message-body is-paddingless has-background-white">
         @foreach($posts as $post)

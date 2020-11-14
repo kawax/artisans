@@ -13,7 +13,7 @@
                 <div class="card mb-1">
                     <div class="card-content">
                         <div class="content">
-                            <h1>募集変更</h1>
+                            <h1>投稿変更</h1>
                         </div>
 
                         <post-edit-component post-id="{{ $post->id }}"></post-edit-component>

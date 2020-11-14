@@ -2,8 +2,6 @@
     <div class="content has-text-centered">
         <p>
             <a href="{{ route('pages.api') }}">API</a> |
-            <a href="{{ route('pages.terms') }}">利用規約</a> |
-            <a href="{{ route('pages.privacy') }}">プライバシーポリシー</a> |
             <a href="https://github.com/kawax/artisans" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
         <p>

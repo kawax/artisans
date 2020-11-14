@@ -11,12 +11,6 @@
         </b-field>
         <p class="help mb-1"></p>
 
-
-        <div class="field">
-            <b-switch v-model="terms">利用規約に同意する</b-switch>
-        </div>
-
-
         <button class="button is-fullwidth is-primary"
                 :disabled="enablePost"
                 @click="post">送信
@@ -31,13 +25,12 @@
             return {
                 title: '',
                 message: '### 連絡方法',
-                terms: false,
                 errors: null,
             }
         },
         computed: {
             enablePost () {
-                return !this.terms || this.title.length === 0 || this.message.length === 0
+                return this.title.length === 0 || this.message.length === 0
             },
         },
         methods: {

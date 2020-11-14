@@ -11,12 +11,6 @@
         </b-field>
         <p class="help mb-1"></p>
 
-
-        <div class="field">
-            <b-switch v-model="terms">利用規約に同意する</b-switch>
-        </div>
-
-
         <button class="button is-fullwidth is-primary" :disabled="!terms || title.length === 0 || message.length === 0"
                 @click="post">送信
         </button>
@@ -30,7 +24,6 @@
             return {
                 title: '',
                 message: '',
-                terms: true,
             }
         },
         props: ['postId'],

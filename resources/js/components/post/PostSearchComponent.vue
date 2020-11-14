@@ -2,7 +2,7 @@
     <section class="mb-1">
         <article class="message is-primary">
             <div class="message-header">
-                <p>募集検索</p>
+                <p>投稿検索</p>
             </div>
             <div class="message-body">
                 <b-field label="">
