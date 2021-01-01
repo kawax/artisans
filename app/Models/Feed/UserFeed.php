@@ -8,9 +8,9 @@ use Spatie\Feed\FeedItem;
 trait UserFeed
 {
     /**
-     * @return array|FeedItem
+     * @return FeedItem
      */
-    public function toFeedItem()
+    public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
                        ->id('user/'.$this->id)
