@@ -3161,21 +3161,21 @@
         },
         {
             "name": "revolution/laravel-namespaced-helpers",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-namespaced-helpers.git",
-                "reference": "2b3534dfccbcf5930367474b703c84bc95534859"
+                "reference": "7e2d770d8ac7926ae68c3377b37abb12a1d88f6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-namespaced-helpers/zipball/2b3534dfccbcf5930367474b703c84bc95534859",
-                "reference": "2b3534dfccbcf5930367474b703c84bc95534859",
+                "url": "https://api.github.com/repos/kawax/laravel-namespaced-helpers/zipball/7e2d770d8ac7926ae68c3377b37abb12a1d88f6b",
+                "reference": "7e2d770d8ac7926ae68c3377b37abb12a1d88f6b",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^6.0||^7.0||^8.0",
-                "php": "^7.2||^8.0"
+                "php": "^7.3||^8.0"
             },
             "require-dev": {
                 "orchestra/testbench": "^4.0||^5.0||^6.0"
@@ -3203,9 +3203,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-namespaced-helpers/issues",
-                "source": "https://github.com/kawax/laravel-namespaced-helpers/tree/1.0.0"
+                "source": "https://github.com/kawax/laravel-namespaced-helpers/tree/1.1.0"
             },
-            "time": "2020-10-25T23:04:15+00:00"
+            "time": "2021-01-01T08:50:18+00:00"
         },
         {
             "name": "revolution/laravel-pagination-bulma",
@@ -3262,21 +3262,21 @@
         },
         {
             "name": "revolution/laravel-server-push",
-            "version": "1.1.8",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-server-push.git",
-                "reference": "003b94b013f2edd370ac07ab06e3318c85686bb4"
+                "reference": "87b76951be8c5a687be577658bee84d94c4998cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/003b94b013f2edd370ac07ab06e3318c85686bb4",
-                "reference": "003b94b013f2edd370ac07ab06e3318c85686bb4",
+                "url": "https://api.github.com/repos/kawax/laravel-server-push/zipball/87b76951be8c5a687be577658bee84d94c4998cf",
+                "reference": "87b76951be8c5a687be577658bee84d94c4998cf",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.2||^8.0"
+                "php": "^7.3||^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
@@ -3313,33 +3313,31 @@
                 "server-push"
             ],
             "support": {
-                "source": "https://github.com/kawax/laravel-server-push/tree/1.1.8"
+                "source": "https://github.com/kawax/laravel-server-push/tree/1.2.0"
             },
-            "time": "2020-10-07T04:46:07+00:00"
+            "time": "2021-01-01T09:08:49+00:00"
         },
         {
             "name": "revolution/laravel-str-mixins",
-            "version": "2.0.4",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-str-mixins.git",
-                "reference": "baf6f8c07ae2bde0fb85f8bd42827b90fa7df026"
+                "reference": "49fc1100215862d30393dbf4861896339e389b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/baf6f8c07ae2bde0fb85f8bd42827b90fa7df026",
-                "reference": "baf6f8c07ae2bde0fb85f8bd42827b90fa7df026",
+                "url": "https://api.github.com/repos/kawax/laravel-str-mixins/zipball/49fc1100215862d30393dbf4861896339e389b67",
+                "reference": "49fc1100215862d30393dbf4861896339e389b67",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "illuminate/support": "^7.0||^8.0",
-                "php": "^7.2||^8.0"
+                "php": "^7.3||^8.0"
             },
             "require-dev": {
-                "mockery/mockery": "^1.3.3",
-                "orchestra/testbench": "^5.0||^6.0",
-                "phpunit/phpunit": "^8.0||^9.3"
+                "orchestra/testbench": "^5.0||^6.0"
             },
             "type": "library",
             "extra": {
@@ -3372,9 +3370,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-str-mixins/issues",
-                "source": "https://github.com/kawax/laravel-str-mixins/tree/2.0.4"
+                "source": "https://github.com/kawax/laravel-str-mixins/tree/2.1.0"
             },
-            "time": "2020-10-04T00:43:12+00:00"
+            "time": "2021-01-01T09:07:37+00:00"
         },
         {
             "name": "spatie/laravel-feed",
