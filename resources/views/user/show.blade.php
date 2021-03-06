@@ -24,7 +24,7 @@
         <div class="columns is-marginless is-centered">
             <div class="column is-12">
 
-                <div class="card has-text-white has-background-primary mb-1">
+                <div class="card has-text-white has-background-primary my-3">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-left">
@@ -36,8 +36,7 @@
                                 <p class="title is-4 has-text-white">{{ $user->name }}</p>
                                 <p class="subtitle is-6">
                                     <a href="https://github.com/{{ $user->name }}"
-                                       target="_blank"
-                                       rel="noopener noreferrer">
+                                       target="_blank">
                                        <span class="icon has-text-black">
                                            <i class="fab fa-github"></i>
                                        </span>
@@ -68,7 +67,7 @@
                             </article>
 
 
-                            <div class="control mb-1">
+                            <div class="control mb-3">
                                 <div class="tags has-addons">
                                     <span class="tag is-dark">更新日</span>
                                     <span class="tag is-white">{{ $user->updated_at->toDateString() }}</span>
@@ -81,11 +80,11 @@
                 </div>
 
                 @if($user->posts->count() > 0)
-                    <article class="message is-primary">
+                    <article class="message is-primary my-3">
                         <div class="message-header">
                             <p>最近の投稿</p>
                         </div>
-                        <div class="message-body content">
+                        <div class="message-body content pt-0">
                             <ul>
                                 @foreach($user->posts as $post)
                                     <li>
@@ -102,7 +101,7 @@
 
                 @auth
                     @if(auth()->user()->id === $user->id)
-                        <a href="{{ route('profile.edit') }}" class="button is-primary is-outlined mb-1">
+                        <a href="{{ route('profile.edit') }}" class="button is-primary is-outlined mb-3">
                             <span class="icon"><i class="fas fa-edit"></i></span>
                             <span>変更</span>
                         </a>

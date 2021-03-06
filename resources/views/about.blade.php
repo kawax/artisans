@@ -1,4 +1,4 @@
-<div class="notification is-primary">
+<div class="notification is-primary mt-3">
     <div class="content">
         <h1 class="has-text-white">Laravel職人を探すサービス</h1>
 
@@ -7,8 +7,7 @@
             <li><strong>情報提供</strong>のみのサービスです。連絡等は外部で行ってください。</li>
             <li>余計な情報は預からないのでメールアドレスさえも保存してません。</li>
             <li>通知先
-                <a href="https://twitter.com/kawaxbiz" class="tag is-dark" target="_blank"
-                   rel="noopener noreferrer">Twitter</a>
+                <a href="https://twitter.com/kawaxbiz" class="tag is-dark" target="_blank">Twitter</a>
                 <a href="{{ config('artisans.discord_url') }}" class="tag is-dark">Discord</a>
                 <b-tooltip label="無期限の招待リンクが作れないので保留"
                            type="is-dark"
@@ -17,8 +16,7 @@
                 </b-tooltip>
             </li>
             <li>
-                <a href="https://widget.kawax.biz/" class="tag is-dark" target="_blank"
-                   rel="noopener noreferrer">Widget</a>
+                <a href="https://widget.kawax.biz/" class="tag is-dark" target="_blank">Widget</a>
             </li>
             <li>ハッシュタグ
                 <b-tooltip label="#自動 は自動ツイートをミュートしたい人用"
@@ -30,7 +28,7 @@
         </ul>
     </div>
     @guest
-        <p class="mb-1">
+        <p class="mb-3">
             <a class="button is-dark" href="{{ route('login') }}">
                 <i class="fab fa-github"></i>
                 Login with GitHub

@@ -5,19 +5,18 @@
                 職人リストで非公開
             </b-switch>
         </div>
-        <p class="help mb-1">個別のページでは公開されます。</p>
+        <p class="help mb-3">個別のページでは公開されます。</p>
 
 
         <b-field label="一言タイトル">
             <b-input v-model="title" maxlength="100"></b-input>
         </b-field>
-        <p class="help mb-1">OGPの画像等でも使われます。</p>
-
+        <p class="help mb-3">OGPの画像等でも使われます。</p>
 
         <b-field label="メッセージ">
             <b-input maxlength="1000" type="textarea" v-model="message"></b-input>
         </b-field>
-        <p class="help mb-1">Markdownが使えます。</p>
+        <p class="help mb-3">Markdownが使えます。</p>
 
 
         <b-field label="タグ">
@@ -31,7 +30,7 @@
                 placeholder="Add a tag">
             </b-taginput>
         </b-field>
-        <p class="help mb-1">スキルを書くなり条件を書くなり使い方は自由。</p>
+        <p class="help mb-3">スキルを書くなり条件を書くなり使い方は自由。</p>
 
 
         <button class="button is-fullwidth is-primary" @click="post">保存</button>

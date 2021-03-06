@@ -78,6 +78,7 @@
     ],
     "ide-helper:meta": "php artisan ide-helper:meta",
     "ide-helper:generate": "php artisan ide-helper:generate",
-    "ide-helper:models": "php artisan ide-helper:models -N"
+    "ide-helper:models": "php artisan ide-helper:models -N",
+    "serve": "php artisan serve"
   }
 }

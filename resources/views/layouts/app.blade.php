@@ -24,7 +24,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar has-shadow mb-1" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-shadow mb-3" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a href="{{ url('/') }}" class="navbar-item">{{ config('app.name', 'Laravel') }}</a>

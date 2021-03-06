@@ -24,7 +24,7 @@
         <div class="columns is-marginless is-centered">
             <div class="column is-12">
 
-                <div class="card has-text-primary has-background-white mb-1">
+                <div class="card has-text-primary has-background-white mb-3">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-left">
@@ -60,7 +60,7 @@
                                 </div>
                             </article>
 
-                            <div class="control mb-1">
+                            <div class="control mb-3">
                                 <div class="field is-grouped is-grouped-multiline">
                                     <div class="control">
                                         <div class="tags has-addons">
@@ -89,7 +89,7 @@
                     <div class="field has-addons">
                         @can('update', $post)
                             <p class="control">
-                                <a href="{{ route('post.edit', $post) }}" class="button is-primary is-outlined mb-1">
+                                <a href="{{ route('post.edit', $post) }}" class="button is-primary is-outlined mb-3">
                                     <span class="icon"><i class="fas fa-edit"></i></span>
                                     <span>変更</span>
                                 </a>

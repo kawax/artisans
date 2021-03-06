@@ -1,5 +1,5 @@
 <template>
-    <section class="mb-1">
+    <section class="my-3">
         <article class="message is-primary">
             <div class="message-header">
                 <p>投稿検索</p>

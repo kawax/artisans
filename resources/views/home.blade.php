@@ -38,7 +38,7 @@
 
                 @auth
                     <a href="{{ route('post.create') }}"
-                       class="button is-medium is-primary is-outlined is-fullwidth mb-1">新規投稿</a>
+                       class="button is-medium is-primary is-outlined is-fullwidth my-3">新規投稿</a>
                 @endauth
 
                 @include('post.posts')

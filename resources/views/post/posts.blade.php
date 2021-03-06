@@ -1,4 +1,4 @@
-<article class="message is-primary mb-1" v-lazy-container="{ selector: 'img[lazyload=on]' }">
+<article class="message is-primary mb-3" v-lazy-container="{ selector: 'img[lazyload=on]' }">
     <div class="message-header">
         <p>投稿（{{ $posts->total() }}）</p>
     </div>

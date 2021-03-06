@@ -10,7 +10,7 @@
                 @include('post.side')
             </div>
             <div class="column is-8">
-                <div class="card mb-1">
+                <div class="card mb-3">
                     <div class="card-content">
                         <div class="content">
                             <h1>投稿変更</h1>
