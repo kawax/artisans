@@ -23,11 +23,11 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'id'             => $this->faker->unique()->randomNumber,
-            'name'           => $this->faker->unique()->userName,
-            'avatar'         => $this->faker->imageUrl(240, 240),
-            'title'          => $this->faker->sentence,
-            'message'        => $this->faker->text,
+            'id' => $this->faker->unique()->numberBetween(1, 10000),
+            'name' => $this->faker->unique()->userName,
+            'avatar' => $this->faker->imageUrl(240, 240),
+            'title' => $this->faker->sentence,
+            'message' => $this->faker->text,
             'remember_token' => Str::random(10),
         ];
     }
