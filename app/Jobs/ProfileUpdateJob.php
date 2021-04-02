@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class ProfileUpdateJob implements ShouldQueue
+class ProfileUpdateJob
 {
     use Dispatchable;
     use InteractsWithQueue;
