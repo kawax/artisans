@@ -17,7 +17,7 @@ class UpdateController extends Controller
      */
     public function __invoke(UpdateRequest $request)
     {
-        ProfileUpdateJob::dispatchNow($request);
+        ProfileUpdateJob::dispatchSync($request);
 
         return response()->json(['message' => 'OK']);
     }
