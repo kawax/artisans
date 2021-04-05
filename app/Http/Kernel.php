@@ -36,6 +36,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Revolution\ServerPush\ServerPush::class,
+            'throttle:web',
         ],
 
         'api' => [
@@ -46,6 +47,7 @@ class Kernel extends HttpKernel
         'image' => [
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             'cache.headers:etag;max_age=3600;s_maxage=3600',
+            'throttle:web',
         ],
     ];
 
