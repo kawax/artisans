@@ -3273,16 +3273,16 @@
         },
         {
             "name": "revolution/laravel-namespaced-helpers",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-namespaced-helpers.git",
-                "reference": "7e2d770d8ac7926ae68c3377b37abb12a1d88f6b"
+                "reference": "3f6b27639ea4b67fe6e2591ca986b7face97757e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-namespaced-helpers/zipball/7e2d770d8ac7926ae68c3377b37abb12a1d88f6b",
-                "reference": "7e2d770d8ac7926ae68c3377b37abb12a1d88f6b",
+                "url": "https://api.github.com/repos/kawax/laravel-namespaced-helpers/zipball/3f6b27639ea4b67fe6e2591ca986b7face97757e",
+                "reference": "3f6b27639ea4b67fe6e2591ca986b7face97757e",
                 "shasum": ""
             },
             "require": {
@@ -3294,6 +3294,9 @@
             },
             "type": "library",
             "autoload": {
+                "psr-4": {
+                    "Revolution\\Illuminate\\Support\\": "src/"
+                },
                 "files": [
                     "src/helpers.php"
                 ]
@@ -3315,9 +3318,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-namespaced-helpers/issues",
-                "source": "https://github.com/kawax/laravel-namespaced-helpers/tree/1.1.0"
+                "source": "https://github.com/kawax/laravel-namespaced-helpers/tree/1.2.0"
             },
-            "time": "2021-01-01T08:50:18+00:00"
+            "time": "2021-04-14T05:17:17+00:00"
         },
         {
             "name": "revolution/laravel-pagination-bulma",
