@@ -66,11 +66,6 @@ return [
             'post_report' => env('DISCORD_CHANNEL_POST_REPORT'),
         ],
         'bot'       => env('DISCORD_BOT'),
-        'yasmin'    => [
-            'ws.disabledEvents' => [
-                'TYPING_START',
-            ],
-        ],
     ],
 
     'slack' => [
