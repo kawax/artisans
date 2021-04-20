@@ -5,3 +5,4 @@ finder:
   not-name:
     - index.php
     - server.php
+version: 8
