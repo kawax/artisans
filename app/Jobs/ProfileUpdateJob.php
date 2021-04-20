@@ -4,7 +4,6 @@ namespace App\Jobs;
 
 use App\Models\Tag;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
@@ -18,20 +17,14 @@ class ProfileUpdateJob
     use SerializesModels;
 
     /**
-     * @var Request
-     */
-    public $request;
-
-    /**
      * Create a new job instance.
      *
      * @param  Request  $request
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct(public Request $request)
     {
-        $this->request = $request;
     }
 
     /**

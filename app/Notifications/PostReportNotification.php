@@ -15,21 +15,6 @@ class PostReportNotification extends Notification implements ShouldQueue
     use Queueable;
 
     /**
-     * @var Post
-     */
-    public $post;
-
-    /**
-     * @var User
-     */
-    public $user;
-
-    /**
-     * @var string
-     */
-    public $reason;
-
-    /**
      * Create a new notification instance.
      *
      * @param  Post  $post
@@ -37,11 +22,11 @@ class PostReportNotification extends Notification implements ShouldQueue
      * @param  string  $reason
      * @return void
      */
-    public function __construct(Post $post, User $user, string $reason)
-    {
-        $this->post = $post;
-        $this->user = $user;
-        $this->reason = $reason;
+    public function __construct(
+        public Post $post,
+        public User $user,
+        public string $reason
+    ) {
     }
 
     /**
@@ -58,15 +43,15 @@ class PostReportNotification extends Notification implements ShouldQueue
     public function toDiscord($notifiable)
     {
         return DiscordMessage::create(route('post.show', $this->post), [
-            'author'      => [
-                'name'     => $this->user->name,
-                'url'      => route('user', $this->user),
+            'author' => [
+                'name' => $this->user->name,
+                'url' => route('user', $this->user),
                 'icon_url' => $this->user->avatar,
             ],
-            'title'       => $this->post->title,
+            'title' => $this->post->title,
             'description' => $this->reason,
-            'url'         => route('post.show', $this->post),
-            'color'       => 15156272,
+            'url' => route('post.show', $this->post),
+            'color' => 15156272,
         ]);
     }
 }
