@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\UpdateRequest;
-use App\Jobs\ProfileUpdateJob;
 
 class UpdateController extends Controller
 {
@@ -17,7 +16,7 @@ class UpdateController extends Controller
      */
     public function __invoke(UpdateRequest $request)
     {
-        ProfileUpdateJob::dispatchSync($request);
+        $request->updateProfile();
 
         return response()->json(['message' => 'OK']);
     }

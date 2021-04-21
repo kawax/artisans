@@ -17,8 +17,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::factory(100)
-            ->hasTag(3)
-            ->hasPost(1)
+            ->hasTags(3)
+            ->hasPosts(1)
             ->create();
     }
 }

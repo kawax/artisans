@@ -50,34 +50,33 @@ class User extends Authenticatable implements Feedable
 
     /**
      * @param  Builder  $query
-     * @param  string  $search
+     * @param  string|null  $search
      *
      * @return Builder
      */
-    public function scopeSearch($query, ?string $search)
+    public function scopeSearch(Builder $query, ?string $search)
     {
-        return $query->when(
-            $search,
-            function (Builder $query, $search) {
-                return $query->where('title', 'LIKE', '%'.$search.'%')
-                             ->orWhere('message', 'LIKE', '%'.$search.'%')
-                             ->orWhere('name', 'LIKE', '%'.$search.'%');
-            }
-        );
+        return $query->when($search, function (Builder $query, $search) {
+            return $query->where(function (Builder $query) use ($search) {
+                $query->where('title', 'LIKE', '%'.$search.'%')
+                    ->orWhere('message', 'LIKE', '%'.$search.'%')
+                    ->orWhere('name', 'LIKE', '%'.$search.'%');
+            });
+        });
     }
 
     /**
      * @param  Builder  $query
-     * @param  int  $page
+     * @param  int|null  $page
      *
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
-    public function scopeArtisans($query, ?int $page = 20)
+    public function scopeArtisans(Builder $query, ?int $page = 20)
     {
         return $query->latest('updated_at')
-                     ->whereHidden(false)
-                     ->with('tags')
-                     ->paginate($page);
+            ->whereHidden(false)
+            ->with('tags')
+            ->paginate($page);
     }
 
     /**
@@ -98,14 +97,14 @@ class User extends Authenticatable implements Feedable
     public function resolveRouteBinding($value, $field = null)
     {
         return $this->where($field ?? $this->getRouteKeyName(), $value)
-                    ->with(
-                        [
-                            'tags',
-                            'posts' => function ($query) {
-                                $query->latest('updated_at')->limit(5);
-                            },
-                        ]
-                    )->first();
+            ->with(
+                [
+                    'tags',
+                    'posts' => function ($query) {
+                        $query->latest('updated_at')->limit(5);
+                    },
+                ]
+            )->first();
     }
 
     /**

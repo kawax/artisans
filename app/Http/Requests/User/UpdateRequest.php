@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\User;
 
+use App\Models\Tag;
 use Illuminate\Foundation\Http\FormRequest;
+use function Symfony\Component\String\s;
 
 class UpdateRequest extends FormRequest
 {
@@ -24,8 +26,33 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'   => 'max:100',
+            'title' => 'max:100',
             'message' => 'max:1000',
         ];
+    }
+
+    public function updateProfile()
+    {
+        $this->user()->fill(
+            $this->only(
+                [
+                    'title',
+                    'message',
+                    'hidden',
+                ]
+            )
+        )->save();
+
+        $tag_id = [];
+
+        foreach ($this->tags as $tag) {
+            $tag_id[] = Tag::firstOrCreate(
+                [
+                    'tag' => $tag,
+                ]
+            )->id;
+        }
+
+        $this->user()->tags()->sync($tag_id);
     }
 }
