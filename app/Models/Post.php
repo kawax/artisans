@@ -27,11 +27,13 @@ class Post extends Model implements Feedable
      * @param  string  $search
      * @return Builder
      */
-    public function scopeSearch($query, ?string $search)
+    public function scopeSearch(Builder $query, ?string $search)
     {
         return $query->when($search, function (Builder $query, $search) {
-            return $query->where('title', 'LIKE', '%'.$search.'%')
-                         ->orWhere('message', 'LIKE', '%'.$search.'%');
+            return $query->where(function (Builder $query) use ($search) {
+                $query->where('title', 'LIKE', '%'.$search.'%')
+                    ->orWhere('message', 'LIKE', '%'.$search.'%');
+            });
         });
     }
 
@@ -42,7 +44,7 @@ class Post extends Model implements Feedable
     public function scopeArticles($query)
     {
         return $query->latest('updated_at')
-                     ->with('user');
+            ->with('user');
     }
 
     /**
