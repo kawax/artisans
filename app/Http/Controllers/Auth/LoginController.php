@@ -15,8 +15,8 @@ class LoginController extends Controller
     public function login()
     {
         return Socialite::driver('github')
-                        ->setScopes(['read:user'])
-                        ->redirect();
+            ->setScopes(['read:user'])
+            ->redirect();
     }
 
     /**
@@ -49,17 +49,23 @@ class LoginController extends Controller
         return User::updateOrCreate([
             'id' => $user->id,
         ], [
-            'name'   => $user->nickname,
+            'name' => $user->nickname,
             'avatar' => $user->avatar,
         ]);
     }
 
     /**
+     * @param  Request  $request
+     *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function logout()
+    public function logout(Request $request)
     {
         auth()->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerate();
 
         return redirect('/');
     }
