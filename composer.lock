@@ -2332,16 +2332,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.47.0",
+            "version": "2.48.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "606262fd8888b75317ba9461825a24fc34001e1e"
+                "reference": "d3c447f21072766cddec3522f9468a5849a76147"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/606262fd8888b75317ba9461825a24fc34001e1e",
-                "reference": "606262fd8888b75317ba9461825a24fc34001e1e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3c447f21072766cddec3522f9468a5849a76147",
+                "reference": "d3c447f21072766cddec3522f9468a5849a76147",
                 "shasum": ""
             },
             "require": {
@@ -2421,7 +2421,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-13T21:54:02+00:00"
+            "time": "2021-05-07T10:08:30+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3258,16 +3258,16 @@
         },
         {
             "name": "revolution/laravel-pagination-bulma",
-            "version": "1.0.3",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/laravel-pagination-bulma.git",
-                "reference": "7a92ef594f74249b90281caa88d88885cbab0768"
+                "reference": "340de839a09a5590298f67855b7cc90a8d6683f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/7a92ef594f74249b90281caa88d88885cbab0768",
-                "reference": "7a92ef594f74249b90281caa88d88885cbab0768",
+                "url": "https://api.github.com/repos/kawax/laravel-pagination-bulma/zipball/340de839a09a5590298f67855b7cc90a8d6683f7",
+                "reference": "340de839a09a5590298f67855b7cc90a8d6683f7",
                 "shasum": ""
             },
             "require": {
@@ -3305,9 +3305,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/laravel-pagination-bulma/issues",
-                "source": "https://github.com/kawax/laravel-pagination-bulma/tree/1.0.3"
+                "source": "https://github.com/kawax/laravel-pagination-bulma/tree/1.1.1"
             },
-            "time": "2020-03-21T06:31:54+00:00"
+            "time": "2021-05-12T08:54:16+00:00"
         },
         {
             "name": "revolution/laravel-server-push",
