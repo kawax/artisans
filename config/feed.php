@@ -16,7 +16,7 @@ return [
             /*
              * The feed will be available on this url.
              */
-            'url'   => '/feed/user',
+            'url'   => '/user',
 
             'title' => 'Laravel職人を探す - 職人',
 
@@ -39,7 +39,7 @@ return [
             /*
              * The feed will be available on this url.
              */
-            'url'   => '/feed/post',
+            'url'   => '/post',
 
             'title' => 'Laravel職人を探す - 投稿',
 

@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-    @include('feed::links')
+    <x-feed-links />
 
     @yield('card')
 
