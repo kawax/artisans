@@ -3583,16 +3583,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "a28108b61dac8a83de6c97f09a5a1e98f4d75522"
+                "reference": "1150930205dbe32f4e594ba2805cd56563120145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/a28108b61dac8a83de6c97f09a5a1e98f4d75522",
-                "reference": "a28108b61dac8a83de6c97f09a5a1e98f4d75522",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/1150930205dbe32f4e594ba2805cd56563120145",
+                "reference": "1150930205dbe32f4e594ba2805cd56563120145",
                 "shasum": ""
             },
             "require": {
@@ -3631,7 +3631,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.7.0"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.8.0"
             },
             "funding": [
                 {
@@ -3639,7 +3639,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-06T21:49:32+00:00"
+            "time": "2021-05-22T09:13:53+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
