@@ -74,4 +74,4 @@ Route::view('api', 'pages.api')->name('pages.api');
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::feeds();
+Route::feeds('feed');
