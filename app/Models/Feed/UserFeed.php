@@ -18,7 +18,7 @@ trait UserFeed
                        ->summary(Markdown::parse($this->message))
                        ->updated($this->updated_at)
                        ->link(route('user', $this))
-                       ->author($this->name);
+                       ->authorName($this->name);
     }
 
     /**

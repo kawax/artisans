@@ -27,7 +27,7 @@
     "revolution/laravel-pagination-bulma": "^1.0",
     "revolution/laravel-server-push": "^1.0",
     "revolution/laravel-str-mixins": "^2.0",
-    "spatie/laravel-feed": "^3.0"
+    "spatie/laravel-feed": "^4.0"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^2.6",
