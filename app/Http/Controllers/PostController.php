@@ -66,6 +66,7 @@ class PostController extends Controller
      *
      * @param  Post  $post
      * @return \Illuminate\Http\Response
+     *
      * @throws
      */
     public function edit(Post $post)
@@ -79,6 +80,7 @@ class PostController extends Controller
      * @param  StoreRequest  $request
      * @param  Post  $post
      * @return mixed
+     *
      * @throws
      */
     public function update(StoreRequest $request, Post $post)
@@ -96,6 +98,7 @@ class PostController extends Controller
      *
      * @param  Post  $post
      * @return \Illuminate\Http\Response
+     *
      * @throws
      */
     public function destroy(Post $post)
