@@ -13,6 +13,7 @@ class PostObserver
      *
      * @param  Post  $post
      * @return void
+     *
      * @throws \Exception
      */
     public function created(Post $post)
@@ -29,6 +30,7 @@ class PostObserver
      *
      * @param  Post  $post
      * @return void
+     *
      * @throws \Exception
      */
     public function updated(Post $post)
@@ -45,6 +47,7 @@ class PostObserver
      *
      * @param  Post  $post
      * @return void
+     *
      * @throws \Exception
      */
     public function deleted(Post $post)
