@@ -15,6 +15,7 @@ class EditController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  Post  $post
      * @return \Illuminate\Http\Response
+     *
      * @throws
      */
     public function __invoke(Request $request, Post $post)

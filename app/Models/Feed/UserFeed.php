@@ -23,6 +23,7 @@ trait UserFeed
 
     /**
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function getFeedItems()

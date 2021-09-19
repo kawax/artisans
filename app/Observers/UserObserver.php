@@ -13,6 +13,7 @@ class UserObserver
      *
      * @param  User  $user
      * @return void
+     *
      * @throws \Exception
      */
     public function created(User $user)
@@ -31,6 +32,7 @@ class UserObserver
      *
      * @param  User  $user
      * @return void
+     *
      * @throws \Exception
      */
     public function updated(User $user)
@@ -49,6 +51,7 @@ class UserObserver
      *
      * @param  User  $user
      * @return void
+     *
      * @throws \Exception
      */
     public function deleted(User $user)
