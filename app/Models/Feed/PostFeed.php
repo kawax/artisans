@@ -23,6 +23,7 @@ trait PostFeed
 
     /**
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function getFeedItems()
