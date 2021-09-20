@@ -51,7 +51,6 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  Builder  $query
      * @param  string|null  $search
-     *
      * @return Builder
      */
     public function scopeSearch(Builder $query, ?string $search)
@@ -68,7 +67,6 @@ class User extends Authenticatable implements Feedable
     /**
      * @param  Builder  $query
      * @param  int|null  $page
-     *
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
     public function scopeArtisans(Builder $query, ?int $page = 20)
