@@ -6314,16 +6314,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.11.0",
+            "version": "v2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "f2a7f9d84f628cb50e1b0dc302f10d2ba945b0ea"
+                "reference": "771770e56cbb22bdbe507613d3685b13e73b1776"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/f2a7f9d84f628cb50e1b0dc302f10d2ba945b0ea",
-                "reference": "f2a7f9d84f628cb50e1b0dc302f10d2ba945b0ea",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/771770e56cbb22bdbe507613d3685b13e73b1776",
+                "reference": "771770e56cbb22bdbe507613d3685b13e73b1776",
                 "shasum": ""
             },
             "require": {
@@ -6331,9 +6331,9 @@
                 "composer/composer": "^1.10.23 || ^2.1.9",
                 "doctrine/dbal": "^2.6 || ^3",
                 "ext-json": "*",
-                "illuminate/console": "^8",
-                "illuminate/filesystem": "^8",
-                "illuminate/support": "^8",
+                "illuminate/console": "^8 || ^9",
+                "illuminate/filesystem": "^8 || ^9",
+                "illuminate/support": "^8 || ^9",
                 "nikic/php-parser": "^4.7",
                 "php": "^7.3 || ^8.0",
                 "phpdocumentor/type-resolver": "^1.1.0"
@@ -6341,21 +6341,21 @@
             "require-dev": {
                 "ext-pdo_sqlite": "*",
                 "friendsofphp/php-cs-fixer": "^2",
-                "illuminate/config": "^8",
-                "illuminate/view": "^8",
+                "illuminate/config": "^8 || ^9",
+                "illuminate/view": "^8 || ^9",
                 "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^6",
+                "orchestra/testbench": "^6 || ^7",
                 "phpunit/phpunit": "^8.5 || ^9",
                 "spatie/phpunit-snapshot-assertions": "^3 || ^4",
                 "vimeo/psalm": "^3.12"
             },
             "suggest": {
-                "illuminate/events": "Required for automatic helper generation (^6|^7|^8)."
+                "illuminate/events": "Required for automatic helper generation (^6|^7|^8|^9)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.9-dev"
+                    "dev-master": "2.12-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -6392,7 +6392,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-ide-helper/issues",
-                "source": "https://github.com/barryvdh/laravel-ide-helper/tree/v2.11.0"
+                "source": "https://github.com/barryvdh/laravel-ide-helper/tree/v2.12.0"
             },
             "funding": [
                 {
@@ -6404,7 +6404,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-03T20:47:54+00:00"
+            "time": "2022-01-23T16:50:53+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -7267,16 +7267,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.17.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669"
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/b85e9d44eae8c52cca7aa0939483611f7232b669",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/2e77a868f6540695cf5ebf21e5ab472c65f47567",
+                "reference": "2e77a868f6540695cf5ebf21e5ab472c65f47567",
                 "shasum": ""
             },
             "require": {
@@ -7301,7 +7301,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "v1.17-dev"
+                    "dev-main": "v1.18-dev"
                 }
             },
             "autoload": {
@@ -7326,9 +7326,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.17.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.18.0"
             },
-            "time": "2021-12-05T17:14:47+00:00"
+            "time": "2022-01-23T17:56:23+00:00"
         },
         {
             "name": "filp/whoops",
