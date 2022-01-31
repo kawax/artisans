@@ -12,7 +12,6 @@
     "ext-json": "*",
     "ext-mbstring": "*",
     "doctrine/dbal": "^3.1",
-    "fideloper/proxy": "^4.2",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "intervention/image": "^2.4",
@@ -25,7 +24,6 @@
     "league/commonmark": "^1.4",
     "revolution/laravel-namespaced-helpers": "^1.0",
     "revolution/laravel-pagination-bulma": "^1.0",
-    "revolution/laravel-server-push": "^1.0",
     "revolution/laravel-str-mixins": "^2.0",
     "spatie/laravel-feed": "^4.0"
   },
