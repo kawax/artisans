@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/88f07994dc91784c2877/maintainability)](https://codeclimate.com/github/kawax/artisans/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88f07994dc91784c2877/test_coverage)](https://codeclimate.com/github/kawax/artisans/test_coverage)
 
-WIP
+一応まだ残してるけどLaravelの話はこっちに移行。https://invokable.net/
 
 ## 開発
 SQLiteで足りる程度のことしかしてない。

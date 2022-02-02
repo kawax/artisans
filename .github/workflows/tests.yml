@@ -25,12 +25,11 @@ jobs:
           cp .env.example .env
           php artisan key:generate
       - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v2.7.5
+        uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: vendor/bin/phpunit
-          coverageLocations: build/logs/clover.xml:clover
       - name: Deploy
         if: success() && (github.event_name != 'pull_request')
         run: curl -s "${{ secrets.FORGE }}"
