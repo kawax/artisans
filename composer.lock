@@ -3324,12 +3324,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Revolution\\Illuminate\\Support\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "Revolution\\Illuminate\\Support\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
