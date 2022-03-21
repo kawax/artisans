@@ -22,6 +22,6 @@ class Markdown
             ]
         );
 
-        return new HtmlString($converter->convertToHtml($text ?? ''));
+        return new HtmlString($converter->convert($text ?? '')->getContent());
     }
 }

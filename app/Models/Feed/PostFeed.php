@@ -13,12 +13,12 @@ trait PostFeed
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
-                       ->id('post/'.$this->id)
-                       ->title($this->title ?? 'no title')
-                       ->summary(Markdown::parse($this->message))
-                       ->updated($this->updated_at)
-                       ->link(route('post.show', $this))
-                       ->authorName($this->user->name);
+            ->id('post/'.$this->id)
+            ->title($this->title ?? 'no title')
+            ->summary(Markdown::parse($this->message))
+            ->updated($this->updated_at)
+            ->link(route('post.show', $this))
+            ->authorName($this->user->name);
     }
 
     /**
@@ -28,11 +28,11 @@ trait PostFeed
      */
     public static function getFeedItems()
     {
-        return cache()->remember('feed.posts', now()->addHours(12), function () {
-            return self::latest()
-                       ->with('user')
-                       ->take(50)
-                       ->get();
-        });
+        return cache()->remember('feed.posts',
+            now()->addHours(12),
+            fn () => self::latest()
+                ->with('user')
+                ->take(50)
+                ->get());
     }
 }

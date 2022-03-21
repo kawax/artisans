@@ -13,12 +13,12 @@ trait UserFeed
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
-                       ->id('user/'.$this->id)
-                       ->title($this->title ?? $this->name ?? 'no title')
-                       ->summary(Markdown::parse($this->message))
-                       ->updated($this->updated_at)
-                       ->link(route('user', $this))
-                       ->authorName($this->name);
+            ->id('user/'.$this->id)
+            ->title($this->title ?? $this->name ?? 'no title')
+            ->summary(Markdown::parse($this->message))
+            ->updated($this->updated_at)
+            ->link(route('user', $this))
+            ->authorName($this->name);
     }
 
     /**
@@ -28,11 +28,11 @@ trait UserFeed
      */
     public static function getFeedItems()
     {
-        return cache()->remember('feed.users', now()->addHours(12), function () {
-            return self::latest()
-                       ->whereHidden(false)
-                       ->take(50)
-                       ->get();
-        });
+        return cache()->remember('feed.users',
+            now()->addHours(12),
+            fn () => self::latest()
+                ->whereHidden(false)
+                ->take(50)
+                ->get());
     }
 }
