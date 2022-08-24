@@ -1,6 +1,20 @@
 {
-    "/js/app.js": "/js/app.js?id=8ebff67b547b128edf437423c42aaa7c",
-    "/css/app.css": "/css/app.css?id=24edf0fe63453198272a64491644c1cf",
-    "/fonts/.DS_Store": "/fonts/.DS_Store?id=eb067a18c1752db002bb23fe95f313a2",
-    "/fonts/NotoSansCJKjp-Black.ttf": "/fonts/NotoSansCJKjp-Black.ttf?id=f1d902c92b11e2a9eda9581c1ae254ef"
+    "/js/app.js": "/js/app.js?id=4bb931ea14b3b6c3843e83eb2a763219",
+    "/css/app.css": "/css/app.css?id=6e160ce8f49821e117e7114ad4a6b2ee",
+    "/fonts/NotoSansCJKjp-Black.ttf": "/fonts/NotoSansCJKjp-Black.ttf?id=f1d902c92b11e2a9eda9581c1ae254ef",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?id=0868992b7c56298026b76b22c534eab9",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?id=1d5619cd804367cefe6da2d79289218a",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?id=9fefebd385ff8e0973f14d0ee1a28601",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?id=66ea863732752673548b3b6537b6465b",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?id=4ec8652aef2ce3e636bf32c24dd5ce86",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?id=5292d0407d0ee90376d1fd038a8a5b0f",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?id=e7e957c87c454bccaa3bf9fdaa6874f8",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?id=d3e91a71e98a258bd29a2136a1b06281",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?id=26a3b8ce98f8348430ed4fac61908067",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?id=85dc33c4760a6454d1df04ef3b9622c2",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?id=0af95f09495e76b34fb2a911b8c78051",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?id=37bc7099f6f1ba80236164f22e905837",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?id=d44877cb1fa07af67d56e4d86d39dd96",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?id=26f963f67e793d91cc76426d43836849",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?id=184257670d2e18e37fc93ca106b9c6a7"
 }
